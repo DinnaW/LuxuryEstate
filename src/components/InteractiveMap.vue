@@ -526,10 +526,8 @@ const locations = [
 .kicker {
   margin: 0;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+   font-family:
+    sans-serif;
 
   font-size:
     clamp(
@@ -564,10 +562,8 @@ const locations = [
     0
     0;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+   font-family:
+    sans-serif;
 
   font-size:
     clamp(
@@ -597,10 +593,8 @@ const locations = [
       0.72
     );
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+   font-family:
+    sans-serif;
 
   font-size:
     clamp(
@@ -670,9 +664,7 @@ const locations = [
   color: #111111;
 
   font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    sans-serif;
 
   font-size:
     clamp(
@@ -882,10 +874,8 @@ const locations = [
 
   color: #88837d;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+   font-family:
+    sans-serif;
 
   font-size:
     clamp(
@@ -906,10 +896,8 @@ const locations = [
     0
     0.45rem;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:
+    sans-serif;
 
   font-size:
     clamp(
@@ -929,10 +917,8 @@ const locations = [
 
   color: #77736e;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:
+    sans-serif;
 
   font-size:
     clamp(
@@ -958,10 +944,8 @@ const locations = [
     0
     0.65rem;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:
+    sans-serif;
 
   font-size:
     clamp(
@@ -1001,10 +985,8 @@ const locations = [
 
   color: #55514d;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:
+    sans-serif;
 
   font-size:
     clamp(
@@ -1035,10 +1017,8 @@ const locations = [
 
   color: #111111;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:
+    sans-serif;
 
   font-size:
     clamp(
@@ -1204,10 +1184,8 @@ const locations = [
 .location-tabs strong {
   display: block;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:
+    sans-serif;
 
   font-size:
     clamp(
@@ -1233,10 +1211,8 @@ const locations = [
       0.65
     );
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:
+    sans-serif;
 
   font-size:
     clamp(

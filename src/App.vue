@@ -19,13 +19,14 @@ import ProjectGallery from './components/ProjectGallery.vue'
     <FeaturedResidences/>
     <PlacesSection/>
     <HotDeals/>
-    <PropertyJourney/>
-    <MarketTrends/>
-    <SmartSearch/>
+    <!-- <PropertyJourney/> -->
+    <!-- <MarketTrends/> -->
+    <!-- <SmartSearch/> -->
     <InteractiveMap/>
     <InteriorStory/>
-      <ProjectGallery/>
-    <PopularSearches/>
+      
+
     <FeaturedDevelopment/>
+        <PopularSearches/>
 
 </template>
