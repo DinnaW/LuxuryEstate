@@ -1,179 +1,419 @@
 <template>
-  <section class="deals">
+  <div class="property-sections">
 
-    <div class="shell">
+    <!-- =====================================================
+         HOT DEAL PROPERTIES
+    ====================================================== -->
+    <section class="property-section hot-deals">
 
-      <!-- =========================
-           HEADER
-      ========================== -->
-      <div class="head">
+      <div class="shell">
 
-        <div>
-          <p class="kicker">
-            SELECTED OPPORTUNITIES
-          </p>
+        <!-- HEADER -->
+        <div class="section-head">
 
-          <h2 class="title">
-            Hot Deal Residences
-          </h2>
-        </div>
+          <div class="section-heading">
 
-        <a
-          href="#"
-          class="view-more"
-        >
-          View more →
-        </a>
+            <p class="kicker">
+              SELECTED OPPORTUNITIES
+            </p>
 
-      </div>
+            <h2>
+              Hot Deal Properties
+            </h2>
 
-
-      <!-- =========================
-           DEAL CAROUSEL
-      ========================== -->
-      <div class="track">
-
-        <article
-          v-for="d in deals"
-          :key="d.name"
-          class="deal-card"
-        >
-
-          <!-- IMAGE -->
-          <div class="pic">
-
-            <img
-              :src="d.img"
-              :alt="d.name"
-            />
-
-            <span>
-              {{ d.tag }}
-            </span>
+            <p class="section-description">
+              Selected residences offering attractive value
+              in sought-after locations across Sri Lanka.
+            </p>
 
           </div>
 
 
-          <!-- CONTENT -->
-          <div class="copy">
+          <a
+            href="#"
+            class="view-all"
+          >
+            View all
+            <span>→</span>
+          </a>
 
-            <small>
-              {{ d.location }}
-            </small>
+        </div>
 
-            <h3>
-              {{ d.name }}
-            </h3>
 
-            <p>
-              {{ d.meta }}
-            </p>
+        <!-- GOLD HIGHLIGHT LINE -->
+        <div class="section-line">
+          <span></span>
+        </div>
 
-            <div class="card-bottom">
 
-              <b>
-                {{ d.price }}
-              </b>
+        <!-- CARDS -->
+        <div class="property-grid">
 
-              <a href="#">
-                View →
-              </a>
+          <article
+            v-for="property in hotDeals"
+            :key="property.name"
+            class="property-card"
+          >
+
+            <!-- IMAGE -->
+            <div class="image-wrap">
+
+              <img
+                :src="property.img"
+                :alt="property.name"
+              />
+
+
+              <div class="image-shade"></div>
+
+
+              <span class="status hot-status">
+                {{ property.status }}
+              </span>
 
             </div>
 
-          </div>
 
-        </article>
+            <!-- CARD BODY -->
+            <div class="card-content">
+
+              <p class="property-type">
+                {{ property.type }}
+              </p>
+
+
+              <h3>
+                {{ property.name }}
+              </h3>
+
+
+              <div class="location">
+
+                <span class="location-dot"></span>
+
+                <span>
+                  {{ property.location }}
+                </span>
+
+              </div>
+
+
+              <div class="card-bottom">
+
+                <div class="price">
+
+                  <small>
+                    STARTING FROM
+                  </small>
+
+                  <strong>
+                    {{ property.price }}
+                  </strong>
+
+                </div>
+
+
+                <a
+                  href="#"
+                  class="view-property"
+                >
+                  View residence
+                  <span>→</span>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </section>
+
+
+    <!-- =====================================================
+         TRENDING PROPERTIES
+    ====================================================== -->
+    <section class="property-section trending">
+
+      <div class="shell">
+
+        <!-- HEADER -->
+        <div class="section-head">
+
+          <div class="section-heading">
+
+            <p class="kicker">
+              MOST VIEWED RESIDENCES
+            </p>
+
+            <h2>
+              Trending Properties
+            </h2>
+
+            <p class="section-description">
+              Residences currently attracting strong interest
+              from buyers and investors.
+            </p>
+
+          </div>
+
+
+          <a
+            href="#"
+            class="view-all light-link"
+          >
+            Explore all
+            <span>→</span>
+          </a>
+
+        </div>
+
+
+        <!-- GOLD HIGHLIGHT LINE -->
+        <div class="section-line dark-line">
+          <span></span>
+        </div>
+
+
+        <!-- CARDS -->
+        <div class="property-grid">
+
+          <article
+            v-for="property in trendingProperties"
+            :key="property.name"
+            class="property-card trending-card"
+          >
+
+            <!-- IMAGE -->
+            <div class="image-wrap">
+
+              <img
+                :src="property.img"
+                :alt="property.name"
+              />
+
+
+              <div class="image-shade trending-shade"></div>
+
+
+              <span class="status trending-status">
+                {{ property.status }}
+              </span>
+
+            </div>
+
+
+            <!-- CARD BODY -->
+            <div class="card-content">
+
+              <p class="property-type">
+                {{ property.type }}
+              </p>
+
+
+              <h3>
+                {{ property.name }}
+              </h3>
+
+
+              <div class="location">
+
+                <span class="location-dot"></span>
+
+                <span>
+                  {{ property.location }}
+                </span>
+
+              </div>
+
+
+              <div class="card-bottom">
+
+                <div class="price">
+
+                  <small>
+                    FROM
+                  </small>
+
+                  <strong>
+                    {{ property.price }}
+                  </strong>
+
+                </div>
+
+
+                <a
+                  href="#"
+                  class="view-property"
+                >
+                  View residence
+                  <span>→</span>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
 </template>
+
 
 
 <script setup>
 
-const deals = [
+/* =========================================================
+   HOT DEALS
+========================================================= */
+
+const hotDeals = [
 
   {
-    tag: "FEATURED",
+    name: "Ocean Avenue Residence",
 
     location: "Colombo 03",
 
-    name: "Ocean Avenue Residence",
-
-    meta: "3 Bed · 2,150 sq.ft",
+    type: "Luxury Apartment",
 
     price: "USD 520K",
 
+    status: "HOT DEAL",
+
     img:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=90"
+      "src/images/hf_20260724_043544_62932b82-e384-492f-aa3c-8ca7dc82d080.webp"
   },
 
 
   {
-    tag: "NEW",
+    name: "Parkside Penthouse",
 
     location: "Colombo 07",
 
-    name: "Parkside Penthouse",
-
-    meta: "4 Bed · 3,400 sq.ft",
+    type: "Penthouse Residence",
 
     price: "USD 780K",
 
+    status: "SPECIAL",
+
     img:
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=90"
+      "src/images/weligama.webp"
   },
 
 
   {
-    tag: "READY",
+    name: "South Coast Residence",
 
     location: "Galle",
 
-    name: "South Coast Residence",
-
-    meta: "3 Bed · 2,480 sq.ft",
+    type: "Coastal Residence",
 
     price: "USD 465K",
 
+    status: "READY",
+
     img:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=90"
+      "src/images/Galle.webp"
   },
 
 
   {
-    tag: "LIMITED",
+    name: "Garden Courtyard Home",
 
     location: "Thalpe",
 
-    name: "Garden Courtyard Home",
-
-    meta: "2 Bed · 1,890 sq.ft",
+    type: "Private Residence",
 
     price: "USD 355K",
 
+    status: "LIMITED",
+
     img:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=90"
+      "src/images/Thalpe.webp"
+  }
+
+];
+
+
+
+/* =========================================================
+   TRENDING
+========================================================= */
+
+const trendingProperties = [
+
+  {
+    name: "Icon V Talpe",
+
+    location: "Thalpe",
+
+    type: "Luxury Apartment",
+
+    price: "USD 420K",
+
+    status: "TRENDING",
+
+    img:
+      "src/images/Thalpe.webp"
   },
 
 
   {
-    tag: "VIEW",
+    name: "City Central Residence",
 
     location: "Colombo",
 
-    name: "Skyline Apartment",
+    type: "City Residence",
 
-    meta: "2 Bed · 1,600 sq.ft",
+    price: "USD 340K",
 
-    price: "USD 295K",
+    status: "POPULAR",
 
     img:
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=90"
+      "src/images/Colombo.jpeg"
+  },
+
+
+  {
+    name: "Galle Ocean Residence",
+
+    location: "Galle",
+
+    type: "Ocean View Apartment",
+
+    price: "USD 490K",
+
+    status: "MOST VIEWED",
+
+    img:
+      "src/images/Galle.webp"
+  },
+
+
+  {
+    name: "Thalpe Private Collection",
+
+    location: "Thalpe",
+
+    type: "Boutique Residence",
+
+    price: "USD 375K",
+
+    status: "TRENDING",
+
+    img:
+      "src/images/mirissa.webp"
   }
 
 ];
@@ -181,39 +421,85 @@ const deals = [
 </script>
 
 
+
 <style scoped>
 
-/* =========================
-   SECTION
-========================= */
+/* =========================================================
+   GLOBAL
+========================================================= */
 
-.deals {
+.property-sections,
+.property-sections * {
+  box-sizing: border-box;
+
+  font-family:
+    sans-serif;
+}
+
+
+.property-sections {
+  width: 100%;
+}
+
+
+/* =========================================================
+   SHARED SECTION
+========================================================= */
+
+.property-section {
   width: 100%;
 
   padding:
-    clamp(4rem, 7vh, 6rem)
+    clamp(3.5rem, 6vh, 5rem)
     0;
-
-  background: #efefef;
-
-  color: #111111;
 
   overflow: hidden;
 }
 
 
 .shell {
-  width: min(91vw, 1550px);
+  width:
+    min(
+      94vw,
+      1650px
+    );
 
-  margin: 0 auto;
+  margin:
+    0 auto;
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/* =========================================================
+   HOT DEAL BACKGROUND
+========================================================= */
 
-.head {
+.hot-deals {
+  background:
+    #f3f2ef;
+
+  color:
+    #111111;
+}
+
+
+/* =========================================================
+   TRENDING BACKGROUND
+========================================================= */
+
+.trending {
+  background:
+    #0a0a0a;
+
+  color:
+    #ffffff;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.section-head {
   display: flex;
 
   justify-content: space-between;
@@ -221,39 +507,46 @@ const deals = [
   align-items: flex-end;
 
   gap:
-    clamp(1.5rem, 3vw, 3rem);
+    clamp(
+      2rem,
+      5vw,
+      6rem
+    );
+}
 
-  margin-bottom:
-    clamp(1.4rem, 2.5vh, 2rem);
+
+.section-heading {
+  max-width:
+    700px;
 }
 
 
 .kicker {
-  margin: 0;
+  margin:
+    0;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+  color:
+    #a4864d;
 
   font-size:
     clamp(
-      0.52rem,
-      0.58vw,
-      0.66rem
+      0.48rem,
+      0.54vw,
+      0.62rem
     );
 
-  font-weight: 400;
+  font-weight:
+    600;
 
-  letter-spacing: 0.18em;
+  letter-spacing:
+    0.2em;
 
-  text-transform: uppercase;
-
-  color: #666666;
+  text-transform:
+    uppercase;
 }
 
 
-.title {
+.section-heading h2 {
   margin:
     clamp(
       0.45rem,
@@ -263,61 +556,208 @@ const deals = [
     0
     0;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
   font-size:
     clamp(
-      1.7rem,
-      2.1vw,
-      4.8rem
+      2rem,
+      2.5vw,
+      3.2rem
     );
 
-  font-weight: 400;
+  font-weight:
+    400;
 
-  line-height: 0.96;
+  line-height:
+    1;
 
-  letter-spacing: 0.01em;
+  letter-spacing:
+    -0.035em;
 }
 
 
-.view-more {
-  color: #111111;
+.section-description {
+  max-width:
+    520px;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+  margin:
+    clamp(
+      0.7rem,
+      1.3vh,
+      1rem
+    )
+    0
+    0;
+
+  color:
+    #77736c;
 
   font-size:
     clamp(
-      0.56rem,
-      0.62vw,
-      0.68rem
+      0.62rem,
+      0.7vw,
+      0.8rem
     );
 
-  text-transform: uppercase;
+  line-height:
+    1.6;
+}
 
-  letter-spacing: 0.08em;
 
-  text-decoration: none;
+.trending .section-description {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.48
+    );
+}
 
-  padding-bottom: 0.25rem;
+
+/* =========================================================
+   VIEW ALL
+========================================================= */
+
+.view-all {
+  display: flex;
+
+  align-items: center;
+
+  gap:
+    0.55rem;
+
+  padding-bottom:
+    0.3rem;
+
+  color:
+    #111111;
 
   border-bottom:
     1px solid
-    rgba(0, 0, 0, 0.2);
+    rgba(
+      17,
+      17,
+      17,
+      0.35
+    );
+
+  font-size:
+    clamp(
+      0.5rem,
+      0.56vw,
+      0.64rem
+    );
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform:
+    uppercase;
+
+  text-decoration:
+    none;
 }
 
 
-/* =========================
-   TRACK
-========================= */
+.light-link {
+  color:
+    #ffffff;
 
-.track {
-  display: flex;
+  border-color:
+    rgba(
+      255,
+      255,
+      255,
+      0.35
+    );
+}
+
+
+/* =========================================================
+   HIGHLIGHT LINE
+========================================================= */
+
+.section-line {
+  width:
+    100%;
+
+  height:
+    1px;
+
+  margin:
+    clamp(
+      1.4rem,
+      2.5vh,
+      2rem
+    )
+    0
+    clamp(
+      1.5rem,
+      2.8vh,
+      2.2rem
+    );
+
+  position:
+    relative;
+
+  background:
+    #dcd8d1;
+}
+
+
+.section-line span {
+  position:
+    absolute;
+
+  top:
+    0;
+
+  left:
+    0;
+
+  width:
+    clamp(
+      80px,
+      9vw,
+      150px
+    );
+
+  height:
+    2px;
+
+  background:
+    #a4864d;
+}
+
+
+.dark-line {
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.12
+    );
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.property-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(
+        0,
+        1fr
+      )
+    );
 
   gap:
     clamp(
@@ -325,387 +765,620 @@ const deals = [
       1vw,
       1rem
     );
-
-  overflow-x: auto;
-
-  overflow-y: hidden;
-
-  scroll-snap-type: x mandatory;
-
-  scroll-behavior: smooth;
-
-  scrollbar-width: none;
-
-  -webkit-overflow-scrolling: touch;
 }
 
 
-.track::-webkit-scrollbar {
-  display: none;
-}
-
-
-/* =========================
+/* =========================================================
    CARD
-========================= */
+========================================================= */
 
-.deal-card {
-  flex:
-    0
-    0
-    clamp(
-      230px,
-      21vw,
-      310px
-    );
+.property-card {
+  min-width:
+    0;
 
-  background: #ffffff;
+  overflow:
+    hidden;
+
+  background:
+    #ffffff;
 
   border:
     1px solid
-    rgba(0, 0, 0, 0.1);
-
-  overflow: hidden;
-
-  scroll-snap-align: start;
+    rgba(
+      17,
+      17,
+      17,
+      0.08
+    );
 
   transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 
-.deal-card:hover {
+.property-card:hover {
   transform:
-    translateY(-5px);
+    translateY(-6px);
 
   box-shadow:
     0
-    clamp(
-      0.8rem,
-      2vh,
-      1.5rem
-    )
-    clamp(
-      1.8rem,
-      3vw,
-      3rem
-    )
-    rgba(0, 0, 0, 0.07);
+    18px
+    45px
+    rgba(
+      0,
+      0,
+      0,
+      0.1
+    );
 }
 
 
-/* =========================
-   IMAGE
-========================= */
+.trending-card {
+  background:
+    #111111;
 
-.pic {
-  width: 100%;
+  border-color:
+    rgba(
+      255,
+      255,
+      255,
+      0.12
+    );
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.image-wrap {
+  width:
+    100%;
 
   height:
     clamp(
-      180px,
+      200px,
       18vw,
-      250px
+      300px
     );
 
-  position: relative;
+  position:
+    relative;
 
-  overflow: hidden;
+  overflow:
+    hidden;
 
-  background: #111111;
+  background:
+    #111111;
 }
 
 
-.pic img {
-  width: 100%;
-  height: 100%;
+.image-wrap img {
+  width:
+    100%;
 
-  object-fit: cover;
+  height:
+    100%;
+
+  object-fit:
+    cover;
 
   transition:
-    transform 0.7s ease;
+    transform
+    0.8s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
 }
 
 
-.deal-card:hover .pic img {
+.property-card:hover .image-wrap img {
   transform:
-    scale(1.04);
+    scale(
+      1.045
+    );
 }
 
 
-/* STATUS */
+/* =========================================================
+   IMAGE SHADE
+========================================================= */
 
-.pic span {
-  position: absolute;
+.image-shade {
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0)
+      55%,
+      rgba(0,0,0,0.26)
+      100%
+    );
+}
+
+
+.trending-shade {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.05)
+      35%,
+      rgba(0,0,0,0.42)
+      100%
+    );
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status {
+  position:
+    absolute;
+
+  z-index:
+    3;
 
   top:
-    clamp(
-      0.65rem,
-      0.8vw,
-      0.8rem
-    );
+    0.75rem;
 
   left:
-    clamp(
-      0.65rem,
-      0.8vw,
-      0.8rem
-    );
+    0.75rem;
 
   padding:
     0.32rem
-    0.5rem;
-
-  background: #111111;
-
-  color: #ffffff;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    0.55rem;
 
   font-size:
     clamp(
-      0.46rem,
-      0.5vw,
-      0.56rem
+      0.42rem,
+      0.47vw,
+      0.53rem
     );
 
-  font-weight: 400;
+  font-weight:
+    600;
 
-  letter-spacing: 0.1em;
+  letter-spacing:
+    0.07em;
+
+  text-transform:
+    uppercase;
 }
 
 
-/* =========================
-   CONTENT
-========================= */
+.hot-status {
+  background:
+    #111111;
 
-.copy {
+  color:
+    #ffffff;
+}
+
+
+.trending-status {
+  background:
+    #a4864d;
+
+  color:
+    #ffffff;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.card-content {
   padding:
     clamp(
-      0.85rem,
-      1.1vw,
-      1.1rem
+      0.95rem,
+      1.2vw,
+      1.25rem
     );
 }
 
 
-.copy small {
-  display: block;
+.property-type {
+  margin:
+    0
+    0
+    0.3rem;
 
-  color: #777777;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+  color:
+    #8f8a83;
 
   font-size:
     clamp(
-      0.56rem,
-      0.62vw,
-      0.68rem
+      0.52rem,
+      0.58vw,
+      0.66rem
     );
 }
 
 
-.copy h3 {
+.trending-card .property-type {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.48
+    );
+}
+
+
+.card-content h3 {
   margin:
-    clamp(
-      0.32rem,
-      0.6vh,
-      0.45rem
-    )
     0;
 
-  color: #111111;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+  color:
+    #111111;
 
   font-size:
     clamp(
-      1.25rem,
-      1.45vw,
-      1.6rem
+      1rem,
+      1.2vw,
+      1.4rem
     );
 
-  font-weight: 400;
+  font-weight:
+    500;
 
-  line-height: 1.08;
+  line-height:
+    1.16;
+
+  letter-spacing:
+    -0.02em;
 }
 
 
-.copy > p {
-  margin:
-    0
-    0
-    clamp(
-      0.7rem,
-      1.1vh,
-      0.9rem
-    );
+.trending-card h3 {
+  color:
+    #ffffff;
+}
 
-  color: #777777;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.location {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    0.4rem;
+
+  margin-top:
+    0.55rem;
+
+  color:
+    #6f6a64;
 
   font-size:
     clamp(
-      0.6rem,
-      0.65vw,
-      0.72rem
+      0.55rem,
+      0.62vw,
+      0.7rem
     );
-
-  line-height: 1.5;
 }
 
 
-/* =========================
-   BOTTOM
-========================= */
+.trending-card .location {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.58
+    );
+}
+
+
+.location-dot {
+  width:
+    5px;
+
+  height:
+    5px;
+
+  flex-shrink:
+    0;
+
+  border-radius:
+    50%;
+
+  background:
+    #a4864d;
+}
+
+
+/* =========================================================
+   CARD BOTTOM
+========================================================= */
 
 .card-bottom {
-  display: flex;
+  display:
+    flex;
 
-  align-items: center;
+  justify-content:
+    space-between;
 
-  justify-content: space-between;
+  align-items:
+    flex-end;
 
-  gap: 1rem;
+  gap:
+    0.8rem;
+
+  margin-top:
+    clamp(
+      0.85rem,
+      1.4vh,
+      1rem
+    );
 
   padding-top:
     clamp(
-      0.7rem,
-      1vh,
-      0.85rem
+      0.75rem,
+      1.2vh,
+      0.9rem
     );
 
   border-top:
     1px solid
-    #eeeeee;
+    #eceae6;
 }
 
 
-.card-bottom b {
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+.trending-card .card-bottom {
+  border-color:
+    rgba(
+      255,
+      255,
+      255,
+      0.12
+    );
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.price small {
+  display:
+    block;
+
+  margin-bottom:
+    0.18rem;
+
+  color:
+    #99958e;
+
+  font-size:
+    0.42rem;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.11em;
+}
+
+
+.price strong {
+  color:
+    #111111;
 
   font-size:
     clamp(
-      0.7rem,
-      0.76vw,
-      0.85rem
+      0.76rem,
+      0.86vw,
+      0.98rem
     );
 
-  font-weight: 400;
-
-  color: #111111;
+  font-weight:
+    600;
 }
 
 
-.card-bottom a {
-  color: #111111;
+.trending-card .price strong {
+  color:
+    #ffffff;
+}
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+
+/* =========================================================
+   VIEW PROPERTY
+========================================================= */
+
+.view-property {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    0.4rem;
+
+  padding-bottom:
+    0.2rem;
+
+  color:
+    #111111;
+
+  border-bottom:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.3
+    );
 
   font-size:
     clamp(
-      0.5rem,
-      0.55vw,
-      0.62rem
+      0.45rem,
+      0.51vw,
+      0.58rem
     );
 
-  text-transform: uppercase;
+  font-weight:
+    500;
 
-  letter-spacing: 0.08em;
+  letter-spacing:
+    0.06em;
 
-  text-decoration: none;
+  text-decoration:
+    none;
+
+  text-transform:
+    uppercase;
+
+  white-space:
+    nowrap;
+
+  transition:
+    opacity 0.3s ease;
 }
 
 
-/* =========================
+.trending-card .view-property {
+  color:
+    #ffffff;
+
+  border-color:
+    rgba(
+      255,
+      255,
+      255,
+      0.32
+    );
+}
+
+
+.view-property:hover {
+  opacity:
+    0.55;
+}
+
+
+/* =========================================================
    TABLET
-========================= */
+========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
 
-  .deal-card {
-    flex-basis:
+  .property-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+  }
+
+
+  .image-wrap {
+    height:
       clamp(
-        230px,
-        34vw,
-        300px
+        240px,
+        31vw,
+        360px
       );
   }
 
 }
 
 
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 600px) {
 
-  .deals {
+  .property-section {
     padding:
-      clamp(
-        3.5rem,
-        7vh,
-        5rem
-      )
+      3rem
       0;
   }
 
 
-  .head {
-    flex-direction: column;
-
-    align-items: flex-start;
+  .shell {
+    width:
+      91vw;
   }
 
 
-  .title {
+  .section-head {
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
+
+    gap:
+      1rem;
+  }
+
+
+  .section-heading h2 {
     font-size:
       clamp(
-        2.5rem,
-        11vw,
-        3.8rem
+        1.9rem,
+        9vw,
+        2.7rem
       );
   }
 
 
-  .deal-card {
-    flex-basis:
-      clamp(
-        240px,
-        78vw,
-        310px
-      );
+  .property-grid {
+    grid-template-columns:
+      1fr;
   }
 
 
-  .pic {
+  .image-wrap {
     height:
       clamp(
-        200px,
-        60vw,
-        280px
+        240px,
+        68vw,
+        350px
       );
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .card-bottom {
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
   }
 
 }

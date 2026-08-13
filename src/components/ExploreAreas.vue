@@ -131,12 +131,12 @@ const areas = [
 }
 
 .kicker {
-   margin: 0;
+  margin: 0;
+
+  color: #987b49;
 
   font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    sans-serif;
 
   font-size:
     clamp(
@@ -147,51 +147,46 @@ const areas = [
 
   font-weight: 400;
 
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
 
   text-transform: uppercase;
-
-  color: #6f6f6f;
 }
 
 .intro h2 {
   margin: 0.45rem 0;
 
-  font-family: Georgia, "Times New Roman", serif;
+   font-family:
+    sans-serif;
 
   font-weight: 400;
 }
 
 /* KEEP THIS AFTER ALL OTHER HEADING CSS */
 .places .intro h2.title {
-     margin:
+margin:
     clamp(
-      0.45rem,
-      0.8vh,
-      0.7rem
+      0.5rem,
+      0.9vh,
+      0.8rem
     )
     0
     0;
 
   font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    sans-serif;
 
   font-size:
     clamp(
-      1.7rem,
-      2.1vw,
-      4.8rem
+      2rem,
+      2.5vw,
+      3.5rem
     );
 
   font-weight: 400;
 
-  line-height: 0.96;
+  line-height: 1;
 
-  letter-spacing: 0.01em;
-
-
+  letter-spacing: 0.005em;
 }
 .intro > p {
   max-width: 520px;
@@ -205,7 +200,7 @@ const areas = [
     );
 
   font-size: clamp(
-    0.68rem,
+    0.88rem,
     0.95vw,
     0.84rem
   );
@@ -378,10 +373,8 @@ const areas = [
     0
     0.6rem;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:
+    sans-serif;
 
   font-size:
     clamp(
@@ -411,10 +404,8 @@ const areas = [
     1px solid
     rgba(255, 255, 255, 0.8);
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:
+    sans-serif;
 
   font-size:
     clamp(
