@@ -4,7 +4,7 @@
     <!-- Background Image -->
     <img
       class="dev-bg"
-      src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=90"
+      src="/Users/naduniameesha/LuxuryEstate/src/images/Thalpe.webp"
       alt="Featured luxury apartment development"
     />
 
@@ -49,7 +49,7 @@
 <style scoped>
 .dev {
   width: 100%;
-  height: clamp(700px, 88vh, 940px);
+  height: clamp(100px, 62vh, 940px);
   position: relative;
   overflow: hidden;
   background: #0a0a0a;
@@ -127,11 +127,8 @@
   margin: 0 0 clamp(18px, 2vh, 28px);
 
   font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: clamp(10px, 0.7vw, 13px);
+    sans-serif;
+  font-size: clamp(4px, 0.5vw, 13px);
 
   font-weight: 400;
 
@@ -151,15 +148,13 @@
   margin: 0;
 
   font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    sans-serif;
 
-  font-size: clamp(2.5rem, 3.8vw, 4rem);
+  font-size: clamp(1.5rem, 2.9vw, 4rem);
 
   font-weight: 200;
 
-  line-height: 0.99;
+  line-height: 1.29;
 
   letter-spacing: -0.015em;
 
@@ -179,10 +174,8 @@
     0
     0;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+font-family:
+    sans-serif;
 
   font-size: clamp(13px, 0.82vw, 16px);
 
@@ -213,10 +206,8 @@
 .facts span {
   position: relative;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+ font-family:
+    sans-serif;
 
   font-size: clamp(11px, 0.7vw, 14px);
 
@@ -269,10 +260,7 @@
 
   text-transform: uppercase;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+  font-family: sans-serif;
 
   font-size: clamp(9px, 0.62vw, 12px);
 
