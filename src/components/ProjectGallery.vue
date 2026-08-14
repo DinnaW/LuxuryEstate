@@ -138,9 +138,7 @@ const images = [
     rgba(255, 255, 255, 0.48);
 
   font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    sans-serif;
 
   font-size:
     clamp(
@@ -167,10 +165,9 @@ const images = [
     0
     0;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+font-family:
+    sans-serif;
+
 
   font-size:
     clamp(
@@ -196,9 +193,8 @@ const images = [
     rgba(255, 255, 255, 0.52);
 
   font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    sans-serif;
+
 
   font-size:
     clamp(

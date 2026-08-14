@@ -44,7 +44,7 @@
           </p>
 
           <span>
-            Odiliya Premier Design Studio
+            Luxury Estate Design Studio
           </span>
         </div>
 
@@ -97,9 +97,7 @@
   margin: 0;
 
   font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    sans-serif;
 
   font-size: clamp(
     0.52rem,
@@ -122,10 +120,8 @@
     0
     0;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+ font-family:
+    sans-serif;
 
   font-size:
     clamp(
@@ -146,9 +142,7 @@
   color: #777777;
 
   font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    sans-serif;
 
   font-size: clamp(
     0.7rem,
@@ -177,9 +171,7 @@
   color: #ffffff;
 
   font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    sans-serif;
 
   font-size: clamp(
     0.52rem,
@@ -238,7 +230,7 @@
       1.6rem
     );
 
-  background: #ffffff;
+  background: #f4f0e9;
 
   border:
     1px solid
@@ -255,10 +247,8 @@
     0
     0.8rem;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+ font-family:
+    sans-serif;
 
   font-size: clamp(
     0.78rem,

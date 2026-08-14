@@ -363,10 +363,8 @@ const menuOpen = ref(false);
 
   color: #ffffff;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+   font-family:
+    sans-serif;
 
   font-size:
     clamp(
@@ -408,9 +406,7 @@ const menuOpen = ref(false);
   color:
     rgba(255, 255, 255, 0.95);
 
-  font-family:
-    Arial,
-    Helvetica,
+   font-family:
     sans-serif;
 
   font-size:
@@ -485,8 +481,6 @@ const menuOpen = ref(false);
   color: #ffffff;
 
   font-family:
-    Arial,
-    Helvetica,
     sans-serif;
 
   font-size:
@@ -522,9 +516,7 @@ const menuOpen = ref(false);
 
   color: #ffffff;
 
-  font-family:
-    Arial,
-    Helvetica,
+   font-family:
     sans-serif;
 
   font-size: 0.64rem;
@@ -603,8 +595,6 @@ const menuOpen = ref(false);
     rgba(255, 255, 255, 0.88);
 
   font-family:
-    Arial,
-    Helvetica,
     sans-serif;
 
   font-size:
@@ -633,10 +623,8 @@ h1 {
 
   color: #ffffff;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+   font-family:
+    sans-serif;
 
   font-size:
     clamp(
@@ -673,8 +661,6 @@ h1 {
     rgba(255, 255, 255, 0.88);
 
   font-family:
-    Arial,
-    Helvetica,
     sans-serif;
 
   font-size:
@@ -728,9 +714,7 @@ h1 {
 
   color: #ffffff;
 
-  font-family:
-    Arial,
-    Helvetica,
+   font-family:
     sans-serif;
 
   font-size:
@@ -838,9 +822,7 @@ label {
 .field-title {
   color: #111111;
 
-  font-family:
-    Arial,
-    Helvetica,
+   font-family:
     sans-serif;
 
   font-size:
@@ -874,9 +856,7 @@ select {
 
   color: #777777;
 
-  font-family:
-    Arial,
-    Helvetica,
+   font-family:
     sans-serif;
 
   font-size:
@@ -910,8 +890,6 @@ select {
   color: #ffffff;
 
   font-family:
-    Arial,
-    Helvetica,
     sans-serif;
 
   font-size:
@@ -966,9 +944,7 @@ select {
   color:
     rgba(255, 255, 255, 0.9);
 
-  font-family:
-    Arial,
-    Helvetica,
+   font-family:
     sans-serif;
 
   font-size:
@@ -996,9 +972,7 @@ select {
 
   color: #111111;
 
-  font-family:
-    Arial,
-    Helvetica,
+   font-family:
     sans-serif;
 
   font-size:
@@ -1062,9 +1036,7 @@ select {
     color: #ffffff;
 
     font-family:
-      Arial,
-      Helvetica,
-      sans-serif;
+    sans-serif;
 
     font-size: 0.78rem;
 

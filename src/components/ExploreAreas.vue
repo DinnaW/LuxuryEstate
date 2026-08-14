@@ -273,18 +273,18 @@ const areas = [
 
 
 .heading-left h2 {
-  margin: 0;
+   margin: 0;
 
   font-size:
     clamp(
       2.1rem,
-      2.8vw,
+      2.3vw,
       3.7rem
     );
 
   font-weight: 400;
 
-  line-height: 1.5;
+  line-height: 1.6;
 
   letter-spacing: -0.045em;
 }
@@ -689,8 +689,8 @@ const areas = [
 
   font-size:
     clamp(
-      1.35rem,
-      1.75vw,
+      0.15rem,
+      1.51vw,
       2.15rem
     );
 
