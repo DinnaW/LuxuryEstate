@@ -11,7 +11,7 @@
         <!-- HEADER -->
         <div class="section-head">
 
-          <div class="heading-copy">
+          <div>
 
             <p class="eyebrow">
               SELECTED OPPORTUNITIES
@@ -54,19 +54,24 @@
                 :alt="property.name"
               />
 
-              <!-- ATTACHED BADGE -->
-              <span class="status hot-status">
-                {{ property.status }}
-              </span>
+
+              <!-- SMALL VERTICAL STATUS -->
+              <div class="status-side hot-status">
+
+                <span>
+                  {{ property.status }}
+                </span>
+
+              </div>
 
             </div>
 
 
-            <!-- CONTENT -->
+            <!-- CARD CONTENT -->
             <div class="card-content">
 
-              <!-- META -->
-              <div class="card-meta">
+              <!-- TYPE + LOCATION -->
+              <div class="meta-row">
 
                 <span class="property-type">
                   {{ property.type }}
@@ -110,7 +115,7 @@
 
 
               <!-- SHORT DESCRIPTION -->
-              <p class="card-description">
+              <p class="description">
                 {{ property.description }}
               </p>
 
@@ -120,20 +125,21 @@
 
                 <a
                   href="#"
-                  class="view-property"
+                  class="explore-link"
                 >
                   View Residence
                   <span>↗</span>
                 </a>
 
 
-                <div class="price">
+                <div class="price-right">
 
                   <small>
                     FROM
                   </small>
 
                   <div>
+
                     <span>
                       {{ property.currency }}
                     </span>
@@ -141,6 +147,7 @@
                     <strong>
                       {{ property.price }}
                     </strong>
+
                   </div>
 
                 </div>
@@ -169,7 +176,7 @@
         <!-- HEADER -->
         <div class="section-head">
 
-          <div class="heading-copy">
+          <div>
 
             <p class="eyebrow">
               MOST VIEWED
@@ -212,19 +219,24 @@
                 :alt="property.name"
               />
 
-              <!-- ATTACHED BADGE -->
-              <span class="status trending-status">
-                {{ property.status }}
-              </span>
+
+              <!-- SMALL VERTICAL STATUS -->
+              <div class="status-side trending-status">
+
+                <span>
+                  {{ property.status }}
+                </span>
+
+              </div>
 
             </div>
 
 
-            <!-- CONTENT -->
+            <!-- CARD CONTENT -->
             <div class="card-content">
 
-              <!-- META -->
-              <div class="card-meta">
+              <!-- TYPE + LOCATION -->
+              <div class="meta-row">
 
                 <span class="property-type">
                   {{ property.type }}
@@ -268,7 +280,7 @@
 
 
               <!-- SHORT DESCRIPTION -->
-              <p class="card-description">
+              <p class="description">
                 {{ property.description }}
               </p>
 
@@ -278,20 +290,21 @@
 
                 <a
                   href="#"
-                  class="view-property"
+                  class="explore-link"
                 >
                   View Residence
                   <span>↗</span>
                 </a>
 
 
-                <div class="price">
+                <div class="price-right">
 
                   <small>
                     FROM
                   </small>
 
                   <div>
+
                     <span>
                       {{ property.currency }}
                     </span>
@@ -299,6 +312,7 @@
                     <strong>
                       {{ property.price }}
                     </strong>
+
                   </div>
 
                 </div>
@@ -328,53 +342,41 @@
 const hotProperties = [
 
   {
-    name:
-      "Ocean Avenue Residence",
+    name: "Ocean Avenue Residence",
 
-    type:
-      "Luxury Apartment",
+    type: "Luxury Apartment",
 
-    location:
-      "Colombo 03",
+    location: "Colombo 03",
 
     description:
-      "Prime city living with a special limited release opportunity.",
+      "Prime city living offered through a limited-value release.",
 
-    currency:
-      "USD",
+    currency: "USD",
 
-    price:
-      "520K",
+    price: "520K",
 
-    status:
-      "HOT DEAL",
+    status: "HOT DEAL",
 
     image:
-      "src/images/hf_20260724_043544_62932b82-e384-492f-aa3c-8ca7dc82d080.webp"
+      "src/images/mirissa.webp"
   },
 
 
   {
-    name:
-      "Parkside Penthouse",
+    name: "Parkside Penthouse",
 
-    type:
-      "Penthouse Residence",
+    type: "Penthouse Residence",
 
-    location:
-      "Colombo 07",
+    location: "Colombo 07",
 
     description:
-      "An elevated city residence with refined contemporary interiors.",
+      "Refined elevated living in one of Colombo’s most desirable addresses.",
 
-    currency:
-      "USD",
+    currency: "USD",
 
-    price:
-      "780K",
+    price: "780K",
 
-    status:
-      "SPECIAL",
+    status: "SPECIAL",
 
     image:
       "src/images/weligama.webp"
@@ -382,26 +384,20 @@ const hotProperties = [
 
 
   {
-    name:
-      "South Coast Residence",
+    name: "South Coast Residence",
 
-    type:
-      "Coastal Residence",
+    type: "Coastal Residence",
 
-    location:
-      "Galle",
+    location: "Galle",
 
     description:
       "Private coastal living positioned close to the southern shoreline.",
 
-    currency:
-      "USD",
+    currency: "USD",
 
-    price:
-      "465K",
+    price: "465K",
 
-    status:
-      "READY",
+    status: "READY",
 
     image:
       "src/images/Galle.webp"
@@ -409,26 +405,20 @@ const hotProperties = [
 
 
   {
-    name:
-      "Garden Courtyard Home",
+    name: "Garden Courtyard Home",
 
-    type:
-      "Private Residence",
+    type: "Private Residence",
 
-    location:
-      "Thalpe",
+    location: "Thalpe",
 
     description:
-      "A quiet tropical residence designed around privacy and greenery.",
+      "A quiet tropical home created around privacy and natural surroundings.",
 
-    currency:
-      "USD",
+    currency: "USD",
 
-    price:
-      "355K",
+    price: "355K",
 
-    status:
-      "LIMITED",
+    status: "LIMITED",
 
     image:
       "src/images/Thalpe.webp"
@@ -445,26 +435,20 @@ const hotProperties = [
 const trendingProperties = [
 
   {
-    name:
-      "Icon V Thalpe",
+    name: "Icon V Thalpe",
 
-    type:
-      "Beachfront Residence",
+    type: "Beachfront Residence",
 
-    location:
-      "Thalpe, Galle",
+    location: "Thalpe, Galle",
 
     description:
       "A distinctive beachfront address attracting strong buyer interest.",
 
-    currency:
-      "LKR",
+    currency: "LKR",
 
-    price:
-      "24M",
+    price: "24M",
 
-    status:
-      "TRENDING",
+    status: "TRENDING",
 
     image:
       "src/images/Thalpe.webp"
@@ -472,26 +456,20 @@ const trendingProperties = [
 
 
   {
-    name:
-      "City Central Residence",
+    name: "City Central Residence",
 
-    type:
-      "City Residence",
+    type: "City Residence",
 
-    location:
-      "Colombo",
+    location: "Colombo",
 
     description:
-      "Contemporary urban living in one of Colombo’s connected addresses.",
+      "Contemporary urban living in one of Colombo’s connected locations.",
 
-    currency:
-      "USD",
+    currency: "USD",
 
-    price:
-      "340K",
+    price: "340K",
 
-    status:
-      "POPULAR",
+    status: "POPULAR",
 
     image:
       "src/images/Colombo.jpeg"
@@ -499,26 +477,20 @@ const trendingProperties = [
 
 
   {
-    name:
-      "Galle Ocean Residence",
+    name: "Galle Ocean Residence",
 
-    type:
-      "Ocean View Apartment",
+    type: "Ocean View Apartment",
 
-    location:
-      "Galle",
+    location: "Galle",
 
     description:
-      "Modern coastal living with expansive views towards the Indian Ocean.",
+      "Modern coastal living framed by open views towards the Indian Ocean.",
 
-    currency:
-      "USD",
+    currency: "USD",
 
-    price:
-      "490K",
+    price: "490K",
 
-    status:
-      "TRENDING",
+    status: "TRENDING",
 
     image:
       "src/images/Galle.webp"
@@ -526,26 +498,20 @@ const trendingProperties = [
 
 
   {
-    name:
-      "Thalpe Private Collection",
+    name: "Thalpe Private Collection",
 
-    type:
-      "Boutique Residence",
+    type: "Boutique Residence",
 
-    location:
-      "Thalpe",
+    location: "Thalpe",
 
     description:
-      "An intimate residential collection created for relaxed coastal living.",
+      "An intimate residential collection designed for relaxed coastal living.",
 
-    currency:
-      "USD",
+    currency: "USD",
 
-    price:
-      "375K",
+    price: "375K",
 
-    status:
-      "LIMITED",
+    status: "LIMITED",
 
     image:
       "src/images/mirissa.webp"
@@ -565,23 +531,16 @@ const trendingProperties = [
 .opportunities *,
 .opportunities *::before,
 .opportunities *::after {
-  box-sizing:
-    border-box;
+  box-sizing: border-box;
 
-  font-family:
-    sans-serif;
+  font-family: sans-serif;
 }
 
 
 .opportunities {
-  width:
-    100%;
+  width: 100%;
 
-  background:
-    #ffffff;
-
-  color:
-    #111111;
+  color: #111111;
 }
 
 
@@ -590,37 +549,27 @@ const trendingProperties = [
 ========================================================= */
 
 .property-section {
-  width:
-    100%;
+  width: 100%;
 
   padding:
-    clamp(
-      4rem,
-      7vh,
-      6rem
-    )
+    clamp(4rem, 7vh, 6rem)
     0;
 }
 
 
 .hot-section {
-  background:
-    #f4f2ee;
+  background: #f5f4f1;
 }
 
 
 .trending-section {
-  background:
-    #ffffff;
+  background: #ffffff;
 }
 
 
 .shell {
   width:
-    min(
-      94vw,
-      1650px
-    );
+    min(94vw, 1650px);
 
   margin:
     0 auto;
@@ -632,33 +581,20 @@ const trendingProperties = [
 ========================================================= */
 
 .section-head {
-  display:
-    flex;
+  display: flex;
 
-  align-items:
-    flex-end;
+  align-items: flex-end;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
-  gap:
-    3rem;
+  gap: 3rem;
 
-  padding-bottom:
-    1.5rem;
+  padding-bottom: 1.5rem;
 
-  margin-bottom:
-    1.55rem;
+  margin-bottom: 1.5rem;
 
   border-bottom:
-    1px solid
-    #ddd9d2;
-}
-
-
-.heading-copy {
-  max-width:
-    600px;
+    1px solid #dedbd5;
 }
 
 
@@ -668,29 +604,22 @@ const trendingProperties = [
     0
     0.6rem;
 
-  color:
-    #9d7e46;
+  color: #9d7e46;
 
-  font-size:
-    0.62rem;
+  font-size: 0.62rem;
 
-  font-weight:
-    700;
+  font-weight: 700;
 
-  letter-spacing:
-    0.2em;
+  letter-spacing: 0.2em;
 
-  text-transform:
-    uppercase;
+  text-transform: uppercase;
 }
 
 
 .section-head h2 {
-  margin:
-    0;
+  margin: 0;
 
-  color:
-    #111111;
+  color: #111111;
 
   font-size:
     clamp(
@@ -699,28 +628,23 @@ const trendingProperties = [
       3.7rem
     );
 
-  font-weight:
-    400;
+  font-weight: 400;
 
-  line-height:
-    1;
+  line-height: 1;
 
-  letter-spacing:
-    -0.045em;
+  letter-spacing: -0.045em;
 }
 
 
 .section-description {
-  max-width:
-    470px;
+  max-width: 470px;
 
   margin:
     0.75rem
     0
     0;
 
-  color:
-    #858079;
+  color: #858079;
 
   font-size:
     clamp(
@@ -729,8 +653,7 @@ const trendingProperties = [
       0.82rem
     );
 
-  line-height:
-    1.6;
+  line-height: 1.6;
 }
 
 
@@ -739,46 +662,34 @@ const trendingProperties = [
 ========================================================= */
 
 .view-all {
-  display:
-    inline-flex;
+  display: inline-flex;
 
-  align-items:
-    center;
+  align-items: center;
 
-  gap:
-    0.7rem;
+  gap: 0.7rem;
 
-  padding-bottom:
-    0.3rem;
+  padding-bottom: 0.3rem;
 
   border-bottom:
-    1px solid
-    #111111;
+    1px solid #111111;
 
-  color:
-    #111111;
+  color: #111111;
 
-  font-size:
-    0.58rem;
+  font-size: 0.58rem;
 
-  font-weight:
-    700;
+  font-weight: 700;
 
-  letter-spacing:
-    0.08em;
+  letter-spacing: 0.08em;
 
-  text-decoration:
-    none;
+  text-decoration: none;
 
-  text-transform:
-    uppercase;
+  text-transform: uppercase;
 }
 
 
 .view-all span {
   transition:
-    transform
-    0.3s ease;
+    transform 0.3s ease;
 }
 
 
@@ -793,8 +704,7 @@ const trendingProperties = [
 ========================================================= */
 
 .property-grid {
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
     repeat(
@@ -816,24 +726,18 @@ const trendingProperties = [
 ========================================================= */
 
 .property-card {
-  min-width:
-    0;
+  min-width: 0;
 
-  overflow:
-    hidden;
+  overflow: hidden;
 
-  background:
-    #ffffff;
+  background: #ffffff;
 
   border:
-    1px solid
-    #e2dfd9;
+    1px solid #e1ded8;
 
   transition:
-    transform
-    0.4s ease,
-    box-shadow
-    0.4s ease;
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 
@@ -845,12 +749,7 @@ const trendingProperties = [
     0
     18px
     45px
-    rgba(
-      0,
-      0,
-      0,
-      0.07
-    );
+    rgba(0, 0, 0, 0.07);
 }
 
 
@@ -859,11 +758,9 @@ const trendingProperties = [
 ========================================================= */
 
 .image-box {
-  position:
-    relative;
+  position: relative;
 
-  width:
-    100%;
+  width: 100%;
 
   height:
     clamp(
@@ -872,36 +769,24 @@ const trendingProperties = [
       315px
     );
 
-  overflow:
-    hidden;
+  overflow: hidden;
 
-  background:
-    #dddddd;
+  background: #dddddd;
 }
 
 
 .image-box img {
-  width:
-    100%;
+  width: 100%;
 
-  height:
-    100%;
+  height: 100%;
 
-  display:
-    block;
+  display: block;
 
-  object-fit:
-    cover;
+  object-fit: cover;
 
   transition:
     transform
-    0.7s
-    cubic-bezier(
-      0.22,
-      1,
-      0.36,
-      1
-    );
+    0.7s ease;
 }
 
 
@@ -913,76 +798,74 @@ const trendingProperties = [
 
 
 /* =========================================================
-   ATTACHED BADGE
+   SMALL VERTICAL STATUS
 ========================================================= */
 
-.status {
-  position:
-    absolute;
+.status-side {
+  position: absolute;
 
-  z-index:
-    4;
+  z-index: 5;
 
-  top:
-    0;
+  top: 0;
 
-  left:
-    0;
+  left: 0;
 
-  min-width:
-    88px;
+  width:
+    clamp(
+      29px,
+      2vw,
+      34px
+    );
 
   height:
-    31px;
+    clamp(
+      95px,
+      8vw,
+      125px
+    );
 
-  display:
-    inline-flex;
+  display: flex;
 
-  align-items:
-    center;
+  align-items: center;
 
-  justify-content:
-    center;
+  justify-content: center;
 
-  padding:
-    0
-    13px;
+  color: #ffffff;
 
-  background:
-    #111111;
-
-  color:
-    #ffffff;
-
-  border-radius:
-    0
-    0
-    11px
-    0;
-
-  font-size:
-    0.5rem;
-
-  font-weight:
-    700;
-
-  letter-spacing:
-    0.08em;
-
-  text-transform:
-    uppercase;
+  background: #111111;
 }
 
 
-.hot-status {
-  background:
-    #111111;
+.status-side span {
+  display: block;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(
+      0.66rem,
+      0.4vw,
+      0.46rem
+    );
+
+  font-weight: 500;
+
+  letter-spacing: 0.17em;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  writing-mode: vertical-rl;
+
+  text-orientation: mixed;
 }
 
 
 .trending-status {
-  background:
-    #9b7a42;
+  background: #8e713e;
 }
 
 
@@ -1004,30 +887,23 @@ const trendingProperties = [
    META
 ========================================================= */
 
-.card-meta {
-  display:
-    flex;
+.meta-row {
+  display: flex;
 
-  align-items:
-    center;
+  align-items: center;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
-  gap:
-    0.7rem;
+  gap: 0.8rem;
 
-  margin-bottom:
-    0.4rem;
+  margin-bottom: 0.4rem;
 }
 
 
 .property-type {
-  overflow:
-    hidden;
+  overflow: hidden;
 
-  color:
-    #96918a;
+  color: #96918a;
 
   font-size:
     clamp(
@@ -1036,14 +912,11 @@ const trendingProperties = [
       0.62rem
     );
 
-  font-weight:
-    500;
+  font-weight: 500;
 
-  white-space:
-    nowrap;
+  white-space: nowrap;
 
-  text-overflow:
-    ellipsis;
+  text-overflow: ellipsis;
 }
 
 
@@ -1052,45 +925,38 @@ const trendingProperties = [
 ========================================================= */
 
 .location {
-  display:
-    flex;
+  display: flex;
 
-  align-items:
-    center;
+  align-items: center;
 
-  gap:
-    0.28rem;
+  justify-content: flex-end;
 
-  color:
-    #8a6e3b;
+  gap: 0.3rem;
 
-  white-space:
-    nowrap;
+  color: #8a6e3b;
+
+  white-space: nowrap;
 }
 
 
 .location svg {
-  width:
-    12px;
+  width: 12px;
 
-  height:
-    12px;
+  height: 12px;
 
-  flex-shrink:
-    0;
+  flex-shrink: 0;
 }
 
 
 .location span {
   font-size:
     clamp(
-      0.48rem,
-      0.51vw,
-      0.57rem
+      0.49rem,
+      0.52vw,
+      0.58rem
     );
 
-  font-weight:
-    650;
+  font-weight: 650;
 }
 
 
@@ -1099,11 +965,9 @@ const trendingProperties = [
 ========================================================= */
 
 .card-content h3 {
-  margin:
-    0;
+  margin: 0;
 
-  color:
-    #111111;
+  color: #111111;
 
   font-size:
     clamp(
@@ -1112,14 +976,11 @@ const trendingProperties = [
       1.5rem
     );
 
-  font-weight:
-    450;
+  font-weight: 450;
 
-  line-height:
-    1.14;
+  line-height: 1.14;
 
-  letter-spacing:
-    -0.025em;
+  letter-spacing: -0.025em;
 }
 
 
@@ -1127,23 +988,19 @@ const trendingProperties = [
    DESCRIPTION
 ========================================================= */
 
-.card-description {
-  display:
-    -webkit-box;
+.description {
+  display: -webkit-box;
 
-  min-height:
-    2.8em;
+  min-height: 2.8em;
 
-  overflow:
-    hidden;
+  overflow: hidden;
 
   margin:
     0.6rem
     0
     0;
 
-  color:
-    #858079;
+  color: #858079;
 
   font-size:
     clamp(
@@ -1152,17 +1009,11 @@ const trendingProperties = [
       0.66rem
     );
 
-  font-weight:
-    400;
+  line-height: 1.5;
 
-  line-height:
-    1.5;
+  -webkit-line-clamp: 2;
 
-  -webkit-line-clamp:
-    2;
-
-  -webkit-box-orient:
-    vertical;
+  -webkit-box-orient: vertical;
 }
 
 
@@ -1171,53 +1022,40 @@ const trendingProperties = [
 ========================================================= */
 
 .card-footer {
-  display:
-    flex;
+  display: flex;
 
-  align-items:
-    flex-end;
+  align-items: flex-end;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
-  gap:
-    1rem;
+  gap: 1rem;
 
-  margin-top:
-    0.9rem;
+  margin-top: 0.9rem;
 
-  padding-top:
-    0.85rem;
+  padding-top: 0.85rem;
 
   border-top:
-    1px solid
-    #ebe8e2;
+    1px solid #ebe8e2;
 }
 
 
 /* =========================================================
-   VIEW PROPERTY
+   VIEW RESIDENCE
 ========================================================= */
 
-.view-property {
-  display:
-    inline-flex;
+.explore-link {
+  display: inline-flex;
 
-  align-items:
-    center;
+  align-items: center;
 
-  gap:
-    0.55rem;
+  gap: 0.55rem;
 
-  padding-bottom:
-    0.2rem;
+  padding-bottom: 0.2rem;
 
   border-bottom:
-    1px solid
-    #111111;
+    1px solid #111111;
 
-  color:
-    #111111;
+  color: #111111;
 
   font-size:
     clamp(
@@ -1226,28 +1064,23 @@ const trendingProperties = [
       0.58rem
     );
 
-  font-weight:
-    650;
+  font-weight: 650;
 
-  letter-spacing:
-    0.05em;
+  letter-spacing: 0.05em;
 
-  text-decoration:
-    none;
+  text-decoration: none;
 
-  text-transform:
-    uppercase;
+  text-transform: uppercase;
 }
 
 
-.view-property span {
+.explore-link span {
   transition:
-    transform
-    0.3s ease;
+    transform 0.3s ease;
 }
 
 
-.view-property:hover span {
+.explore-link:hover span {
   transform:
     translate(
       3px,
@@ -1257,78 +1090,57 @@ const trendingProperties = [
 
 
 /* =========================================================
-   PRICE
+   PRICE RIGHT
 ========================================================= */
 
-.price {
-  display:
-    flex;
+.price-right {
+  display: flex;
 
-  flex-direction:
-    column;
+  flex-direction: column;
 
-  align-items:
-    flex-end;
+  align-items: flex-end;
 
-  text-align:
-    right;
+  text-align: right;
 }
 
 
-.price > small {
-  display:
-    block;
+.price-right > small {
+  margin-bottom: 0.14rem;
 
-  margin-bottom:
-    0.14rem;
+  color: #aaa49c;
 
-  color:
-    #aaa49c;
+  font-size: 0.37rem;
 
-  font-size:
-    0.37rem;
+  font-weight: 700;
 
-  font-weight:
-    700;
+  letter-spacing: 0.12em;
 
-  letter-spacing:
-    0.12em;
+  text-transform: uppercase;
 }
 
 
-.price > div {
-  display:
-    flex;
+.price-right > div {
+  display: flex;
 
-  align-items:
-    baseline;
+  align-items: baseline;
 
-  justify-content:
-    flex-end;
+  justify-content: flex-end;
 
-  gap:
-    0.24rem;
+  gap: 0.24rem;
 }
 
 
-.price > div span {
-  color:
-    #9b7a42;
+.price-right > div span {
+  color: #9b7a42;
 
-  font-size:
-    0.49rem;
+  font-size: 0.49rem;
 
-  font-weight:
-    700;
-
-  letter-spacing:
-    0.05em;
+  font-weight: 700;
 }
 
 
-.price > div strong {
-  color:
-    #111111;
+.price-right > div strong {
+  color: #111111;
 
   font-size:
     clamp(
@@ -1337,11 +1149,9 @@ const trendingProperties = [
       1.3rem
     );
 
-  font-weight:
-    500;
+  font-weight: 500;
 
-  line-height:
-    1;
+  line-height: 1;
 }
 
 
@@ -1386,26 +1196,21 @@ const trendingProperties = [
 
 
   .shell {
-    width:
-      91vw;
+    width: 91vw;
   }
 
 
   .section-head {
-    flex-direction:
-      column;
+    flex-direction: column;
 
-    align-items:
-      flex-start;
+    align-items: flex-start;
 
-    gap:
-      1rem;
+    gap: 1rem;
   }
 
 
   .property-grid {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
   }
 
 
@@ -1419,21 +1224,17 @@ const trendingProperties = [
   }
 
 
-  .card-meta {
-    align-items:
-      flex-start;
+  .meta-row {
+    align-items: flex-start;
   }
 
 
   .location {
-    max-width:
-      48%;
+    max-width: 48%;
 
-    white-space:
-      normal;
+    white-space: normal;
 
-    text-align:
-      right;
+    text-align: right;
   }
 
 }
