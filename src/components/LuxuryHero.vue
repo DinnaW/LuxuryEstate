@@ -23,7 +23,7 @@
       <div class="header-inner">
 
         <a href="#" class="brand">
-          ODILIYA PREMIER
+          LUXURY ESTATE
         </a>
 
         <nav class="header-nav">
