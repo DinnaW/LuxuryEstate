@@ -1,1000 +1,687 @@
 <template>
-  <section class="smart">
+  <footer class="site-footer">
 
-    <div class="shell grid">
+    <div class="footer-shell">
 
-      <!-- =========================
-           LEFT IMAGE
-      ========================== -->
-      <div class="visual">
+      <!-- ==========================================
+           POPULAR SEARCHES / SEO
+      =========================================== -->
+      <section class="seo-section">
 
-        <img
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=90"
-          alt="Luxury apartment interior"
-        />
-
-        <div class="visual-overlay"></div>
-
-        <div class="visual-content">
+        <div class="seo-head">
 
           <p class="kicker">
-            TAILORED SEARCH
+            DISCOVER MORE
           </p>
 
-          <h2 class="title">
-            Find the place
-           
-            that feels right.
+          <h2>
+            Popular Searches
           </h2>
 
-          <p class="visual-text">
-            Explore residences shaped around your location,
-            lifestyle and preferred way of living.
+          <p class="seo-intro">
+            Explore premium residences, investment opportunities
+            and desirable locations across Sri Lanka.
           </p>
 
+        </div>
+
+
+        <!-- SEARCH COLUMNS -->
+        <div class="seo-grid">
+
+          <!-- APARTMENTS -->
+          <div class="seo-column">
+
+            <h3>Apartments</h3>
+
+            <nav>
+              <a href="#">Luxury apartments in Colombo</a>
+              <a href="#">Apartments in Colombo 03</a>
+              <a href="#">Apartments in Colombo 07</a>
+              <a href="#">Ocean-view apartments</a>
+            </nav>
+
+            <a href="#" class="view-more">
+              View more
+              <span>→</span>
+            </a>
+
+          </div>
+
+
+          <!-- INVESTMENT -->
+          <div class="seo-column">
+
+            <h3>Investment</h3>
+
+            <nav>
+              <a href="#">High-yield residences</a>
+              <a href="#">Rental-ready apartments</a>
+              <a href="#">Long-term investment homes</a>
+              <a href="#">New launch opportunities</a>
+            </nav>
+
+            <a href="#" class="view-more">
+              View more
+              <span>→</span>
+            </a>
+
+          </div>
+
+
+          <!-- LOCATIONS -->
+          <div class="seo-column">
+
+            <h3>Locations</h3>
+
+            <nav>
+              <a href="#">Colombo residences</a>
+              <a href="#">Colombo 03 residences</a>
+              <a href="#">Colombo 07 residences</a>
+              <a href="#">Galle residences</a>
+            </nav>
+
+            <a href="#" class="view-more">
+              View more
+              <span>→</span>
+            </a>
+
+          </div>
+
+
+          <!-- LIFESTYLE -->
+          <div class="seo-column">
+
+            <h3>Lifestyle</h3>
+
+            <nav>
+              <a href="#">Ocean-view living</a>
+              <a href="#">City-centre living</a>
+              <a href="#">Private amenity residences</a>
+              <a href="#">Penthouse living</a>
+            </nav>
+
+            <a href="#" class="view-more">
+              View more
+              <span>→</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==========================================
+           FOOTER
+      =========================================== -->
+      <section class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+          <a href="#" class="brand">
+            LUXURY ESTATE
+          </a>
+
+          <p>
+            Distinctive residences and premium property
+            opportunities across Sri Lanka.
+          </p>
+
+        </div>
+
+
+        <!-- COMPANY -->
+        <div class="footer-column">
+
+          <h4>Company</h4>
+
+          <a href="#">About Us</a>
+          <a href="#">Our Projects</a>
+          <a href="#">Apartments</a>
+          <a href="#">Contact</a>
+
+        </div>
+
+
+        <!-- PROPERTY -->
+        <div class="footer-column">
+
+          <h4>Property</h4>
+
+          <a href="#">Featured Residences</a>
+          <a href="#">Hot Deals</a>
+          <a href="#">Trending Properties</a>
+          <a href="#">Area Guide</a>
+
+        </div>
+
+
+        <!-- CONTACT -->
+        <div class="footer-column">
+
+          <h4>Enquiries</h4>
+
+          <a href="tel:+94112345678">
+            +94 11 234 5678
+          </a>
+
+          <a href="mailto:hello@luxuryestate.lk">
+            hello@luxuryestate.lk
+          </a>
+
+          <span>
+            Colombo, Sri Lanka
+          </span>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==========================================
+           BOTTOM
+      =========================================== -->
+      <div class="footer-bottom">
+
+        <p>
+          © {{ year }} Luxury Estate. All rights reserved.
+        </p>
+
+        <div class="legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
         </div>
 
       </div>
 
-
-      <!-- =========================
-           SEARCH FORM
-      ========================== -->
-      <form
-        class="search-form"
-        @submit.prevent="searchResidences"
-      >
-
-        <p class="kicker form-kicker">
-          START YOUR SEARCH
-        </p>
-
-        <h3>
-          Choose your preferences
-        </h3>
-
-        <p class="form-intro">
-          Tell us what you are looking for and discover
-          residences that match your requirements.
-        </p>
-
-
-        <!-- PROPERTY TYPE -->
-        <div class="tabs">
-
-          <button
-            v-for="t in types"
-            :key="t"
-            type="button"
-            :class="{ on: type === t }"
-            @click="type = t"
-          >
-            {{ t }}
-          </button>
-
-        </div>
-
-
-        <!-- LOCATION -->
-        <label>
-
-          <span>
-            Location
-          </span>
-
-          <select v-model="filters.location">
-
-            <option value="">
-              Select Location
-            </option>
-
-            <option>
-              Colombo
-            </option>
-
-            <option>
-              Colombo 03
-            </option>
-
-            <option>
-              Colombo 07
-            </option>
-
-            <option>
-              Galle
-            </option>
-
-            <option>
-              Thalpe
-            </option>
-
-          </select>
-
-        </label>
-
-
-        <!-- BEDROOMS -->
-        <label>
-
-          <span>
-            Bedrooms
-          </span>
-
-          <select v-model="filters.bedrooms">
-
-            <option value="">
-              Any bedrooms
-            </option>
-
-            <option>
-              1 Bedroom
-            </option>
-
-            <option>
-              2 Bedrooms
-            </option>
-
-            <option>
-              3 Bedrooms
-            </option>
-
-            <option>
-              4+ Bedrooms
-            </option>
-
-          </select>
-
-        </label>
-
-
-        <!-- PRICE -->
-        <label>
-
-          <span>
-            Price Range
-          </span>
-
-          <select v-model="filters.price">
-
-            <option value="">
-              Any price
-            </option>
-
-            <option>
-              USD 150K – 250K
-            </option>
-
-            <option>
-              USD 250K – 500K
-            </option>
-
-            <option>
-              USD 500K – 750K
-            </option>
-
-            <option>
-              USD 750K+
-            </option>
-
-          </select>
-
-        </label>
-
-
-        <!-- BUTTON -->
-        <button
-          class="submit"
-          type="submit"
-        >
-
-          <span>
-            Search residences
-          </span>
-
-          <span class="submit-arrow">
-            →
-          </span>
-
-        </button>
-
-      </form>
-
     </div>
 
-  </section>
+  </footer>
 </template>
 
 
 <script setup>
-import {
-  reactive,
-  ref
-} from "vue";
-
-
-const types = [
-  "Apartment",
-  "Penthouse",
-  "Villa"
-];
-
-
-const type = ref(
-  "Apartment"
-);
-
-
-const filters = reactive({
-
-  location: "",
-
-  bedrooms: "",
-
-  price: ""
-
-});
-
-
-const searchResidences = () => {
-
-  console.log({
-
-    type:
-      type.value,
-
-    location:
-      filters.location,
-
-    bedrooms:
-      filters.bedrooms,
-
-    price:
-      filters.price
-
-  });
-
-};
-
+const year = new Date().getFullYear();
 </script>
 
 
 <style scoped>
 
 /* =========================================
-   SECTION
+   GLOBAL
 ========================================= */
 
-.smart {
+.site-footer,
+.site-footer *,
+.site-footer *::before,
+.site-footer *::after {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.site-footer {
   width: 100%;
-
-  padding:
-    clamp(4.5rem, 8vh, 7rem)
-    0;
-
-  background: #ffffff;
-
+  background: #f5f3ee;
   color: #111111;
 }
 
 
-.shell {
-  width:
-    min(
-      91vw,
-      1550px
-    );
+.footer-shell {
+  width: min(91vw, 1550px);
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   SEO SECTION
+   COMPACT HEIGHT
+========================================= */
+
+.seo-section {
+  width: 100%;
+
+  padding:
+    2.2rem
+    0
+    2rem;
+
+  border-bottom:
+    1px solid rgba(17, 17, 17, 0.12);
+}
+
+
+/* =========================================
+   SEO HEADER
+========================================= */
+
+.seo-head {
+  max-width: 600px;
 
   margin:
-    0
-    auto;
+    0 auto
+    1.5rem;
+
+  text-align: center;
 }
 
-
-/* =========================================
-   GRID
-========================================= */
-
-.grid {
-  display: grid;
-
-  grid-template-columns:
-    1.25fr
-    0.75fr;
-
-  gap:
-    clamp(
-      1rem,
-      1.5vw,
-      1.5rem
-    );
-}
-
-
-/* =========================================
-   LEFT IMAGE
-========================================= */
-
-.visual {
-  min-height:
-    clamp(
-      500px,
-      64vh,
-      720px
-    );
-
-  position: relative;
-
-  overflow: hidden;
-
-  background: #111111;
-}
-
-
-.visual > img {
-  width: 100%;
-  height: 100%;
-
-  position: absolute;
-
-  inset: 0;
-
-  object-fit: cover;
-
-  transition:
-    transform
-    0.8s
-    ease;
-}
-
-
-.visual:hover > img {
-  transform:
-    scale(1.035);
-}
-
-
-/* =========================================
-   IMAGE OVERLAY
-========================================= */
-
-.visual-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  z-index: 1;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(
-        0,
-        0,
-        0,
-        0.03
-      )
-      30%,
-
-      rgba(
-        0,
-        0,
-        0,
-        0.18
-      )
-      58%,
-
-      rgba(
-        0,
-        0,
-        0,
-        0.76
-      )
-      100%
-    );
-}
-
-
-/* =========================================
-   IMAGE CONTENT
-========================================= */
-
-.visual-content {
-  position: absolute;
-
-  z-index: 2;
-
-  left:
-    clamp(
-      1.4rem,
-      2.2vw,
-      2.4rem
-    );
-
-  right:
-    clamp(
-      1.4rem,
-      2.2vw,
-      2.4rem
-    );
-
-  bottom:
-    clamp(
-      1.5rem,
-      3vw,
-      3rem
-    );
-
-  max-width:
-    650px;
-
-  color:
-    #ffffff;
-}
-
-
-/* =========================================
-   KICKER
-========================================= */
 
 .kicker {
   margin: 0;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+  color: #9b7b42;
 
   font-size:
     clamp(
-      0.52rem,
-      0.58vw,
-      0.68rem
+      0.46rem,
+      0.5vw,
+      0.55rem
     );
 
-  font-weight:
-    400;
+  font-weight: 600;
 
-  line-height:
-    1.2;
+  letter-spacing: 0.2em;
 
-  letter-spacing:
-    0.18em;
-
-  text-transform:
-    uppercase;
+  text-transform: uppercase;
 }
 
 
-/* =========================================
-   LEFT TITLE
-========================================= */
-
-.visual-content .title {
+.seo-head h2 {
   margin:
-    clamp(
-      0.55rem,
-      1vh,
-      0.8rem
-    )
-    0;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:
-    clamp(
-      rem,
-      0.4vw,
-      5.4rem
-    );
-
-  font-weight:
-    400;
-
-  line-height:
-    0.94;
-
-  letter-spacing:
-    0.012em;
-
-  color:
-    #ffffff;
-}
-
-
-/* =========================================
-   LEFT DESCRIPTION
-========================================= */
-
-.visual-text {
-  width:
-    min(
-      90%,
-      500px
-    );
-
-  margin:
-    clamp(
-      0.8rem,
-      1.5vh,
-      1rem
-    )
+    0.35rem
     0
     0;
 
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      0.74
-    );
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
   font-size:
-    clamp(
-      0.66rem,
-      0.72vw,
-      0.82rem
-    );
-
-  line-height:
-    1.65;
-}
-
-
-/* =========================================
-   FORM
-========================================= */
-
-.search-form {
-  min-height:
-    clamp(
-      500px,
-      64vh,
-      720px
-    );
-
-  padding:
-    clamp(
-      1.6rem,
-      2.5vw,
-      2.7rem
-    );
-
-  display:
-    flex;
-
-  flex-direction:
-    column;
-
-  justify-content:
-    center;
-
-  background:
-    #f3efe8;
-
-  border:
-    1px
-    solid
-    rgba(
-      0,
-      0,
-      0,
-      0.08
-    );
-}
-
-
-/* =========================================
-   FORM SMALL TITLE
-========================================= */
-
-.form-kicker {
-  color:
-    #777777;
-}
-
-
-/* =========================================
-   FORM TITLE
-========================================= */
-
-.search-form h3 {
-  margin:
-    clamp(
-      0.45rem,
-      0.8vh,
-      0.7rem
-    )
-    0
-    0;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:
-    clamp(
-      1.7rem,
-      2.1vw,
-      4.8rem
-    );
-
-  font-weight: 400;
-
-  line-height: 1.71;
-
-  letter-spacing: 0.01em;
-}
-
-
-/* =========================================
-   FORM DESCRIPTION
-========================================= */
-
-.form-intro {
-  margin:
-    0
-    0
-    clamp(
-      1rem,
-      2vh,
-      1.5rem
-    );
-
-  color:
-    #777777;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:
-    clamp(
-      0.64rem,
-      0.7vw,
-      0.8rem
-    );
-
-  line-height:
-    1.6;
-}
-
-
-/* =========================================
-   PROPERTY TYPE TABS
-========================================= */
-
-.tabs {
-  width: 100%;
-
-  display:
-    flex;
-
-  margin-bottom:
     clamp(
       0.5rem,
-      1vh,
-      0.8rem
+      1.8vw,
+      1.1rem
     );
+
+  font-weight: 100;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.035em;
 }
 
 
-.tabs button {
-  flex:
-    1;
+.seo-intro {
+  max-width: 450px;
 
-  min-height:
-    clamp(
-      2.7rem,
-      3vw,
-      3.1rem
-    );
-
-  padding:
-    0
-    clamp(
-      0.5rem,
-      0.8vw,
-      0.8rem
-    );
-
-  border:
-    1px
-    solid
-    #111111;
-
-  border-right:
+  margin:
+    0.5rem
+    auto
     0;
 
-  background:
-    transparent;
-
-  color:
-    #111111;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+  color: #77736e;
 
   font-size:
     clamp(
       0.58rem,
-      0.64vw,
-      0.72rem
+      0.62vw,
+      0.68rem
     );
 
-  cursor:
-    pointer;
-
-  transition:
-    background
-    0.3s
-    ease,
-    color
-    0.3s
-    ease;
-}
-
-
-.tabs button:last-child {
-  border-right:
-    1px
-    solid
-    #111111;
-}
-
-
-.tabs button:hover,
-.tabs .on {
-  background:
-    #111111;
-
-  color:
-    #ffffff;
+  line-height: 1.5;
 }
 
 
 /* =========================================
-   LABEL
+   SEO GRID
 ========================================= */
 
-.search-form label {
-  display:
-    block;
+.seo-grid {
+  display: grid;
 
-  margin-top:
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap:
     clamp(
-      0.7rem,
-      1.2vh,
-      0.95rem
+      1.5rem,
+      3vw,
+      3.5rem
     );
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
 }
 
 
-.search-form label > span {
-  display:
-    block;
+/* =========================================
+   SEO COLUMNS
+========================================= */
 
-  margin-bottom:
+.seo-column h3 {
+  margin:
+    0
+    0
+    0.5rem;
+
+  padding-bottom: 0.45rem;
+
+  border-bottom:
+    1px solid #d1cdc6;
+
+  color: #55514d;
+
+  font-size:
     clamp(
-      0.3rem,
-      0.5vh,
-      0.4rem
+      0.82rem,
+      0.9vw,
+      1rem
     );
+
+  font-weight: 500;
+}
+
+
+.seo-column nav {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.3rem;
+}
+
+
+.seo-column nav a {
+  width: fit-content;
+
+  color: #252321;
+
+  font-size:
+    clamp(
+      0.55rem,
+      0.59vw,
+      0.65rem
+    );
+
+  font-weight: 400;
+
+  line-height: 1.3;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.seo-column nav a:hover {
+  color: #9b7b42;
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================
+   VIEW MORE
+========================================= */
+
+.view-more {
+  width: fit-content;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.4rem;
+
+  margin-top: 0.55rem;
+
+  padding-bottom: 0.12rem;
+
+  color: #111111;
+
+  border-bottom:
+    1px solid transparent;
+
+  font-size:
+    clamp(
+      0.42rem,
+      0.46vw,
+      0.5rem
+    );
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  transition:
+    border-color 0.25s ease;
+}
+
+
+.view-more:hover {
+  border-color: #111111;
+}
+
+
+/* =========================================
+   FOOTER MAIN
+========================================= */
+
+.footer-main {
+  display: grid;
+
+  grid-template-columns:
+    1.7fr
+    0.7fr
+    0.9fr
+    1fr;
+
+  gap:
+    clamp(
+      1.5rem,
+      3.5vw,
+      4rem
+    );
+
+  padding:
+    1.5rem
+    0;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+  display: inline-block;
+
+  color: #111111;
+
+  font-size:
+    clamp(
+      0.9rem,
+      1.1vw,
+      1.2rem
+    );
+
+  font-weight: 700;
+
+  letter-spacing: 0.06em;
+
+  text-decoration: none;
+}
+
+
+.footer-brand p {
+  max-width: 320px;
+
+  margin:
+    0.5rem
+    0
+    0;
+
+  color: #7c7770;
 
   font-size:
     clamp(
       0.54rem,
-      0.6vw,
-      0.68rem
+      0.58vw,
+      0.64rem
     );
 
-  font-weight:
-    400;
-
-  letter-spacing:
-    0.08em;
-
-  text-transform:
-    uppercase;
+  line-height: 1.45;
 }
 
 
 /* =========================================
-   SELECT
+   FOOTER COLUMNS
 ========================================= */
 
-.search-form select {
-  width:
-    100%;
+.footer-column {
+  display: flex;
 
-  min-height:
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 0.3rem;
+}
+
+
+.footer-column h4 {
+  margin:
+    0
+    0
+    0.2rem;
+
+  color: #99938b;
+
+  font-size: 0.45rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.footer-column a {
+  color: #24211f;
+
+  font-size:
     clamp(
-      2.8rem,
-      3.2vw,
-      3.2rem
+      0.54rem,
+      0.58vw,
+      0.64rem
     );
 
-  padding:
-    0
+  font-weight: 500;
+
+  line-height: 1.35;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.footer-column a:hover {
+  color: #9b7b42;
+
+  transform: translateX(2px);
+}
+
+
+.footer-column span {
+  color: #7d7871;
+
+  font-size:
     clamp(
-      0.8rem,
+      0.53rem,
+      0.57vw,
+      0.63rem
+    );
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.footer-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  padding:
+    0.6rem
+    0
+    0.7rem;
+
+  border-top:
+    1px solid rgba(17, 17, 17, 0.12);
+}
+
+
+.footer-bottom p {
+  margin: 0;
+
+  color: #8a857e;
+
+  font-size:
+    clamp(
+      0.44rem,
+      0.48vw,
+      0.53rem
+    );
+}
+
+
+.legal {
+  display: flex;
+
+  align-items: center;
+
+  gap:
+    clamp(
+      0.6rem,
       1vw,
       1rem
     );
+}
 
-  border:
-    1px
-    solid
-    #cccccc;
 
-  outline:
-    none;
-
-  background:
-    #ffffff;
-
-  color:
-    #555555;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+.legal a {
+  color: #77716b;
 
   font-size:
     clamp(
-      0.62rem,
-      0.68vw,
-      0.76rem
+      0.44rem,
+      0.48vw,
+      0.53rem
     );
 
-  cursor:
-    pointer;
-
-  transition:
-    border-color
-    0.25s
-    ease;
+  text-decoration: none;
 }
 
 
-.search-form select:focus {
-  border-color:
-    #111111;
-}
-
-
-/* =========================================
-   SEARCH BUTTON
-========================================= */
-
-.submit {
-  width:
-    100%;
-
-  min-height:
-    clamp(
-      3.1rem,
-      3.5vw,
-      3.6rem
-    );
-
-  margin-top:
-    clamp(
-      1.2rem,
-      2vh,
-      1.6rem
-    );
-
-  padding:
-    0
-    clamp(
-      1rem,
-      1.4vw,
-      1.4rem
-    );
-
-  display:
-    flex;
-
-  align-items:
-    center;
-
-  justify-content:
-    space-between;
-
-  border:
-    1px
-    solid
-    #111111;
-
-  background:
-    #111111;
-
-  color:
-    #ffffff;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:
-    clamp(
-      0.56rem,
-      0.62vw,
-      0.7rem
-    );
-
-  font-weight:
-    400;
-
-  letter-spacing:
-    0.08em;
-
-  text-transform:
-    uppercase;
-
-  cursor:
-    pointer;
-
-  transition:
-    background
-    0.3s
-    ease,
-    color
-    0.3s
-    ease;
-}
-
-
-.submit-arrow {
-  font-size:
-    clamp(
-      0.9rem,
-      1vw,
-      1.1rem
-    );
-
-  transition:
-    transform
-    0.3s
-    ease;
-}
-
-
-.submit:hover {
-  background:
-    #ffffff;
-
-  color:
-    #111111;
-}
-
-
-.submit:hover
-.submit-arrow {
-  transform:
-    translateX(
-      5px
-    );
+.legal a:hover {
+  color: #111111;
 }
 
 
@@ -1002,35 +689,36 @@ const searchResidences = () => {
    TABLET
 ========================================= */
 
-@media
-(max-width: 900px) {
+@media (max-width: 900px) {
 
-  .grid {
-    grid-template-columns:
-      1fr;
-  }
-
-
-  .visual {
-    min-height:
-      clamp(
-        480px,
-        62vh,
-        650px
-      );
-  }
-
-
-  .search-form {
-    min-height:
-      auto;
-
+  .seo-section {
     padding:
-      clamp(
-        2rem,
-        5vw,
-        3rem
-      );
+      2rem
+      0;
+  }
+
+
+  .seo-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap:
+      1.3rem
+      2rem;
+  }
+
+
+  .footer-main {
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    gap: 1.5rem;
+  }
+
+
+  .footer-brand {
+    grid-column:
+      1 / -1;
   }
 
 }
@@ -1040,78 +728,78 @@ const searchResidences = () => {
    MOBILE
 ========================================= */
 
-@media
-(max-width: 600px) {
+@media (max-width: 560px) {
 
-  .smart {
+  .footer-shell {
+    width: 90vw;
+  }
+
+
+  .seo-section {
     padding:
-      clamp(
-        3.5rem,
-        7vh,
-        5rem
-      )
+      1.8rem
       0;
   }
 
 
-  .shell {
-    width:
-      92vw;
+  .seo-head {
+    margin-bottom: 1.3rem;
+
+    text-align: left;
   }
 
 
-  .visual {
-    min-height:
-      clamp(
-        440px,
-        65vh,
-        580px
-      );
+  .seo-intro {
+    margin-left: 0;
+    margin-right: 0;
   }
 
 
-  .visual-content .title {
-    font-size:
-      clamp(
-        2.7rem,
-        12vw,
-        4rem
-      );
+  .seo-grid {
+    grid-template-columns: 1fr;
+
+    gap: 1.25rem;
   }
 
 
-  .tabs {
-    flex-direction:
-      column;
-  }
+  .footer-main {
+    grid-template-columns:
+      1fr
+      1fr;
 
+    gap:
+      1.2rem
+      1rem;
 
-  .tabs button {
-    border-right:
-      1px
-      solid
-      #111111;
-
-    border-bottom:
+    padding:
+      1.3rem
       0;
   }
 
 
-  .tabs button:last-child {
-    border-bottom:
-      1px
-      solid
-      #111111;
+  .footer-brand {
+    grid-column:
+      1 / -1;
   }
 
 
-  .search-form {
+  .footer-column:last-child {
+    grid-column:
+      1 / -1;
+  }
+
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0.4rem;
+
     padding:
-      clamp(
-        1.4rem,
-        5vw,
-        2rem
-      );
+      0.6rem
+      0
+      0.8rem;
   }
 
 }

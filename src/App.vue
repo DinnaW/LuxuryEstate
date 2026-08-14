@@ -20,6 +20,8 @@ import ProjectGallery from './components/ProjectGallery.vue'
   <FeaturedResidences />
 
   <PlacesSection />
+    <InteriorStory />
+        <ProjectGallery />
 
   <HotDeals />
   
@@ -36,17 +38,13 @@ import ProjectGallery from './components/ProjectGallery.vue'
   <SmartSearch />
   -->
 
-  <InteractiveMap />
+  <!-- <InteractiveMap /> -->
 
-  <InteriorStory />
-    <ProjectGallery />
+
+
 
   <FeaturedDevelopment />
 
- 
-
-
-  
   <PopularSearches />
  
 

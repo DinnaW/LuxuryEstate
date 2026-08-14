@@ -657,7 +657,7 @@ const locations = [
       0.85rem
     );
 
-  border-radius: 100px;
+  border-radius: 3px;
 
   background: #ffffff;
 
@@ -812,8 +812,8 @@ const locations = [
 
   border-radius:
     clamp(
-      0.8rem,
-      1vw,
+      0.1rem,
+      0.6vw,
       1rem
     );
 
