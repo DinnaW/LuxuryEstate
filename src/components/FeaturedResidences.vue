@@ -9,6 +9,7 @@
       <div class="section-head">
 
         <div>
+
           <p class="eyebrow">
             CURATED COLLECTION
           </p>
@@ -21,6 +22,7 @@
             A selected collection of premium residences
             across Sri Lanka’s most desirable addresses.
           </p>
+
         </div>
 
 
@@ -61,9 +63,9 @@
           class="property-card"
         >
 
-          <!-- =====================
+          <!-- =========================
                IMAGE
-          ====================== -->
+          ========================== -->
           <div class="image-box">
 
             <img
@@ -72,34 +74,36 @@
             />
 
 
-            <!-- =====================
-                 SMALL STATUS CARD
-            ====================== -->
-            <div class="status-card">
-
-              <span class="status-small">
-                RESIDENCE
-              </span>
-
-              <strong>
+            <!-- SMALL VERTICAL STATUS -->
+            <div class="status-side">
+              <span>
                 {{ property.status }}
-              </strong>
-
-              <div class="status-divider"></div>
-
-              <small>
-                {{ property.statusNote }}
-              </small>
-
-              <i></i>
-
+              </span>
             </div>
 
+          </div>
 
-            <!-- =====================
-                 IMAGE LOCATION
-            ====================== -->
-            <div class="image-location">
+
+          <!-- =========================
+               CARD CONTENT
+          ========================== -->
+          <div class="card-content">
+
+            <span class="property-type">
+              {{ property.type }}
+            </span>
+
+
+            <!-- PROPERTY NAME -->
+            <h3>
+              {{ property.name }}
+            </h3>
+
+
+            <!-- =========================
+                 LOCATION BELOW TITLE
+            ========================== -->
+            <div class="location-row">
 
               <svg
                 viewBox="0 0 24 24"
@@ -126,27 +130,10 @@
 
             </div>
 
-          </div>
 
-
-          <!-- =====================
-               CONTENT
-          ====================== -->
-          <div class="card-content">
-
-            <span class="property-type">
-              {{ property.type }}
-            </span>
-
-
-            <h3>
-              {{ property.name }}
-            </h3>
-
-
-            <!-- =====================
+            <!-- =========================
                  BUILDER
-            ====================== -->
+            ========================== -->
             <div class="builder">
 
               <span>
@@ -162,20 +149,20 @@
             </div>
 
 
-            <!-- =====================
+            <!-- =========================
                  DESCRIPTION
-            ====================== -->
+            ========================== -->
             <p class="description">
               {{ property.description }}
             </p>
 
 
-            <!-- =====================
+            <!-- =========================
                  DETAILS
-            ====================== -->
+            ========================== -->
             <div class="details-row">
 
-              <!-- BEDROOM -->
+              <!-- BED -->
               <div class="detail">
 
                 <svg
@@ -223,7 +210,7 @@
               </div>
 
 
-              <!-- BATHROOM -->
+              <!-- BATH -->
               <div class="detail">
 
                 <svg
@@ -254,9 +241,9 @@
             </div>
 
 
-            <!-- =====================
+            <!-- =========================
                  FOOTER
-            ====================== -->
+            ========================== -->
             <div class="card-footer">
 
               <a
@@ -324,41 +311,26 @@ const active = ref("All");
 const properties = [
 
   {
-    name:
-      "Icon V Thalpe",
+    name: "Icon V Thalpe",
+    type: "Beachfront Residence",
 
-    type:
-      "Beachfront Residence",
+    location: "Thalpe, Galle",
+    filterLocation: "Thalpe",
 
-    location:
-      "Galle",
-
-    filterLocation:
-      "Thalpe",
-
-    builder:
-      "Odiliya Premier",
+    builder: "Odiliya Premier",
 
     description:
       "Refined beachfront living with ocean views, privacy and contemporary coastal design.",
 
-    bedrooms:
-      "2–3 Bed",
+    bedrooms: "2–3 Bed",
 
-    size:
-      "1,150–1,850 sq.ft",
+    size: "1,150–1,850 sq.ft",
 
-    bathrooms:
-      "2 Bath",
+    bathrooms: "2 Bath",
 
-    price:
-      "24M",
+    price: "24M",
 
-    status:
-      "FEATURED",
-
-    statusNote:
-      "SELECTED",
+    status: "FEATURED",
 
     image:
       "src/images/Thalpe.webp"
@@ -366,41 +338,26 @@ const properties = [
 
 
   {
-    name:
-      "Oceanista Residences",
+    name: "Oceanista Residences",
+    type: "Beachfront Apartments",
 
-    type:
-      "Beachfront Apartments",
+    location: "Panadura",
+    filterLocation: "Colombo",
 
-    location:
-      "Panadura",
-
-    filterLocation:
-      "Colombo",
-
-    builder:
-      "Odiliya Premier",
+    builder: "Odiliya Premier",
 
     description:
       "Contemporary coastal apartments designed around light, comfort and long-term value.",
 
-    bedrooms:
-      "1–3 Bed",
+    bedrooms: "1–3 Bed",
 
-    size:
-      "800–2,400 sq.ft",
+    size: "800–2,400 sq.ft",
 
-    bathrooms:
-      "2 Bath",
+    bathrooms: "2 Bath",
 
-    price:
-      "25M",
+    price: "25M",
 
-    status:
-      "NEW",
-
-    statusNote:
-      "LATEST",
+    status: "NEW",
 
     image:
       "src/images/weligama.webp"
@@ -408,41 +365,26 @@ const properties = [
 
 
   {
-    name:
-      "Platinum 10",
+    name: "Platinum 10",
+    type: "Private Pool Villas",
 
-    type:
-      "Private Pool Villas",
+    location: "Colombo",
+    filterLocation: "Colombo",
 
-    location:
-      "Colombo",
-
-    filterLocation:
-      "Colombo",
-
-    builder:
-      "Odiliya Premier",
+    builder: "Odiliya Premier",
 
     description:
       "Private residences combining generous spaces, refined architecture and city convenience.",
 
-    bedrooms:
-      "4 Bed",
+    bedrooms: "4 Bed",
 
-    size:
-      "3,500+ sq.ft",
+    size: "3,500+ sq.ft",
 
-    bathrooms:
-      "4 Bath",
+    bathrooms: "4 Bath",
 
-    price:
-      "84M",
+    price: "84M",
 
-    status:
-      "LIMITED",
-
-    statusNote:
-      "FEW LEFT",
+    status: "LIMITED",
 
     image:
       "src/images/Colombo.jpeg"
@@ -450,41 +392,26 @@ const properties = [
 
 
   {
-    name:
-      "Ocean House",
+    name: "Ocean House",
+    type: "Luxury Coastal Residence",
 
-    type:
-      "Luxury Coastal Residence",
+    location: "Galle",
+    filterLocation: "Galle",
 
-    location:
-      "Galle",
-
-    filterLocation:
-      "Galle",
-
-    builder:
-      "Odiliya Premier",
+    builder: "Odiliya Premier",
 
     description:
       "A peaceful coastal residence shaped around natural light, privacy and elegant living.",
 
-    bedrooms:
-      "3 Bed",
+    bedrooms: "3 Bed",
 
-    size:
-      "1,750–2,600 sq.ft",
+    size: "1,750–2,600 sq.ft",
 
-    bathrooms:
-      "3 Bath",
+    bathrooms: "3 Bath",
 
-    price:
-      "42M",
+    price: "42M",
 
-    status:
-      "READY",
-
-    statusNote:
-      "AVAILABLE",
+    status: "READY",
 
     image:
       "src/images/nuwaraeliya.webp"
@@ -594,7 +521,7 @@ const shown = computed(() => {
   font-size:
     clamp(
       2.1rem,
-      2.5vw,
+      2.8vw,
       3.7rem
     );
 
@@ -602,7 +529,7 @@ const shown = computed(() => {
 
   line-height: 1;
 
-  letter-spacing: -0.05em;
+  letter-spacing: -0.045em;
 }
 
 
@@ -821,258 +748,81 @@ const shown = computed(() => {
 
 
 /* =========================================================
-   SMALL PREMIUM BLACK STATUS
+   SMALL VERTICAL STATUS
 ========================================================= */
 
-.status-card {
+.status-side {
   position: absolute;
 
-  z-index: 5;
+  z-index: 6;
 
   top: 0;
 
-  right: 0;
+  left: 0;
 
   width:
     clamp(
-      86px,
-      6.2vw,
-      105px
+      30px,
+      2.2vw,
+      36px
     );
 
-  min-height:
+  height:
     clamp(
-      72px,
-      5.8vw,
-      92px
+      155px,
+      9vw,
+      135px
     );
 
   display: flex;
 
-  flex-direction: column;
+  align-items: center;
 
   justify-content: center;
 
-  padding:
-    clamp(
-      0.55rem,
-      0.7vw,
-      0.7rem
-    );
-
-  background: #151515;
+  background:
+    rgba(15, 15, 15, 0.95);
 
   color: #ffffff;
 
-  border-radius:
-    0
-    0
-    0
-    1px;
-
-  box-shadow:
-    0
-    7px
-    20px
-    rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 
   transition:
-    transform 0.35s ease,
-    background 0.35s ease;
+    background 0.3s ease;
+}
+
+
+.status-side span {
+  display: block;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(
+      0.66rem,
+      0.4vw,
+      0.46rem
+    );
+
+  font-weight: 500;
+
+  letter-spacing: 0.17em;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  writing-mode: vertical-rl;
+
+  text-orientation: mixed;
 }
 
 
 .property-card:hover
-.status-card {
-  transform:
-    translateY(-2px);
-
-  background: #0d0d0d;
-}
-
-
-/* SMALL LABEL */
-
-.status-small {
-  margin-bottom: 0.2rem;
-
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      0.5
-    );
-
-  font-size:
-    clamp(
-      0.28rem,
-      0.31vw,
-      0.34rem
-    );
-
-  font-weight: 700;
-
-  letter-spacing: 0.13em;
-
-  text-transform: uppercase;
-}
-
-
-/* STATUS MAIN */
-
-.status-card strong {
-  display: block;
-
-  overflow: hidden;
-
-  color: #ffffff;
-
-  font-size:
-    clamp(
-      0.7rem,
-      0.82vw,
-      0.95rem
-    );
-
-  font-weight: 600;
-
-  line-height: 1;
-
-  letter-spacing: 0.01em;
-
-  white-space: nowrap;
-
-  text-overflow: ellipsis;
-}
-
-
-/* DIVIDER */
-
-.status-divider {
-  width: 17px;
-
-  height: 1px;
-
-  margin:
-    0.38rem
-    0
-    0.28rem;
-
-  background:
-    rgba(
-      255,
-      255,
-      255,
-      0.45
-    );
-}
-
-
-/* SMALL NOTE */
-
-.status-card small {
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      0.43
-    );
-
-  font-size:
-    clamp(
-      0.24rem,
-      0.27vw,
-      0.3rem
-    );
-
-  font-weight: 700;
-
-  letter-spacing: 0.12em;
-
-  text-transform: uppercase;
-}
-
-
-/* CORNER MARK */
-
-.status-card > i {
-  position: absolute;
-
-  right: 6px;
-  bottom: 6px;
-
-  width: 6px;
-  height: 6px;
-
-  border-right:
-    1px solid
-    rgba(255, 255, 255, 0.28);
-
-  border-bottom:
-    1px solid
-    rgba(255, 255, 255, 0.28);
-}
-
-
-/* =========================================================
-   IMAGE LOCATION
-========================================================= */
-
-.image-location {
-  position: absolute;
-
-  z-index: 4;
-
-  left: 0.8rem;
-
-  bottom: 0.8rem;
-
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 0.45rem;
-
-  padding:
-    0.48rem
-    0.7rem;
-
-  background:
-    rgba(
-      20,
-      20,
-      20,
-      0.88
-    );
-
-  color: #ffffff;
-
-  border-radius: 2px;
-}
-
-
-.image-location svg {
-  width: 12px;
-
-  height: 12px;
-}
-
-
-.image-location span {
-  font-size:
-    clamp(
-      0.42rem,
-      0.47vw,
-      0.52rem
-    );
-
-  font-weight: 700;
-
-  letter-spacing: 0.12em;
-
-  text-transform: uppercase;
+.status-side {
+  background: #000000;
 }
 
 
@@ -1129,6 +879,46 @@ const shown = computed(() => {
 
 
 /* =========================================================
+   LOCATION BELOW TITLE
+========================================================= */
+
+.location-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.38rem;
+
+  margin-top: 0.55rem;
+
+  color: #35312d;
+}
+
+
+.location-row svg {
+  width: 13px;
+
+  height: 13px;
+
+  flex-shrink: 0;
+
+  color: #a4864d;
+}
+
+
+.location-row span {
+  font-size:
+    clamp(
+      0.56rem,
+      0.6vw,
+      0.67rem
+    );
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
    BUILDER
 ========================================================= */
 
@@ -1139,7 +929,7 @@ const shown = computed(() => {
 
   gap: 0.4rem;
 
-  margin-top: 0.55rem;
+  margin-top: 0.5rem;
 }
 
 
@@ -1208,6 +998,8 @@ const shown = computed(() => {
       0.68rem
     );
 
+  font-weight: 400;
+
   line-height: 1.5;
 
   -webkit-line-clamp: 2;
@@ -1227,6 +1019,8 @@ const shown = computed(() => {
     0.8fr
     1.35fr
     0.8fr;
+
+  align-items: center;
 
   gap: 0.5rem;
 
@@ -1280,9 +1074,9 @@ const shown = computed(() => {
 
   font-weight: 500;
 
-  white-space: nowrap;
-
   text-overflow: ellipsis;
+
+  white-space: nowrap;
 }
 
 
@@ -1354,7 +1148,7 @@ const shown = computed(() => {
 
 
 /* =========================================================
-   PRICE
+   PRICE RIGHT
 ========================================================= */
 
 .price-right {
@@ -1378,6 +1172,8 @@ const shown = computed(() => {
   font-weight: 700;
 
   letter-spacing: 0.1em;
+
+  text-transform: uppercase;
 }
 
 
@@ -1486,10 +1282,15 @@ const shown = computed(() => {
   }
 
 
-  .status-card {
-    width: 88px;
+  .status-side {
+    width: 30px;
 
-    min-height: 74px;
+    height: 105px;
+  }
+
+
+  .status-side span {
+    font-size: 0.36rem;
   }
 
 
