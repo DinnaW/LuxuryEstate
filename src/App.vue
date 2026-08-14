@@ -22,6 +22,7 @@ import ProjectGallery from './components/ProjectGallery.vue'
   <PlacesSection />
 
   <HotDeals />
+  
 
   <!--
   <PropertyJourney />
@@ -45,8 +46,8 @@ import ProjectGallery from './components/ProjectGallery.vue'
  
 
 
-  <!--
+  
   <PopularSearches />
-  -->
+ 
 
 </template>

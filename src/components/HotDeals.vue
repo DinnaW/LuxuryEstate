@@ -617,14 +617,12 @@ const trendingProperties = [
 
 
 .section-head h2 {
-  margin: 0;
-
-  color: #111111;
+ margin: 0;
 
   font-size:
     clamp(
       2.1rem,
-      2.8vw,
+      2.3vw,
       3.7rem
     );
 

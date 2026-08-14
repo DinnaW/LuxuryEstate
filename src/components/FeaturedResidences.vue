@@ -521,7 +521,7 @@ const shown = computed(() => {
   font-size:
     clamp(
       2.1rem,
-      2.8vw,
+      2.3vw,
       3.7rem
     );
 
@@ -545,7 +545,7 @@ const shown = computed(() => {
 
   font-size:
     clamp(
-      0.68rem,
+      0.48rem,
       0.72vw,
       0.82rem
     );
@@ -629,7 +629,7 @@ const shown = computed(() => {
 
   color: #5e5953;
 
-  font-size: 0.62rem;
+  font-size: 0.67rem;
 
   font-weight: 600;
 

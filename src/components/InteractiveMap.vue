@@ -879,7 +879,7 @@ const locations = [
 
   font-size:
     clamp(
-      0.5rem,
+      0.1rem,
       0.55vw,
       0.62rem
     );
@@ -901,8 +901,8 @@ const locations = [
 
   font-size:
     clamp(
-      1.3rem,
-      1.6vw,
+      0.3rem,
+      1.1vw,
       1.8rem
     );
 
@@ -949,9 +949,9 @@ const locations = [
 
   font-size:
     clamp(
-      1.35rem,
+      0.25rem,
       1.8vw,
-      2rem
+      1rem
     );
 
   font-weight: 400;
@@ -1216,7 +1216,7 @@ const locations = [
 
   font-size:
     clamp(
-      0.45rem,
+      0.65rem,
       0.5vw,
       0.56rem
     );
