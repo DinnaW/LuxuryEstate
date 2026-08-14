@@ -350,7 +350,7 @@ const hotProperties = [
       "HOT DEAL",
 
     image:
-      "src/images/mirissa.webp"
+      "src/images/hf_20260724_043544_62932b82-e384-492f-aa3c-8ca7dc82d080.webp"
   },
 
 
