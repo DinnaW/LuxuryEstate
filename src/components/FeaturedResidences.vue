@@ -3,7 +3,9 @@
 
     <div class="shell">
 
-      <!-- HEADER -->
+      <!-- =========================
+           HEADER
+      ========================== -->
       <div class="section-head">
 
         <div>
@@ -21,6 +23,7 @@
           </p>
         </div>
 
+
         <a href="#" class="view-all">
           View all
           <span>→</span>
@@ -29,7 +32,9 @@
       </div>
 
 
-      <!-- FILTERS -->
+      <!-- =========================
+           FILTERS
+      ========================== -->
       <div class="filters">
 
         <button
@@ -45,7 +50,9 @@
       </div>
 
 
-      <!-- PROPERTY GRID -->
+      <!-- =========================
+           PROPERTY GRID
+      ========================== -->
       <div class="property-grid">
 
         <article
@@ -54,7 +61,9 @@
           class="property-card"
         >
 
-          <!-- IMAGE -->
+          <!-- =====================
+               IMAGE
+          ====================== -->
           <div class="image-box">
 
             <img
@@ -62,60 +71,82 @@
               :alt="property.name"
             />
 
-            <!-- BADGE -->
-            <div class="status">
-              {{ property.status }}
+
+            <!-- =====================
+                 SMALL STATUS CARD
+            ====================== -->
+            <div class="status-card">
+
+              <span class="status-small">
+                RESIDENCE
+              </span>
+
+              <strong>
+                {{ property.status }}
+              </strong>
+
+              <div class="status-divider"></div>
+
+              <small>
+                {{ property.statusNote }}
+              </small>
+
+              <i></i>
+
+            </div>
+
+
+            <!-- =====================
+                 IMAGE LOCATION
+            ====================== -->
+            <div class="image-location">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"
+                />
+
+                <circle
+                  cx="12"
+                  cy="10"
+                  r="2.5"
+                />
+              </svg>
+
+              <span>
+                {{ property.location }}
+              </span>
+
             </div>
 
           </div>
 
 
-          <!-- CONTENT -->
+          <!-- =====================
+               CONTENT
+          ====================== -->
           <div class="card-content">
 
-            <!-- TYPE + LOCATION -->
-            <div class="card-top-meta">
-
-              <span class="property-type">
-                {{ property.type }}
-              </span>
-
-              <div class="location-meta">
-
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.7"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"
-                  />
-                  <circle
-                    cx="12"
-                    cy="10"
-                    r="2.5"
-                  />
-                </svg>
-
-                <span>
-                  {{ property.location }}
-                </span>
-
-              </div>
-
-            </div>
+            <span class="property-type">
+              {{ property.type }}
+            </span>
 
 
-            <!-- NAME -->
             <h3>
               {{ property.name }}
             </h3>
 
 
-            <!-- BUILDER -->
+            <!-- =====================
+                 BUILDER
+            ====================== -->
             <div class="builder">
 
               <span>
@@ -131,16 +162,20 @@
             </div>
 
 
-            <!-- DESCRIPTION -->
-            <p class="property-description">
+            <!-- =====================
+                 DESCRIPTION
+            ====================== -->
+            <p class="description">
               {{ property.description }}
             </p>
 
 
-            <!-- DETAILS -->
+            <!-- =====================
+                 DETAILS
+            ====================== -->
             <div class="details-row">
 
-              <!-- BED -->
+              <!-- BEDROOM -->
               <div class="detail">
 
                 <svg
@@ -188,7 +223,7 @@
               </div>
 
 
-              <!-- BATH -->
+              <!-- BATHROOM -->
               <div class="detail">
 
                 <svg
@@ -200,9 +235,11 @@
                   stroke-linejoin="round"
                 >
                   <path d="M4 13h16" />
+
                   <path
                     d="M5 13v2a5 5 0 0 0 5 5h4a5 5 0 0 0 5-5v-2"
                   />
+
                   <path
                     d="M7 13V7a3 3 0 0 1 6 0"
                   />
@@ -217,7 +254,9 @@
             </div>
 
 
-            <!-- FOOTER -->
+            <!-- =====================
+                 FOOTER
+            ====================== -->
             <div class="card-footer">
 
               <a
@@ -229,17 +268,23 @@
               </a>
 
 
+              <!-- PRICE -->
               <div class="price-right">
 
-                <span class="price-label">
+                <small>
                   STARTING FROM
-                </span>
+                </small>
 
-                <div class="price-value">
-                  <small>LKR</small>
+                <div>
+
+                  <span>
+                    LKR
+                  </span>
+
                   <strong>
                     {{ property.price }}
                   </strong>
+
                 </div>
 
               </div>
@@ -279,21 +324,41 @@ const active = ref("All");
 const properties = [
 
   {
-    name: "Icon V Thalpe",
-    type: "Beachfront Residences",
-    location: "Thalpe, Galle",
-    builder: "Odiliya Premier",
+    name:
+      "Icon V Thalpe",
+
+    type:
+      "Beachfront Residence",
+
+    location:
+      "Galle",
+
+    filterLocation:
+      "Thalpe",
+
+    builder:
+      "Odiliya Premier",
 
     description:
-      "Private beachfront living shaped around ocean views and refined coastal comfort.",
+      "Refined beachfront living with ocean views, privacy and contemporary coastal design.",
 
-    bedrooms: "2–3 Bed",
-    size: "1,150–1,850 sq.ft",
-    bathrooms: "2 Bath",
+    bedrooms:
+      "2–3 Bed",
 
-    price: "24M",
+    size:
+      "1,150–1,850 sq.ft",
 
-    status: "FEATURED",
+    bathrooms:
+      "2 Bath",
+
+    price:
+      "24M",
+
+    status:
+      "FEATURED",
+
+    statusNote:
+      "SELECTED",
 
     image:
       "src/images/Thalpe.webp"
@@ -301,21 +366,41 @@ const properties = [
 
 
   {
-    name: "Oceanista Residences",
-    type: "Beachfront Apartments",
-    location: "Panadura",
-    builder: "Odiliya Premier",
+    name:
+      "Oceanista Residences",
+
+    type:
+      "Beachfront Apartments",
+
+    location:
+      "Panadura",
+
+    filterLocation:
+      "Colombo",
+
+    builder:
+      "Odiliya Premier",
 
     description:
-      "Contemporary coastal residences designed for relaxed living and long-term value.",
+      "Contemporary coastal apartments designed around light, comfort and long-term value.",
 
-    bedrooms: "1–3 Bed",
-    size: "800–2,400 sq.ft",
-    bathrooms: "2 Bath",
+    bedrooms:
+      "1–3 Bed",
 
-    price: "25M",
+    size:
+      "800–2,400 sq.ft",
 
-    status: "NEW",
+    bathrooms:
+      "2 Bath",
+
+    price:
+      "25M",
+
+    status:
+      "NEW",
+
+    statusNote:
+      "LATEST",
 
     image:
       "src/images/weligama.webp"
@@ -323,21 +408,41 @@ const properties = [
 
 
   {
-    name: "Platinum 10",
-    type: "Private Pool Villas",
-    location: "Colombo",
-    builder: "Odiliya Premier",
+    name:
+      "Platinum 10",
+
+    type:
+      "Private Pool Villas",
+
+    location:
+      "Colombo",
+
+    filterLocation:
+      "Colombo",
+
+    builder:
+      "Odiliya Premier",
 
     description:
-      "Generous private residences combining considered architecture, privacy and comfort.",
+      "Private residences combining generous spaces, refined architecture and city convenience.",
 
-    bedrooms: "4 Bed",
-    size: "3,500+ sq.ft",
-    bathrooms: "4 Bath",
+    bedrooms:
+      "4 Bed",
 
-    price: "84M",
+    size:
+      "3,500+ sq.ft",
 
-    status: "LIMITED",
+    bathrooms:
+      "4 Bath",
+
+    price:
+      "84M",
+
+    status:
+      "LIMITED",
+
+    statusNote:
+      "FEW LEFT",
 
     image:
       "src/images/Colombo.jpeg"
@@ -345,21 +450,41 @@ const properties = [
 
 
   {
-    name: "Ocean House",
-    type: "Luxury Coastal Residence",
-    location: "Galle",
-    builder: "Odiliya Premier",
+    name:
+      "Ocean House",
+
+    type:
+      "Luxury Coastal Residence",
+
+    location:
+      "Galle",
+
+    filterLocation:
+      "Galle",
+
+    builder:
+      "Odiliya Premier",
 
     description:
-      "A considered coastal home created around space, natural light and everyday luxury.",
+      "A peaceful coastal residence shaped around natural light, privacy and elegant living.",
 
-    bedrooms: "3 Bed",
-    size: "1,750–2,600 sq.ft",
-    bathrooms: "3 Bath",
+    bedrooms:
+      "3 Bed",
 
-    price: "42M",
+    size:
+      "1,750–2,600 sq.ft",
 
-    status: "READY",
+    bathrooms:
+      "3 Bath",
+
+    price:
+      "42M",
+
+    status:
+      "READY",
+
+    statusNote:
+      "AVAILABLE",
 
     image:
       "src/images/nuwaraeliya.webp"
@@ -376,11 +501,7 @@ const shown = computed(() => {
 
   return properties.filter(
     property =>
-      property.location
-        .toLowerCase()
-        .includes(
-          active.value.toLowerCase()
-        )
+      property.filterLocation === active.value
   );
 
 });
@@ -399,8 +520,7 @@ const shown = computed(() => {
 .featured *::after {
   box-sizing: border-box;
 
-  font-family:
-    sans-serif !important;
+  font-family: sans-serif;
 }
 
 
@@ -415,11 +535,9 @@ const shown = computed(() => {
     clamp(3.8rem, 7vh, 6rem)
     0;
 
-  background:
-    #f5f4f1;
+  background: #f5f4f1;
 
-  color:
-    #111111;
+  color: #111111;
 }
 
 
@@ -437,20 +555,15 @@ const shown = computed(() => {
 ========================================================= */
 
 .section-head {
-  display:
-    flex;
+  display: flex;
 
-  align-items:
-    flex-end;
+  align-items: flex-end;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
-  gap:
-    3rem;
+  gap: 3rem;
 
-  padding-bottom:
-    1.5rem;
+  padding-bottom: 1.5rem;
 
   border-bottom:
     1px solid #dedbd5;
@@ -459,56 +572,49 @@ const shown = computed(() => {
 
 .eyebrow {
   margin:
-    0 0 0.6rem;
+    0
+    0
+    0.6rem;
 
-  color:
-    #9d7e46;
+  color: #9d7e46;
 
-  font-size:
-    0.62rem;
+  font-size: 0.62rem;
 
-  font-weight:
-    700;
+  font-weight: 700;
 
-  letter-spacing:
-    0.2em;
+  letter-spacing: 0.2em;
 
-  text-transform:
-    uppercase;
+  text-transform: uppercase;
 }
 
 
 .section-head h2 {
-  margin:
-    0;
+  margin: 0;
 
   font-size:
     clamp(
       2.1rem,
-      2.8vw,
+      2.5vw,
       3.7rem
     );
 
-  font-weight:
-    400;
+  font-weight: 400;
 
-  line-height:
-    1;
+  line-height: 1;
 
-  letter-spacing:
-    -0.045em;
+  letter-spacing: -0.05em;
 }
 
 
 .section-description {
-  max-width:
-    470px;
+  max-width: 470px;
 
   margin:
-    0.75rem 0 0;
+    0.75rem
+    0
+    0;
 
-  color:
-    #858079;
+  color: #858079;
 
   font-size:
     clamp(
@@ -517,44 +623,37 @@ const shown = computed(() => {
       0.82rem
     );
 
-  line-height:
-    1.6;
+  line-height: 1.6;
 }
 
 
+/* =========================================================
+   VIEW ALL
+========================================================= */
+
 .view-all {
-  display:
-    inline-flex;
+  display: inline-flex;
 
-  align-items:
-    center;
+  align-items: center;
 
-  gap:
-    0.7rem;
+  gap: 0.7rem;
 
-  padding-bottom:
-    0.3rem;
+  padding-bottom: 0.3rem;
 
   border-bottom:
     1px solid #111111;
 
-  color:
-    #111111;
+  color: #111111;
 
-  font-size:
-    0.58rem;
+  font-size: 0.58rem;
 
-  font-weight:
-    700;
+  font-weight: 700;
 
-  letter-spacing:
-    0.08em;
+  letter-spacing: 0.08em;
 
-  text-decoration:
-    none;
+  text-decoration: none;
 
-  text-transform:
-    uppercase;
+  text-transform: uppercase;
 }
 
 
@@ -575,47 +674,39 @@ const shown = computed(() => {
 ========================================================= */
 
 .filters {
-  display:
-    flex;
+  display: flex;
 
-  flex-wrap:
-    wrap;
+  flex-wrap: wrap;
 
-  gap:
-    0.45rem;
+  gap: 0.45rem;
 
   margin:
-    1.5rem 0;
+    1.5rem
+    0;
 }
 
 
 .filters button {
-  min-width:
-    67px;
+  min-width: 67px;
 
   padding:
-    0.5rem 0.95rem;
+    0.5rem
+    0.95rem;
 
   border:
     1px solid #c9c5bd;
 
-  border-radius:
-    5px;
+  border-radius: 50px;
 
-  background:
-    transparent;
+  background: transparent;
 
-  color:
-    #5e5953;
+  color: #5e5953;
 
-  font-size:
-    0.72rem;
+  font-size: 0.62rem;
 
-  font-weight:
-    600;
+  font-weight: 600;
 
-  cursor:
-    pointer;
+  cursor: pointer;
 
   transition:
     0.3s ease;
@@ -624,14 +715,11 @@ const shown = computed(() => {
 
 .filters button:hover,
 .filters button.active {
-  background:
-    #111111;
+  background: #111111;
 
-  border-color:
-    #111111;
+  border-color: #111111;
 
-  color:
-    #ffffff;
+  color: #ffffff;
 }
 
 
@@ -640,8 +728,7 @@ const shown = computed(() => {
 ========================================================= */
 
 .property-grid {
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
     repeat(
@@ -663,21 +750,14 @@ const shown = computed(() => {
 ========================================================= */
 
 .property-card {
-  min-width:
-    0;
+  min-width: 0;
 
-  overflow:
-    hidden;
+  overflow: hidden;
 
-  background:
-    #ffffff;
+  background: #ffffff;
 
   border:
     1px solid #e1ded8;
-
-  box-shadow:
-    0 5px 25px
-    rgba(0, 0, 0, 0.025);
 
   transition:
     transform 0.4s ease,
@@ -690,8 +770,10 @@ const shown = computed(() => {
     translateY(-5px);
 
   box-shadow:
-    0 18px 45px
-    rgba(0, 0, 0, 0.08);
+    0
+    18px
+    45px
+    rgba(0, 0, 0, 0.07);
 }
 
 
@@ -700,11 +782,9 @@ const shown = computed(() => {
 ========================================================= */
 
 .image-box {
-  position:
-    relative;
+  position: relative;
 
-  width:
-    100%;
+  width: 100%;
 
   height:
     clamp(
@@ -713,26 +793,20 @@ const shown = computed(() => {
       340px
     );
 
-  overflow:
-    hidden;
+  overflow: hidden;
 
-  background:
-    #dddddd;
+  background: #dddddd;
 }
 
 
 .image-box img {
-  width:
-    100%;
+  width: 100%;
 
-  height:
-    100%;
+  height: 100%;
 
-  display:
-    block;
+  display: block;
 
-  object-fit:
-    cover;
+  object-fit: cover;
 
   transition:
     transform 0.7s ease;
@@ -747,71 +821,258 @@ const shown = computed(() => {
 
 
 /* =========================================================
-   STATUS BADGE
-   ATTACHED TO IMAGE TOP LEFT
+   SMALL PREMIUM BLACK STATUS
 ========================================================= */
 
-.status {
-  position:
-    absolute;
+.status-card {
+  position: absolute;
 
-  z-index:
-    5;
+  z-index: 5;
 
-  top:
-    0;
+  top: 0;
 
-  left:
-    0;
+  right: 0;
 
-  display:
-    inline-flex;
+  width:
+    clamp(
+      86px,
+      6.2vw,
+      105px
+    );
 
-  align-items:
-    center;
+  min-height:
+    clamp(
+      72px,
+      5.8vw,
+      92px
+    );
 
-  justify-content:
-    center;
+  display: flex;
 
-  min-width:
-    90px;
+  flex-direction: column;
 
-  height:
-    32px;
+  justify-content: center;
 
   padding:
-    0 14px;
+    clamp(
+      0.55rem,
+      0.7vw,
+      0.7rem
+    );
 
-  margin:
-    0;
+  background: #151515;
 
-  background:
-    #111111;
-
-  color:
-    #ffffff;
+  color: #ffffff;
 
   border-radius:
-    0 0 11px 0;
-
-  font-size:
-    0.56rem;
-
-  font-weight:
-    700;
-
-  line-height:
-    1;
-
-  letter-spacing:
-    0.09em;
-
-  text-transform:
-    uppercase;
+    0
+    0
+    0
+    1px;
 
   box-shadow:
-    0 5px 15px
+    0
+    7px
+    20px
     rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+
+.property-card:hover
+.status-card {
+  transform:
+    translateY(-2px);
+
+  background: #0d0d0d;
+}
+
+
+/* SMALL LABEL */
+
+.status-small {
+  margin-bottom: 0.2rem;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.5
+    );
+
+  font-size:
+    clamp(
+      0.28rem,
+      0.31vw,
+      0.34rem
+    );
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+
+/* STATUS MAIN */
+
+.status-card strong {
+  display: block;
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(
+      0.7rem,
+      0.82vw,
+      0.95rem
+    );
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.01em;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+
+/* DIVIDER */
+
+.status-divider {
+  width: 17px;
+
+  height: 1px;
+
+  margin:
+    0.38rem
+    0
+    0.28rem;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.45
+    );
+}
+
+
+/* SMALL NOTE */
+
+.status-card small {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.43
+    );
+
+  font-size:
+    clamp(
+      0.24rem,
+      0.27vw,
+      0.3rem
+    );
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+
+/* CORNER MARK */
+
+.status-card > i {
+  position: absolute;
+
+  right: 6px;
+  bottom: 6px;
+
+  width: 6px;
+  height: 6px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.28);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.28);
+}
+
+
+/* =========================================================
+   IMAGE LOCATION
+========================================================= */
+
+.image-location {
+  position: absolute;
+
+  z-index: 4;
+
+  left: 0.8rem;
+
+  bottom: 0.8rem;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.45rem;
+
+  padding:
+    0.48rem
+    0.7rem;
+
+  background:
+    rgba(
+      20,
+      20,
+      20,
+      0.88
+    );
+
+  color: #ffffff;
+
+  border-radius: 2px;
+}
+
+
+.image-location svg {
+  width: 12px;
+
+  height: 12px;
+}
+
+
+.image-location span {
+  font-size:
+    clamp(
+      0.42rem,
+      0.47vw,
+      0.52rem
+    );
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
 }
 
 
@@ -829,34 +1090,12 @@ const shown = computed(() => {
 }
 
 
-/* =========================================================
-   TOP META
-========================================================= */
-
-.card-top-meta {
-  display:
-    flex;
-
-  align-items:
-    center;
-
-  justify-content:
-    space-between;
-
-  gap:
-    0.8rem;
-
-  margin-bottom:
-    0.35rem;
-}
-
-
 .property-type {
-  display:
-    block;
+  display: block;
 
-  color:
-    #96918a;
+  margin-bottom: 0.35rem;
+
+  color: #96918a;
 
   font-size:
     clamp(
@@ -865,71 +1104,14 @@ const shown = computed(() => {
       0.62rem
     );
 
-  font-weight:
-    500;
+  font-weight: 500;
 }
 
-
-/* =========================================================
-   LOCATION
-========================================================= */
-
-.location-meta {
-  display:
-    flex;
-
-  align-items:
-    center;
-
-  gap:
-    0.3rem;
-
-  color:
-    #8a6e3b;
-
-  white-space:
-    nowrap;
-}
-
-
-.location-meta svg {
-  width:
-    12px;
-
-  height:
-    12px;
-
-  flex-shrink:
-    0;
-}
-
-
-.location-meta span {
-  font-size:
-    clamp(
-      0.48rem,
-      0.52vw,
-      0.58rem
-    );
-
-  font-weight:
-    650;
-
-  letter-spacing:
-    0.02em;
-}
-
-
-/* =========================================================
-   TITLE
-========================================================= */
 
 .card-content h3 {
-  margin:
-    0;
+  margin: 0;
 
-  color:
-    #111111;
+  color: #111111;
 
   font-size:
     clamp(
@@ -938,14 +1120,11 @@ const shown = computed(() => {
       1.6rem
     );
 
-  font-weight:
-    400;
+  font-weight: 400;
 
-  line-height:
-    1.15;
+  line-height: 1.15;
 
-  letter-spacing:
-    -0.025em;
+  letter-spacing: -0.025em;
 }
 
 
@@ -954,59 +1133,42 @@ const shown = computed(() => {
 ========================================================= */
 
 .builder {
-  display:
-    flex;
+  display: flex;
 
-  align-items:
-    center;
+  align-items: center;
 
-  gap:
-    0.4rem;
+  gap: 0.4rem;
 
-  margin-top:
-    0.55rem;
+  margin-top: 0.55rem;
 }
 
 
 .builder span {
-  color:
-    #aaa49c;
+  color: #aaa49c;
 
-  font-size:
-    0.42rem;
+  font-size: 0.42rem;
 
-  font-weight:
-    700;
+  font-weight: 700;
 
-  letter-spacing:
-    0.12em;
+  letter-spacing: 0.12em;
 
-  text-transform:
-    uppercase;
-
-  white-space:
-    nowrap;
+  white-space: nowrap;
 }
 
 
 .builder i {
-  width:
-    15px;
+  width: 15px;
 
-  height:
-    1px;
+  height: 1px;
 
-  display:
-    block;
+  display: block;
 
-  background:
-    #a4864d;
+  background: #a4864d;
 }
 
 
 .builder strong {
-  color:
-    #96773e;
+  color: #96773e;
 
   font-size:
     clamp(
@@ -1015,11 +1177,9 @@ const shown = computed(() => {
       0.67rem
     );
 
-  font-weight:
-    700;
+  font-weight: 700;
 
-  white-space:
-    nowrap;
+  white-space: nowrap;
 }
 
 
@@ -1027,21 +1187,19 @@ const shown = computed(() => {
    DESCRIPTION
 ========================================================= */
 
-.property-description {
-  display:
-    -webkit-box;
+.description {
+  display: -webkit-box;
 
-  min-height:
-    2.8em;
+  min-height: 2.8em;
 
-  overflow:
-    hidden;
+  overflow: hidden;
 
   margin:
-    0.65rem 0 0;
+    0.65rem
+    0
+    0;
 
-  color:
-    #817c75;
+  color: #817c75;
 
   font-size:
     clamp(
@@ -1050,17 +1208,11 @@ const shown = computed(() => {
       0.68rem
     );
 
-  font-weight:
-    400;
+  line-height: 1.5;
 
-  line-height:
-    1.5;
+  -webkit-line-clamp: 2;
 
-  -webkit-line-clamp:
-    2;
-
-  -webkit-box-orient:
-    vertical;
+  -webkit-box-orient: vertical;
 }
 
 
@@ -1069,25 +1221,20 @@ const shown = computed(() => {
 ========================================================= */
 
 .details-row {
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
     0.8fr
     1.35fr
     0.8fr;
 
-  align-items:
-    center;
+  gap: 0.5rem;
 
-  gap:
-    0.5rem;
-
-  margin-top:
-    0.9rem;
+  margin-top: 0.9rem;
 
   padding:
-    0.85rem 0;
+    0.85rem
+    0;
 
   border-top:
     1px solid #ece9e4;
@@ -1098,57 +1245,44 @@ const shown = computed(() => {
 
 
 .detail {
-  min-width:
-    0;
+  min-width: 0;
 
-  display:
-    flex;
+  display: flex;
 
-  align-items:
-    center;
+  align-items: center;
 
-  gap:
-    0.32rem;
+  gap: 0.32rem;
 }
 
 
 .detail svg {
-  width:
-    15px;
+  width: 15px;
 
-  height:
-    15px;
+  height: 15px;
 
-  flex-shrink:
-    0;
+  flex-shrink: 0;
 
-  color:
-    #767069;
+  color: #767069;
 }
 
 
 .detail span {
-  overflow:
-    hidden;
+  overflow: hidden;
 
-  color:
-    #5c5751;
+  color: #5c5751;
 
   font-size:
     clamp(
-      0.72rem,
+      0.52rem,
       0.57vw,
       0.65rem
     );
 
-  font-weight:
-    500;
+  font-weight: 500;
 
-  text-overflow:
-    ellipsis;
+  white-space: nowrap;
 
-  white-space:
-    nowrap;
+  text-overflow: ellipsis;
 }
 
 
@@ -1157,20 +1291,15 @@ const shown = computed(() => {
 ========================================================= */
 
 .card-footer {
-  display:
-    flex;
+  display: flex;
 
-  align-items:
-    flex-end;
+  align-items: flex-end;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
-  gap:
-    1rem;
+  gap: 1rem;
 
-  margin-top:
-    1rem;
+  margin-top: 1rem;
 }
 
 
@@ -1179,23 +1308,18 @@ const shown = computed(() => {
 ========================================================= */
 
 .explore-link {
-  display:
-    inline-flex;
+  display: inline-flex;
 
-  align-items:
-    center;
+  align-items: center;
 
-  gap:
-    0.65rem;
+  gap: 0.65rem;
 
-  padding-bottom:
-    0.22rem;
+  padding-bottom: 0.22rem;
 
   border-bottom:
     1px solid #111111;
 
-  color:
-    #111111;
+  color: #111111;
 
   font-size:
     clamp(
@@ -1204,17 +1328,13 @@ const shown = computed(() => {
       0.6rem
     );
 
-  font-weight:
-    650;
+  font-weight: 650;
 
-  letter-spacing:
-    0.05em;
+  letter-spacing: 0.05em;
 
-  text-decoration:
-    none;
+  text-decoration: none;
 
-  text-transform:
-    uppercase;
+  text-transform: uppercase;
 }
 
 
@@ -1226,92 +1346,61 @@ const shown = computed(() => {
 
 .explore-link:hover span {
   transform:
-    translate(3px, -3px);
+    translate(
+      3px,
+      -3px
+    );
 }
 
 
 /* =========================================================
-   PRICE RIGHT
+   PRICE
 ========================================================= */
 
 .price-right {
-  min-width:
-    108px;
+  display: flex;
 
-  display:
-    flex;
+  flex-direction: column;
 
-  flex-direction:
-    column;
+  align-items: flex-end;
 
-  align-items:
-    flex-end;
-
-  padding-right:
-    0.2rem;
-
-  text-align:
-    right;
+  text-align: right;
 }
 
 
-.price-label {
-  display:
-    block;
+.price-right > small {
+  margin-bottom: 0.14rem;
 
-  margin-bottom:
-    0.16rem;
+  color: #aaa49d;
 
-  color:
-    #aaa49d;
+  font-size: 0.38rem;
 
-  font-size:
-    0.38rem;
+  font-weight: 700;
 
-  font-weight:
-    700;
-
-  letter-spacing:
-    0.11em;
-
-  text-transform:
-    uppercase;
+  letter-spacing: 0.1em;
 }
 
 
-.price-value {
-  display:
-    flex;
+.price-right > div {
+  display: flex;
 
-  align-items:
-    baseline;
+  align-items: baseline;
 
-  justify-content:
-    flex-end;
-
-  gap:
-    0.25rem;
+  gap: 0.23rem;
 }
 
 
-.price-value small {
-  color:
-    #a4864d;
+.price-right > div span {
+  color: #a4864d;
 
-  font-size:
-    0.5rem;
+  font-size: 0.5rem;
 
-  font-weight:
-    700;
-
-  letter-spacing:
-    0.05em;
+  font-weight: 700;
 }
 
 
-.price-value strong {
-  color:
-    #111111;
+.price-right > div strong {
+  color: #111111;
 
   font-size:
     clamp(
@@ -1320,32 +1409,9 @@ const shown = computed(() => {
       1.45rem
     );
 
-  font-weight:
-    500;
+  font-weight: 500;
 
-  line-height:
-    1;
-}
-
-
-.price-right::after {
-  content:
-    "";
-
-  width:
-    28px;
-
-  height:
-    1px;
-
-  display:
-    block;
-
-  margin-top:
-    0.35rem;
-
-  background:
-    #a4864d;
+  line-height: 1;
 }
 
 
@@ -1384,7 +1450,8 @@ const shown = computed(() => {
 
   .featured {
     padding:
-      3rem 0;
+      3rem
+      0;
   }
 
 
@@ -1395,14 +1462,11 @@ const shown = computed(() => {
 
 
   .section-head {
-    flex-direction:
-      column;
+    flex-direction: column;
 
-    align-items:
-      flex-start;
+    align-items: flex-start;
 
-    gap:
-      1rem;
+    gap: 1rem;
   }
 
 
@@ -1415,43 +1479,17 @@ const shown = computed(() => {
   .image-box {
     height:
       clamp(
-        260px,
+        270px,
         75vw,
         370px
       );
   }
 
 
-  .status {
-    min-width:
-      84px;
+  .status-card {
+    width: 88px;
 
-    height:
-      30px;
-
-    padding:
-      0 12px;
-
-    border-radius:
-      0 0 10px 0;
-  }
-
-
-  .card-top-meta {
-    align-items:
-      flex-start;
-  }
-
-
-  .location-meta {
-    max-width:
-      48%;
-
-    white-space:
-      normal;
-
-    text-align:
-      right;
+    min-height: 74px;
   }
 
 
@@ -1461,12 +1499,6 @@ const shown = computed(() => {
         3,
         minmax(0, 1fr)
       );
-  }
-
-
-  .card-footer {
-    align-items:
-      flex-end;
   }
 
 }
