@@ -26,7 +26,7 @@ import ProjectGallery from './components/ProjectGallery.vue'
     <InteriorStory/>
       
 
-    <FeaturedDevelopment/>
+<FeaturedDevelopment/>
         <PopularSearches/>
 
 </template>
