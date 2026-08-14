@@ -24,9 +24,7 @@ import ProjectGallery from './components/ProjectGallery.vue'
     <!-- <SmartSearch/> -->
     <InteractiveMap/>
     <InteriorStory/>
-      
-
     <FeaturedDevelopment/>
-        <PopularSearches/>
+    <PopularSearches/>
 
 </template>
