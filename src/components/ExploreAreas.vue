@@ -10,13 +10,13 @@
 
         <div class="heading-left">
 
-          <p class="eyebrow">
-            EXPLORE SRI LANKA
-          </p>
+   <p class="eyebrow">
+  EXPLORE PROPERTY TYPES
+</p>
 
-          <h2>
-            Places worth calling home.
-          </h2>
+<h2>
+  Find the way you want to live.
+</h2>
 
         </div>
 
@@ -91,7 +91,7 @@
 
 
             <span class="view-link">
-              View Residences
+              Explore Properties
 
               <i>
                 →
@@ -114,13 +114,13 @@
 const areas = [
 
   {
-    name: "Colombo",
+    name: "Apartments",
 
     type:
-      "CITY LIVING",
+      "URBAN LIVING",
 
     description:
-      "Connected urban residences in Sri Lanka’s commercial capital.",
+      "Contemporary apartments designed for connected city living and everyday comfort.",
 
     img:
       "src/images/Colombo.jpeg"
@@ -128,13 +128,13 @@ const areas = [
 
 
   {
-    name: "Galle",
+    name: "Hotels",
 
     type:
-      "COASTAL LIVING",
+      "HOSPITALITY",
 
     description:
-      "Historic character, ocean views and contemporary coastal living.",
+      "Premium hospitality properties positioned in distinctive leisure and city destinations.",
 
     img:
       "src/images/Galle.webp"
@@ -142,13 +142,13 @@ const areas = [
 
 
   {
-    name: "Thalpe",
+    name: "Private Houses",
 
     type:
-      "PRIVATE ESCAPES",
+      "PRIVATE LIVING",
 
     description:
-      "Quiet tropical surroundings shaped for privacy and relaxed living.",
+      "Distinctive private homes shaped around space, privacy and refined modern living.",
 
     img:
       "src/images/mirissa.webp"
@@ -156,13 +156,13 @@ const areas = [
 
 
   {
-    name: "Mirissa",
+    name: "Beachside Homes",
 
     type:
-      "OCEANFRONT LIVING",
+      "COASTAL LIVING",
 
     description:
-      "A relaxed southern address surrounded by sea and tropical landscapes.",
+      "Exceptional residences positioned close to the ocean for relaxed coastal lifestyles.",
 
     img:
       "src/images/Thalpe.webp"
@@ -170,13 +170,13 @@ const areas = [
 
 
   {
-    name: "Nuwara Eliya",
+    name: "Luxury Villas",
 
     type:
-      "HIGHLAND LIVING",
+      "EXCLUSIVE LIVING",
 
     description:
-      "Cool-climate residences surrounded by greenery and timeless scenery.",
+      "Private luxury villas combining generous spaces, premium amenities and distinctive surroundings.",
 
     img:
       "src/images/weligama.webp"
