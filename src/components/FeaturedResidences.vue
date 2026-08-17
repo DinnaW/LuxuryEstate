@@ -34,22 +34,7 @@
       </div>
 
 
-      <!-- =========================
-           FILTERS
-      ========================== -->
-      <div class="filters">
-
-        <button
-          v-for="filter in filters"
-          :key="filter"
-          type="button"
-          :class="{ active: active === filter }"
-          @click="active = filter"
-        >
-          {{ filter }}
-        </button>
-
-      </div>
+ 
 
 
       <!-- =========================
@@ -57,11 +42,11 @@
       ========================== -->
       <div class="property-grid">
 
-        <article
-          v-for="property in shown"
-          :key="property.name"
-          class="property-card"
-        >
+            <article
+        v-for="property in properties"
+        :key="property.name"
+        class="property-card"
+      >
 
           <!-- =========================
                IMAGE
@@ -296,18 +281,6 @@ import {
   computed
 } from "vue";
 
-
-const filters = [
-  "All",
-  "Colombo",
-  "Galle",
-  "Thalpe"
-];
-
-
-const active = ref("All");
-
-
 const properties = [
 
   {
@@ -419,19 +392,6 @@ const properties = [
 
 ];
 
-
-const shown = computed(() => {
-
-  if (active.value === "All") {
-    return properties;
-  }
-
-  return properties.filter(
-    property =>
-      property.filterLocation === active.value
-  );
-
-});
 </script>
 
 
@@ -594,62 +554,6 @@ const shown = computed(() => {
   transform:
     translateX(4px);
 }
-
-
-/* =========================================================
-   FILTERS
-========================================================= */
-
-.filters {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 0.45rem;
-
-  margin:
-    1.5rem
-    0;
-}
-
-
-.filters button {
-  min-width: 67px;
-
-  padding:
-    0.5rem
-    0.95rem;
-
-  border:
-    1px solid #c9c5bd;
-
-  border-radius: 50px;
-
-  background: transparent;
-
-  color: #5e5953;
-
-  font-size: 0.67rem;
-
-  font-weight: 600;
-
-  cursor: pointer;
-
-  transition:
-    0.3s ease;
-}
-
-
-.filters button:hover,
-.filters button.active {
-  background: #111111;
-
-  border-color: #111111;
-
-  color: #ffffff;
-}
-
-
 /* =========================================================
    GRID
 ========================================================= */
@@ -1196,18 +1100,12 @@ const shown = computed(() => {
 
 
 .price-right > div strong {
-  color: #111111;
-
   font-size:
     clamp(
-      1.15rem,
-      1.3vw,
-      1.45rem
+      1.4rem,
+      1.7vw,
+      1.9rem
     );
-
-  font-weight: 500;
-
-  line-height: 1;
 }
 
 

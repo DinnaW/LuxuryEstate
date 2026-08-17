@@ -4,7 +4,7 @@
     <!-- Background Image -->
     <img
       class="dev-bg"
-      src="/Users/naduniameesha/LuxuryEstate/src/images/Thalpe.webp"
+      :src="thalpeImage"
       alt="Featured luxury apartment development"
     />
 
@@ -45,6 +45,12 @@
 
   </section>
 </template>
+
+
+<script setup>
+import thalpeImage from "../images/Thalpe.webp";
+</script>
+
 
 <style scoped>
 .dev {
@@ -126,8 +132,8 @@
 .kicker {
   margin: 0 0 clamp(18px, 2vh, 28px);
 
-  font-family:
-    sans-serif;
+  font-family: sans-serif;
+
   font-size: clamp(4px, 0.5vw, 13px);
 
   font-weight: 400;
@@ -147,8 +153,7 @@
 .title {
   margin: 0;
 
-  font-family:
-    sans-serif;
+  font-family: sans-serif;
 
   font-size: clamp(1.5rem, 2.9vw, 4rem);
 
@@ -174,8 +179,7 @@
     0
     0;
 
-font-family:
-    sans-serif;
+  font-family: sans-serif;
 
   font-size: clamp(13px, 0.82vw, 16px);
 
@@ -206,8 +210,7 @@ font-family:
 .facts span {
   position: relative;
 
- font-family:
-    sans-serif;
+  font-family: sans-serif;
 
   font-size: clamp(11px, 0.7vw, 14px);
 
