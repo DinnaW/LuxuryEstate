@@ -18,7 +18,7 @@
 
         <p class="description">
           A curated visual collection of refined interiors,
-          contemporary architecture and considered living spaces.
+          contemporary architecture, and captivating lifestyle moments,
         </p>
 
       </div>
@@ -27,7 +27,7 @@
 
 
     <!-- =========================
-         IMAGE ONLY MARQUEE
+         IMAGE MARQUEE
     ========================== -->
     <div class="marquee">
 
@@ -68,9 +68,7 @@
 
 
 <script setup>
-
 const images = [
-
   "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=90",
 
   "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=90",
@@ -82,13 +80,24 @@ const images = [
   "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=90",
 
   "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=90"
-
 ];
-
 </script>
 
 
 <style scoped>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.gallery,
+.gallery *,
+.gallery *::before,
+.gallery *::after {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
 
 /* =========================================================
    SECTION
@@ -108,6 +117,10 @@ const images = [
   overflow: hidden;
 }
 
+
+/* =========================================================
+   CONTAINER
+========================================================= */
 
 .shell {
   width: min(91vw, 1550px);
@@ -131,23 +144,29 @@ const images = [
 }
 
 
+/* =========================================================
+   KICKER
+   SAME SIZE AS FEATURED RESIDENCES
+========================================================= */
+
 .kicker {
-  margin: 0;
+  margin:
+    0
+    0
+    9px;
 
-  color:
-    rgba(255, 255, 255, 0.48);
-
-  font-family:
-    sans-serif;
+  color: #a4864d;
 
   font-size:
     clamp(
-      0.52rem,
-      0.58vw,
-      0.68rem
+      10px,
+      0.68vw,
+      12px
     );
 
-  font-weight: 400;
+  font-weight: 700;
+
+  line-height: 1.4;
 
   letter-spacing: 0.18em;
 
@@ -155,53 +174,55 @@ const images = [
 }
 
 
+/* =========================================================
+   TITLE
+   SAME SIZE AS FEATURED RESIDENCES
+========================================================= */
+
 .title {
-    margin:
-    clamp(
-      0.45rem,
-      0.8vh,
-      0.7rem
-    )
-    0
-    0;
+  margin: 0;
 
-font-family:
-    sans-serif;
-
+  color: #ffffff;
 
   font-size:
     clamp(
-      1.7rem,
-      2.1vw,
-      4.8rem
+      32px,
+      2.35vw,
+      44px
     );
 
   font-weight: 400;
 
-  line-height: 1.76;
+  line-height: 1.15;
 
-  letter-spacing: 0.01em;
+  letter-spacing: -0.035em;
 }
 
 
-.description {
-  max-width: 650px;
+/* =========================================================
+   DESCRIPTION
+   SAME SIZE AS FEATURED RESIDENCES
+========================================================= */
 
-  margin: 0 auto;
+.description {
+  max-width: 560px;
+
+  margin:
+    13px
+    auto
+    0;
 
   color:
-    rgba(255, 255, 255, 0.52);
-
-  font-family:
-    sans-serif;
-
+    rgba(255, 255, 255, 0.58);
 
   font-size:
     clamp(
-      0.68rem,
-      0.76vw,
-      0.86rem
+      13px,
+      0.82vw,
+      15px
     );
+
+  font-weight: 400;
 
   line-height: 1.7;
 }
@@ -244,7 +265,9 @@ font-family:
 }
 
 
-/* PAUSE WHEN HOVERING */
+/* =========================================================
+   PAUSE ON HOVER
+========================================================= */
 
 .marquee:hover .marquee-track {
   animation-play-state: paused;
@@ -252,7 +275,7 @@ font-family:
 
 
 /* =========================================================
-   ANIMATION
+   MARQUEE ANIMATION
 ========================================================= */
 
 @keyframes galleryScroll {
@@ -270,24 +293,38 @@ font-family:
 
 /* =========================================================
    IMAGE CARDS
-   NO TEXT INSIDE
 ========================================================= */
 
 .gallery-item {
-  width: clamp(300px, 29vw, 500px);
+  width:
+    clamp(
+      300px,
+      29vw,
+      500px
+    );
 
-  /* SMALLER IMAGE HEIGHT */
-  height: clamp(260px, 34vh, 380px);
+  height:
+    clamp(
+      260px,
+      34vh,
+      380px
+    );
 
   flex-shrink: 0;
+
   margin: 0;
+
   position: relative;
+
   overflow: hidden;
+
   background: #161616;
 }
 
 
-/* Different widths like reference */
+/* =========================================================
+   DIFFERENT IMAGE WIDTHS
+========================================================= */
 
 .gallery-item:nth-child(5n + 1) {
   width:
@@ -352,17 +389,23 @@ font-family:
   object-fit: cover;
 
   transition:
-    transform 0.8s cubic-bezier(
+    transform
+    0.8s
+    cubic-bezier(
       0.22,
       1,
       0.36,
       1
     ),
-    filter 0.6s ease;
+    filter
+    0.6s
+    ease;
 }
 
 
-/* IMAGE HOVER ONLY */
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
 
 .gallery-item:hover img {
   transform: scale(1.055);
@@ -434,6 +477,28 @@ font-family:
   }
 
 
+  .head {
+    max-width: 700px;
+  }
+
+
+  .title {
+    font-size:
+      clamp(
+        30px,
+        4.5vw,
+        38px
+      );
+  }
+
+
+  .description {
+    max-width: 520px;
+
+    font-size: 13px;
+  }
+
+
   .gallery-item,
   .gallery-item:nth-child(5n + 1),
   .gallery-item:nth-child(5n + 2),
@@ -472,27 +537,50 @@ font-family:
   }
 
 
-  .head {
+  .shell {
     width: 90vw;
+  }
+
+
+  .head {
+    width: 100%;
 
     margin-bottom: 2rem;
   }
 
 
-  .title {
-    font-size:
-      clamp(
-        2.3rem,
-        10vw,
-        3.3rem
-      );
+  /* FEATURED RESIDENCES MOBILE KICKER */
+
+  .kicker {
+    margin-bottom: 8px;
+
+    font-size: 10px;
   }
 
+
+  /* FEATURED RESIDENCES MOBILE TITLE */
+
+  .title {
+    font-size: 30px;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+  }
+
+
+  /* FEATURED RESIDENCES MOBILE DESCRIPTION */
 
   .description {
     width: 92%;
 
-    font-size: 0.72rem;
+    max-width: 430px;
+
+    margin-top: 12px;
+
+    font-size: 13px;
+
+    line-height: 1.65;
   }
 
 

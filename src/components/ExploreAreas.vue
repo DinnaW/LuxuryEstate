@@ -253,40 +253,48 @@ const areas = [
 
 
 .eyebrow {
-  margin: 0;
+  margin:
+    0
+    0
+    9px;
 
-  color: #9f8049;
+  color: #9d7e46;
 
   font-size:
     clamp(
-      0.5rem,
-      0.55vw,
-      0.62rem
+      10px,
+      0.68vw,
+      12px
     );
 
   font-weight: 700;
 
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
+
+  line-height: 1.4;
 
   text-transform: uppercase;
 }
 
 
 .heading-left h2 {
-   margin: 0;
+ 
+  margin: 0;
+
+  color: #ffffff;
 
   font-size:
     clamp(
-      2.1rem,
-      2.3vw,
-      3.7rem
+      32px,
+      2.35vw,
+      44px
     );
 
   font-weight: 400;
 
-  line-height: 1.6;
+  line-height: 1.15;
 
-  letter-spacing: -0.045em;
+  letter-spacing: -0.035em;
 }
 
 /* =========================================================
@@ -311,14 +319,16 @@ const areas = [
       0.52
     );
 
-  font-size:
+   font-size:
     clamp(
-      0.68rem,
-      0.74vw,
-      0.82rem
+      13px,
+      0.82vw,
+      15px
     );
 
-  line-height: 1.7;
+
+
+  line-height: 1.65;
 }
 
 
@@ -347,11 +357,7 @@ const areas = [
   color: #ffffff;
 
   font-size:
-    clamp(
-      0.48rem,
-      0.52vw,
-      0.58rem
-    );
+    clamp(10px, 0.44vw, 9px);
 
   font-weight: 700;
 
@@ -585,11 +591,7 @@ const areas = [
     );
 
   font-size:
-    clamp(
-      0.48rem,
-      0.52vw,
-      0.58rem
-    );
+    clamp(8px, 0.44vw, 9px);
 
   font-weight: 600;
 
@@ -664,11 +666,7 @@ const areas = [
     );
 
   font-size:
-    clamp(
-      0.38rem,
-      0.42vw,
-      0.47rem
-    );
+    clamp(9px, 0.40vw, 8px);
 
   font-weight: 700;
 
@@ -689,9 +687,9 @@ const areas = [
 
   font-size:
     clamp(
-      0.15rem,
-      1.51vw,
-      2.15rem
+      20px,
+      2.35vw,
+      25px
     );
 
   font-weight: 450;
@@ -751,11 +749,7 @@ const areas = [
     );
 
   font-size:
-    clamp(
-      0.52rem,
-      0.57vw,
-      0.64rem
-    );
+    clamp(13px, 0.54vw, 11px);
 
   line-height: 1.5;
 }
@@ -788,11 +782,7 @@ const areas = [
   color: #ffffff;
 
   font-size:
-    clamp(
-      0.45rem,
-      0.49vw,
-      0.54rem
-    );
+    clamp(7px, 0.43vw, 9px);
 
   font-weight: 700;
 
@@ -883,6 +873,30 @@ const areas = [
 
 @media (max-width: 560px) {
 
+  .heading-right p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .heading-right a {
+    font-size: 9px;
+  }
+
+  .location-type {
+    font-size: 8px;
+  }
+
+  .location-bottom p {
+    font-size: 10px;
+    line-height: 1.55;
+  }
+
+  .view-link {
+    font-size: 9px;
+  }
+
+
+
   .places {
     padding-top:
       3rem;
@@ -897,11 +911,7 @@ const areas = [
 
   .heading-left h2 {
     font-size:
-      clamp(
-        2.2rem,
-        10vw,
-        3.1rem
-      );
+      clamp(25px, 7.5vw, 32px);
   }
 
 
@@ -923,7 +933,7 @@ const areas = [
 
   .location-copy h3 {
     font-size:
-      1.7rem;
+      21px;
   }
 
 }

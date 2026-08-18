@@ -1,45 +1,129 @@
 <template>
-  <section class="dev">
+  <section class="featured-banner">
 
-    <!-- Background Image -->
-    <img
-      class="dev-bg"
-      :src="thalpeImage"
-      alt="Featured luxury apartment development"
-    />
+    <!-- LEFT CONTENT -->
+    <div class="banner-content">
 
-    <!-- Dark Gradient -->
-    <div class="shade"></div>
+      <div class="banner-top">
 
-    <!-- Content -->
-    <div class="copy">
-
-      <p class="kicker">
-        FEATURED DEVELOPMENT
-      </p>
-
-      <h2 class="title">
-        Architecture made<br />
-        for a lasting<br />
-        impression.
-      </h2>
-
-      <p class="description">
-        A contemporary residence combining intelligent layouts,
-        panoramic views, private amenities and effortless access
-        to the city.
-      </p>
-
-      <div class="facts">
-        <span>3–4 Bedrooms</span>
-        <span>2,200–3,600 sq.ft</span>
-        <span>Private amenities</span>
+        <p class="kicker">
+          FEATURED DEVELOPMENT
+        </p>
+        
       </div>
 
-      <a href="#" class="discover-btn">
-        <span>Discover the development</span>
-        <span class="arrow">→</span>
-      </a>
+
+      <h2 class="title">
+        Architecture
+        <br />
+        with a lasting
+        <br />
+        identity.
+      </h2>
+
+
+      <p class="description">
+        A contemporary residence shaped around intelligent layouts,
+        natural light and refined private amenities. Designed for
+        calm, connected and enduring modern living.
+      </p>
+
+
+      <!-- DETAILS -->
+      <div class="property-details">
+
+        <div class="detail-item">
+          <span>Bedrooms</span>
+          <strong>3–4</strong>
+        </div>
+
+
+        <div class="detail-item">
+          <span>Residence Size</span>
+          <strong>2,200–3,600</strong>
+          <small>sq.ft</small>
+        </div>
+
+
+        <div class="detail-item">
+          <span>Location</span>
+          <strong>Thalpe</strong>
+          <small>Galle</small>
+        </div>
+
+      </div>
+
+
+      <!-- BOTTOM -->
+      <div class="banner-bottom">
+
+        <a href="#" class="discover-btn">
+
+          <span>
+            Discover Development
+          </span>
+
+          <span class="arrow">
+            →
+          </span>
+
+        </a>
+
+
+        <div class="starting-price">
+
+          <span>
+            Starting From
+          </span>
+
+          <div>
+            <small>LKR</small>
+            <strong>84M</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT IMAGE -->
+    <div class="banner-image">
+
+      <img
+        :src="thalpeImage"
+        alt="Featured luxury development"
+      />
+
+      <div class="image-overlay"></div>
+
+
+      <div class="image-top">
+
+        <span class="image-number">
+          01
+        </span>
+
+        <span class="image-location">
+          THALPE · GALLE
+        </span>
+
+      </div>
+
+
+      <div class="image-caption">
+
+        <span>
+          COASTAL LIVING
+        </span>
+
+        <p>
+          Contemporary architecture shaped around privacy,
+          natural light and connection to place.
+        </p>
+
+      </div>
 
     </div>
 
@@ -53,383 +137,864 @@ import thalpeImage from "../images/Thalpe.webp";
 
 
 <style scoped>
-.dev {
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.featured-banner,
+.featured-banner *,
+.featured-banner *::before,
+.featured-banner *::after {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+/* =========================================================
+   FULL WIDTH BANNER
+========================================================= */
+
+.featured-banner {
   width: 100%;
-  height: clamp(100px, 62vh, 940px);
-  position: relative;
+
+  min-height:
+    clamp(
+      470px,
+      56vh,
+      620px
+    );
+
+  display: grid;
+
+  grid-template-columns:
+    0.9fr
+    1.1fr;
+
+  background: #111111;
+
   overflow: hidden;
-  background: #0a0a0a;
+
   color: #ffffff;
 }
 
 
-/* =========================
-   BACKGROUND IMAGE
-========================= */
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
 
-.dev-bg {
+.banner-content {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    clamp(
+      2.5rem,
+      4.5vw,
+      5.5rem
+    )
+    clamp(
+      2rem,
+      5vw,
+      6.5rem
+    );
+
+  background: #111111;
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.banner-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  margin-bottom:
+    clamp(
+      1rem,
+      1.8vh,
+      1.5rem
+    );
+}
+
+
+.kicker {
+  margin: 0;
+
+  color: #b99c68;
+
+  font-size:
+    clamp(
+      0.45rem,
+      0.5vw,
+      0.58rem
+    );
+
+  font-weight: 650;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+
+.project-status {
+  padding:
+    0.42rem
+    0.68rem;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.14);
+
+  color:
+    rgba(255, 255, 255, 0.55);
+
+  font-size:
+    clamp(
+      0.36rem,
+      0.4vw,
+      0.46rem
+    );
+
+  font-weight: 600;
+
+  letter-spacing: 0.09em;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.title {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #f6f5f2;
+
+  font-size:
+    clamp(
+      2rem,
+      3vw,
+      4rem
+    );
+
+  font-weight: 300;
+
+  line-height: 1.12;
+
+  letter-spacing: -0.045em;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.description {
+  max-width: 540px;
+
+  margin:
+    clamp(
+      1.2rem,
+      2.1vh,
+      1.7rem
+    )
+    0
+    0;
+
+  color:
+    rgba(255, 255, 255, 0.53);
+
+  font-size:
+    clamp(
+      0.65rem,
+      0.72vw,
+      0.82rem
+    );
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.property-details {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  margin-top:
+    clamp(
+      1.5rem,
+      2.6vh,
+      2.2rem
+    );
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.detail-item {
+  min-width: 0;
+
+  padding:
+    clamp(
+      1rem,
+      1.4vw,
+      1.25rem
+    );
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.11);
+}
+
+
+.detail-item:first-child {
+  padding-left: 0;
+}
+
+
+.detail-item:last-child {
+  border-right: none;
+}
+
+
+.detail-item > span {
+  display: block;
+
+  margin-bottom: 0.4rem;
+
+  color:
+    rgba(255, 255, 255, 0.35);
+
+  font-size:
+    clamp(
+      0.37rem,
+      0.42vw,
+      0.48rem
+    );
+
+  font-weight: 650;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+
+.detail-item strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(
+      1rem,
+      1.25vw,
+      1.5rem
+    );
+
+  font-weight: 400;
+}
+
+
+.detail-item small {
+  display: block;
+
+  margin-top: 0.2rem;
+
+  color:
+    rgba(255, 255, 255, 0.38);
+
+  font-size:
+    clamp(
+      0.37rem,
+      0.41vw,
+      0.47rem
+    );
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.06em;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.banner-bottom {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  margin-top:
+    clamp(
+      1.5rem,
+      2.6vh,
+      2rem
+    );
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.discover-btn {
+  width:
+    clamp(
+      210px,
+      17vw,
+      270px
+    );
+
+  min-height: 52px;
+
+  padding:
+    0
+    1.2rem;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  background: #f4f2ee;
+
+  color: #111111;
+
+  border:
+    1px solid #f4f2ee;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  font-size:
+    clamp(
+      0.43rem,
+      0.48vw,
+      0.55rem
+    );
+
+  font-weight: 650;
+
+  letter-spacing: 0.08em;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.discover-btn:hover {
+  background: transparent;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+.arrow {
+  font-size: 1rem;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.discover-btn:hover
+.arrow {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.starting-price {
+  text-align: right;
+}
+
+
+.starting-price > span {
+  display: block;
+
+  margin-bottom: 0.3rem;
+
+  color:
+    rgba(255, 255, 255, 0.35);
+
+  font-size:
+    clamp(
+      0.36rem,
+      0.4vw,
+      0.46rem
+    );
+
+  font-weight: 650;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+
+.starting-price > div {
+  display: flex;
+
+  align-items: baseline;
+
+  justify-content: flex-end;
+
+  gap: 0.35rem;
+}
+
+
+.starting-price small {
+  color: #b99c68;
+
+  font-size:
+    clamp(
+      0.46rem,
+      0.52vw,
+      0.6rem
+    );
+
+  font-weight: 700;
+}
+
+
+.starting-price strong {
+  color: #ffffff;
+
+  font-size:
+    clamp(
+      1.6rem,
+      2.15vw,
+      2.7rem
+    );
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+}
+
+
+/* =========================================================
+   RIGHT IMAGE
+========================================================= */
+
+.banner-image {
+  position: relative;
+
+  min-width: 0;
+
+  min-height: 100%;
+
+  overflow: hidden;
+
+  background: #222222;
+}
+
+
+.banner-image > img {
   position: absolute;
+
   inset: 0;
 
   width: 100%;
   height: 100%;
 
   object-fit: cover;
+
   object-position: center;
 
-  transition: transform 1.2s ease;
+  transition:
+    transform
+    1s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
 }
 
-.dev:hover .dev-bg {
+
+.featured-banner:hover
+.banner-image > img {
   transform: scale(1.025);
 }
 
 
-/* =========================
-   DARK OVERLAY
-========================= */
+/* =========================================================
+   OVERLAY
+========================================================= */
 
-.shade {
+.image-overlay {
   position: absolute;
+
   inset: 0;
+
+  z-index: 1;
 
   background:
     linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.88) 0%,
-      rgba(0, 0, 0, 0.76) 25%,
-      rgba(0, 0, 0, 0.46) 53%,
-      rgba(0, 0, 0, 0.12) 78%,
-      rgba(0, 0, 0, 0.04) 100%
+      180deg,
+      rgba(0, 0, 0, 0.13)
+      0%,
+      rgba(0, 0, 0, 0.01)
+      50%,
+      rgba(0, 0, 0, 0.52)
+      100%
     );
 
-  z-index: 1;
+  pointer-events: none;
 }
 
 
-/* =========================
-   CONTENT
-========================= */
+/* =========================================================
+   IMAGE TOP
+========================================================= */
 
-.copy {
+.image-top {
   position: absolute;
 
-  left: clamp(30px, 5.5vw, 110px);
-  top: 50%;
+  z-index: 3;
 
-  transform: translateY(-50%);
+  top:
+    clamp(
+      1.4rem,
+      2vw,
+      2rem
+    );
 
-  width: min(720px, 50vw);
+  left:
+    clamp(
+      1.5rem,
+      2.4vw,
+      2.8rem
+    );
 
-  z-index: 2;
+  right:
+    clamp(
+      1.5rem,
+      2.4vw,
+      2.8rem
+    );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
 }
 
 
-/* =========================
-   SMALL LABEL
-========================= */
+.image-number {
+  width: 38px;
+  height: 38px;
 
-.kicker {
-  margin: 0 0 clamp(18px, 2vh, 28px);
+  display: grid;
 
-  font-family: sans-serif;
+  place-items: center;
 
-  font-size: clamp(4px, 0.5vw, 13px);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.65);
 
-  font-weight: 400;
+  color: #ffffff;
 
-  letter-spacing: 0.22em;
-
-  line-height: 1.3;
-
-  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.55rem;
 }
 
 
-/* =========================
-   MAIN HEADING
-========================= */
+.image-location {
+  color:
+    rgba(255, 255, 255, 0.75);
 
-.title {
+  font-size:
+    clamp(
+      0.4rem,
+      0.45vw,
+      0.52rem
+    );
+
+  font-weight: 650;
+
+  letter-spacing: 0.16em;
+}
+
+
+/* =========================================================
+   CAPTION
+========================================================= */
+
+.image-caption {
+  position: absolute;
+
+  z-index: 3;
+
+  left:
+    clamp(
+      1.5rem,
+      2.4vw,
+      2.8rem
+    );
+
+  bottom:
+    clamp(
+      1.5rem,
+      2.4vw,
+      2.8rem
+    );
+
+  width:
+    min(
+      360px,
+      60%
+    );
+}
+
+
+.image-caption > span {
+  display: block;
+
+  margin-bottom: 0.45rem;
+
+  color: #d2b77f;
+
+  font-size:
+    clamp(
+      0.4rem,
+      0.45vw,
+      0.52rem
+    );
+
+  font-weight: 700;
+
+  letter-spacing: 0.17em;
+}
+
+
+.image-caption p {
   margin: 0;
 
-  font-family: sans-serif;
+  color:
+    rgba(255, 255, 255, 0.79);
 
-  font-size: clamp(1.5rem, 2.9vw, 4rem);
+  font-size:
+    clamp(
+      0.61rem,
+      0.67vw,
+      0.77rem
+    );
 
-  font-weight: 200;
-
-  line-height: 1.29;
-
-  letter-spacing: -0.015em;
-
-  color: #ffffff;
+  line-height: 1.6;
 }
 
 
-/* =========================
-   DESCRIPTION
-========================= */
-
-.description {
-  max-width: 610px;
-
-  margin:
-    clamp(25px, 3vh, 38px)
-    0
-    0;
-
-  font-family: sans-serif;
-
-  font-size: clamp(13px, 0.82vw, 16px);
-
-  font-weight: 400;
-
-  line-height: 1.75;
-
-  color: rgba(255, 255, 255, 0.72);
-}
-
-
-/* =========================
-   PROPERTY FACTS
-========================= */
-
-.facts {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-
-  gap: clamp(20px, 2.5vw, 42px);
-
-  margin:
-    clamp(25px, 3vh, 38px)
-    0;
-}
-
-.facts span {
-  position: relative;
-
-  font-family: sans-serif;
-
-  font-size: clamp(11px, 0.7vw, 14px);
-
-  font-weight: 400;
-
-  color: rgba(255, 255, 255, 0.9);
-
-  white-space: nowrap;
-}
-
-.facts span:not(:last-child)::after {
-  content: "";
-
-  position: absolute;
-
-  right: calc(clamp(10px, 1.25vw, 21px) * -1);
-  top: 50%;
-
-  width: 1px;
-  height: 13px;
-
-  transform: translateY(-50%);
-
-  background: rgba(255, 255, 255, 0.25);
-}
-
-
-/* =========================
-   BUTTON
-========================= */
-
-.discover-btn {
-  width: clamp(230px, 20vw, 310px);
-
-  min-height: 64px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding:
-    0
-    clamp(20px, 1.6vw, 30px);
-
-  background: #ffffff;
-
-  color: #111111;
-
-  text-decoration: none;
-
-  text-transform: uppercase;
-
-  font-family: sans-serif;
-
-  font-size: clamp(9px, 0.62vw, 12px);
-
-  font-weight: 400;
-
-  letter-spacing: 0.08em;
-
-  transition:
-    background 0.35s ease,
-    color 0.35s ease,
-    transform 0.35s ease;
-}
-
-.discover-btn .arrow {
-  font-size: 18px;
-
-  transition: transform 0.35s ease;
-}
-
-.discover-btn:hover {
-  background: #111111;
-  color: #ffffff;
-
-  transform: translateY(-3px);
-}
-
-.discover-btn:hover .arrow {
-  transform: translateX(5px);
-}
-
-
-/* =========================
+/* =========================================================
    TABLET
-========================= */
+========================================================= */
 
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
 
-  .dev {
-    height: 82vh;
-    min-height: 680px;
+  .featured-banner {
+    grid-template-columns:
+      0.95fr
+      1.05fr;
   }
 
-  .copy {
-    width: 65vw;
+
+  .banner-content {
+    padding:
+      2.5rem;
   }
 
-  .title {
-    font-size: clamp(
-      3.5rem,
-      7vw,
-      5.8rem
-    );
+
+  .property-details {
+    grid-template-columns:
+      1fr
+      1fr;
   }
 
-  .shade {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.9) 0%,
-        rgba(0, 0, 0, 0.68) 55%,
-        rgba(0, 0, 0, 0.2) 100%
-      );
+
+  .detail-item:nth-child(2) {
+    border-right: none;
   }
+
+
+  .detail-item:last-child {
+    grid-column: 1 / -1;
+
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.11);
+  }
+
 }
 
 
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
 
-  .dev {
-    height: 82vh;
-    min-height: 650px;
+  .featured-banner {
+    grid-template-columns: 1fr;
+
+    min-height: 0;
   }
 
-  .dev-bg {
-    object-position: 60% center;
-  }
 
-  .shade {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.88),
-        rgba(0, 0, 0, 0.62)
+  .banner-image {
+    order: 1;
+
+    min-height:
+      clamp(
+        360px,
+        85vw,
+        500px
       );
   }
 
-  .copy {
-    left: 6vw;
-    right: 6vw;
 
-    width: auto;
+  .banner-content {
+    order: 2;
+
+    padding:
+      2.2rem
+      6vw
+      2.6rem;
   }
+
+
+  .banner-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .starting-price {
+    text-align: left;
+  }
+
+
+  .starting-price > div {
+    justify-content: flex-start;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+  .banner-top {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
 
   .title {
-    font-size: clamp(
-      3rem,
-      13vw,
-      4.8rem
-    );
-
-    line-height: 0.95;
+    font-size:
+      clamp(
+        2rem,
+        10vw,
+        3rem
+      );
   }
 
-  .description {
-    max-width: 90%;
 
-    font-size: 13px;
+  .property-details {
+    grid-template-columns: 1fr;
   }
 
-  .facts {
-    align-items: flex-start;
 
-    gap: 10px 22px;
+  .detail-item {
+    padding:
+      0.9rem
+      0;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      rgba(255, 255, 255, 0.11);
   }
 
-  .facts span {
-    font-size: 11px;
+
+  .detail-item:last-child {
+    grid-column: auto;
+
+    border-top: none;
+
+    border-bottom: none;
   }
 
-  .facts span::after {
-    display: none;
-  }
 
   .discover-btn {
-    width: min(
-      100%,
-      290px
-    );
+    width: 100%;
 
-    min-height: 58px;
+    max-width: 280px;
   }
+
+
+  .image-caption {
+    width: 78%;
+  }
+
 }
 
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 480px) {
-
-  .dev {
-    min-height: 620px;
-  }
-
-  .kicker {
-    font-size: 9px;
-  }
-
-  .title {
-    font-size: clamp(
-      2.7rem,
-      14vw,
-      4rem
-    );
-  }
-
-  .description {
-    line-height: 1.6;
-  }
-
-  .facts {
-    flex-direction: column;
-  }
-}
 </style>
