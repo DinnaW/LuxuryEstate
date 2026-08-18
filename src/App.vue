@@ -11,19 +11,28 @@ import InteriorStory from './components/InteriorStory.vue'
 import PopularSearches from './components/PopularSearches.vue'
 import FeaturedDevelopment from './components/FeaturedDevelopment.vue'
 import ProjectGallery from './components/ProjectGallery.vue'
+import PropertyFilters from './components/PropertyFilters.vue'
+import LifestyleWellbeing from './components/LifestyleWellbeing.vue'
+
+
+
+
+
 </script>
 
 <template>
 
   <LuxuryHero />
+  
 
   <FeaturedResidences />
 
   <PlacesSection />
     <InteriorStory />
-        <ProjectGallery />
+       
 
   <HotDeals />
+    <LifestyleWellbeing />
   
 
   <!--
@@ -36,14 +45,18 @@ import ProjectGallery from './components/ProjectGallery.vue'
 
   <!--
   <SmartSearch />
-  -->
+  --> 
 
   <!-- <InteractiveMap /> -->
+   
+
+
+<PropertyFilters />
 
 
 
-
-  <FeaturedDevelopment />
+  <!-- <FeaturedDevelopment /> -->
+   <ProjectGallery />
 
   <PopularSearches />
  

@@ -351,9 +351,9 @@ const hotProperties = [
     description:
       "Prime city living offered through a limited-value release.",
 
-    currency: "USD",
+    currency: "LKR",
 
-    price: "520K",
+    price: "520M",
 
     status: "HOT DEAL",
 
@@ -372,9 +372,9 @@ const hotProperties = [
     description:
       "Refined elevated living in one of Colombo’s most desirable addresses.",
 
-    currency: "USD",
+    currency: "LKR",
 
-    price: "780K",
+    price: "780M",
 
     status: "SPECIAL",
 
@@ -393,9 +393,9 @@ const hotProperties = [
     description:
       "Private coastal living positioned close to the southern shoreline.",
 
-    currency: "USD",
+    currency: "LKR",
 
-    price: "465K",
+    price: "465M",
 
     status: "READY",
 
@@ -414,9 +414,9 @@ const hotProperties = [
     description:
       "A quiet tropical home created around privacy and natural surroundings.",
 
-    currency: "USD",
+    currency: "LKR",
 
-    price: "355K",
+    price: "355M",
 
     status: "LIMITED",
 
@@ -605,8 +605,7 @@ const trendingProperties = [
     0.6rem;
 
   color: #9d7e46;
-
-  font-size: 0.62rem;
+  font-size: clamp(10px, 0.68vw, 12px);
 
   font-weight: 700;
 
@@ -618,19 +617,11 @@ const trendingProperties = [
 
 .section-head h2 {
  margin: 0;
-
-  font-size:
-    clamp(
-      2.1rem,
-      2.3vw,
-      3.7rem
-    );
+  font-size: clamp(32px, 2.35vw, 44px);
 
   font-weight: 400;
-
-  line-height: 1;
-
-  letter-spacing: -0.045em;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
 }
 
 
@@ -643,15 +634,8 @@ const trendingProperties = [
     0;
 
   color: #858079;
-
-  font-size:
-    clamp(
-      0.68rem,
-      0.72vw,
-      0.82rem
-    );
-
-  line-height: 1.6;
+  font-size: clamp(13px, 0.82vw, 15px);
+  line-height: 1.7;
 }
 
 
@@ -672,8 +656,7 @@ const trendingProperties = [
     1px solid #111111;
 
   color: #111111;
-
-  font-size: 0.58rem;
+  font-size: clamp(10px, 0.65vw, 12px);
 
   font-weight: 700;
 
@@ -838,13 +821,7 @@ const trendingProperties = [
   display: block;
 
   color: #ffffff;
-
-  font-size:
-    clamp(
-      0.66rem,
-      0.4vw,
-      0.46rem
-    );
+  font-size: clamp(9px, 0.55vw, 10px);
 
   font-weight: 500;
 
@@ -902,13 +879,7 @@ const trendingProperties = [
   overflow: hidden;
 
   color: #96918a;
-
-  font-size:
-    clamp(
-      0.52rem,
-      0.56vw,
-      0.62rem
-    );
+  font-size: clamp(11px, 0.68vw, 13px);
 
   font-weight: 500;
 
@@ -947,12 +918,7 @@ const trendingProperties = [
 
 
 .location span {
-  font-size:
-    clamp(
-      0.49rem,
-      0.52vw,
-      0.58rem
-    );
+  font-size: clamp(11px, 0.68vw, 13px);
 
   font-weight: 650;
 }
@@ -966,17 +932,9 @@ const trendingProperties = [
   margin: 0;
 
   color: #111111;
-
-  font-size:
-    clamp(
-      1.1rem,
-      1.3vw,
-      1.5rem
-    );
-
-  font-weight: 450;
-
-  line-height: 1.14;
+  font-size: clamp(20px, 1.35vw, 25px);
+  font-weight: 400;
+  line-height: 1.2;
 
   letter-spacing: -0.025em;
 }
@@ -999,15 +957,8 @@ const trendingProperties = [
     0;
 
   color: #858079;
-
-  font-size:
-    clamp(
-      0.56rem,
-      0.6vw,
-      0.66rem
-    );
-
-  line-height: 1.5;
+  font-size: clamp(12px, 0.72vw, 14px);
+  line-height: 1.6;
 
   -webkit-line-clamp: 2;
 
@@ -1054,13 +1005,7 @@ const trendingProperties = [
     1px solid #111111;
 
   color: #111111;
-
-  font-size:
-    clamp(
-      0.48rem,
-      0.52vw,
-      0.58rem
-    );
+  font-size: clamp(9px, 0.58vw, 11px);
 
   font-weight: 650;
 
@@ -1106,8 +1051,7 @@ const trendingProperties = [
   margin-bottom: 0.14rem;
 
   color: #aaa49c;
-
-  font-size: 0.37rem;
+  font-size: clamp(8px, 0.46vw, 9px);
 
   font-weight: 700;
 
@@ -1130,8 +1074,7 @@ const trendingProperties = [
 
 .price-right > div span {
   color: #9b7a42;
-
-  font-size: 0.49rem;
+  font-size: clamp(10px, 0.6vw, 12px);
 
   font-weight: 700;
 }
@@ -1139,13 +1082,7 @@ const trendingProperties = [
 
 .price-right > div strong {
   color: #111111;
-
-  font-size:
-    clamp(
-      1rem,
-      1.15vw,
-      1.3rem
-    );
+  font-size: clamp(23px, 1.55vw, 29px);
 
   font-weight: 500;
 
@@ -1185,6 +1122,63 @@ const trendingProperties = [
 ========================================================= */
 
 @media (max-width: 600px) {
+
+  /* Featured Residences typography scale */
+  .eyebrow {
+    font-size: 10px;
+  }
+
+  .section-head h2 {
+    font-size: 30px;
+    line-height: 1.15;
+  }
+
+  .section-description {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .view-all {
+    font-size: 10px;
+  }
+
+  .status-side span {
+    font-size: 8px;
+  }
+
+  .property-type {
+    font-size: 11px;
+  }
+
+  .location span {
+    font-size: 12px;
+  }
+
+  .card-content h3 {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .explore-link {
+    font-size: 9px;
+  }
+
+  .price-right > small {
+    font-size: 8px;
+  }
+
+  .price-right > div span {
+    font-size: 10px;
+  }
+
+  .price-right > div strong {
+    font-size: 25px;
+  }
+
 
   .property-section {
     padding:

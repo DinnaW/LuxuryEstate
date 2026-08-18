@@ -1,15 +1,18 @@
 <template>
-  <section class="story">
+  <section class="story-section">
 
-    <div class="shell grid">
+    <div class="story-container">
 
-      <div class="copy">
+      <!-- =========================
+           LEFT CONTENT
+      ========================== -->
+      <div class="story-content">
 
-        <p class="kicker">
+        <p class="story-kicker">
           AWARD-WINNING INTERIORS
         </p>
 
-        <h2 class="title">
+        <h2 class="story-title">
           Interior design
           <br />
           with a lasting
@@ -17,35 +20,49 @@
           identity.
         </h2>
 
-        <p>
+        <p class="story-description">
           Carefully balanced materials, natural light and refined proportions
           create residences that feel calm, functional and distinctive.
-          Every detail is considered for everyday comfort and long-term relevance.
+          Every detail is considered for everyday comfort and
+          long-term relevance.
         </p>
 
-        <a href="#">
-          Read the design story →
+        <a href="#" class="story-button">
+          <span>Read the design story</span>
+          <span class="button-arrow">→</span>
         </a>
 
       </div>
 
 
-      <div class="image">
+      <!-- =========================
+           RIGHT IMAGE
+      ========================== -->
+      <div class="story-visual">
 
-        <img
-          src="/Users/naduniameesha/LuxuryEstate/src/images/Colombo.jpeg"
-          alt="Luxury apartment interior"
-        />
+        <div class="story-image-wrap">
 
-        <div class="quote">
+          <img
+            :src="colomboImage"
+            alt="Luxury residence"
+            class="story-image"
+          />
+
+        </div>
+
+
+        <!-- OVERLAPPING QUOTE -->
+        <div class="story-quote">
+
           <p>
-            “Quiet materials, generous light and considered details shape
-            the experience of home.”
+            “Quiet materials, generous light and considered
+            details shape the experience of home.”
           </p>
 
           <span>
             Luxury Estate Design Studio
           </span>
+
         </div>
 
       </div>
@@ -55,228 +72,590 @@
   </section>
 </template>
 
+
+<script setup>
+import colomboImage from "../images/Colombo.jpeg";
+</script>
+
+
 <style scoped>
-.story {
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.story-section,
+.story-section *,
+.story-section *::before,
+.story-section *::after {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.story-section {
   width: 100%;
 
   padding:
-    clamp(5rem, 9vh, 8rem)
-    0;
+    clamp(4.5rem, 8vh, 7rem)
+    0
+    clamp(5.5rem, 10vh, 8rem);
 
   background: #ffffff;
+
   color: #111111;
+
+  overflow: hidden;
 }
 
-.shell {
-  width: min(
-    91vw,
-    1550px
-  );
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.story-container {
+  width: min(82vw, 1460px);
 
   margin: 0 auto;
-}
 
-.grid {
   display: grid;
 
   grid-template-columns:
-    0.85fr
-    1.15fr;
+    0.82fr
+    1.18fr;
+
+  align-items: center;
 
   gap:
     clamp(
-      3rem,
-      7vw,
-      8rem
+      4rem,
+      8vw,
+      9rem
     );
-
-  align-items: center;
 }
 
-.kicker {
-  margin: 0;
 
-  font-family:
-    sans-serif;
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
 
-  font-size: clamp(
-    0.52rem,
-    0.58vw,
-    0.68rem
-  );
+.story-content {
+  width: 100%;
 
-  letter-spacing: 0.18em;
-
-  color: #6f6f6f;
+  max-width: 570px;
 }
 
-.title {
+
+/* =========================================================
+   KICKER
+========================================================= */
+
+.story-kicker {
   margin:
-    clamp(
-      0.45rem,
-      0.8vh,
-      0.7rem
-    )
     0
-    0;
+    0
+    9px;
 
- font-family:
-    sans-serif;
+  color: #9d7e46;
 
   font-size:
     clamp(
-      1.7rem,
-      3.1vw,
-      4.8rem
+      10px,
+      0.68vw,
+      12px
+    );
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.story-title {
+  margin: 0;
+
+  color: #111111;
+
+  font-size:
+    clamp(
+      2.3rem,
+      3.35vw,
+      4.35rem
     );
 
   font-weight: 400;
 
-  line-height: 1.26;
+  line-height: 1.18;
 
-  letter-spacing: 0.01em;
-}
-.copy > p:last-of-type {
-  max-width: 560px;
-
-  color: #777777;
-
-  font-family:
-    sans-serif;
-
-  font-size: clamp(
-    0.7rem,
-    0.78vw,
-    0.88rem
-  );
-
-  line-height: 1.85;
+  letter-spacing: -0.035em;
 }
 
-.copy a {
-  display: inline-block;
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.story-description {
+    margin: 0;
+
+  color:
+    rgba(0, 0, 0, 0.52);
+
+   font-size:
+    clamp(
+      13px,
+      0.82vw,
+      15px
+    );
+
+
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.story-button {
+  width: fit-content;
+
+  min-width:
+    clamp(
+      175px,
+      14vw,
+      215px
+    );
+
+  height:
+    clamp(
+      42px,
+      3.5vw,
+      50px
+    );
 
   margin-top:
     clamp(
-      1.2rem,
-      2vh,
-      1.5rem
+      1.7rem,
+      3vh,
+      2.3rem
     );
 
   padding:
-    0.9rem
-    1.2rem;
+    0
+    clamp(
+      1rem,
+      1.3vw,
+      1.4rem
+    );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 1rem;
 
   background: #111111;
+
   color: #ffffff;
 
-  font-family:
-    sans-serif;
-
-  font-size: clamp(
-    0.52rem,
-    0.58vw,
-    0.64rem
-  );
-
-  letter-spacing: 0.08em;
-
   text-decoration: none;
+
   text-transform: uppercase;
+
+  font-size:
+    clamp(
+      0.65rem,
+      0.5vw,
+      0.57rem
+    );
+
+  font-weight: 600;
+
+  letter-spacing: 0.07em;
 
   transition:
     background 0.3s ease,
-    color 0.3s ease;
+    transform 0.3s ease;
 }
 
-.copy a:hover {
-  background: #eeeeee;
-  color: #111111;
+
+.story-button:hover {
+  background: #343434;
+
+  transform: translateY(-2px);
 }
 
-.image {
-  min-height:
+
+.button-arrow {
+  font-size: 0.85rem;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.story-button:hover .button-arrow {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   RIGHT VISUAL
+========================================================= */
+
+.story-visual {
+  width: 100%;
+
+  position: relative;
+
+  padding-bottom:
     clamp(
-      430px,
-      55vh,
-      640px
+      3rem,
+      5vw,
+      4.5rem
+    );
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.story-image-wrap {
+  width: 100%;
+
+  height:
+    clamp(
+      380px,
+      47vh,
+      540px
     );
 
   position: relative;
+
+  overflow: hidden;
+
+  background: #eeeeee;
 }
 
-.image > img {
+
+.story-image {
   width: 100%;
   height: 100%;
 
+  display: block;
+
   object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform
+    1s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
 }
 
-.quote {
+
+.story-image-wrap:hover .story-image {
+  transform: scale(1.02);
+}
+
+
+/* =========================================================
+   QUOTE CARD
+========================================================= */
+
+.story-quote {
   position: absolute;
 
-  left: -7%;
-  bottom: -6%;
+  left:
+    clamp(
+      -3.5rem,
+      -3vw,
+      -1.5rem
+    );
 
-  width: min(
-    420px,
-    72%
-  );
+  bottom: 0;
+
+  width:
+    min(
+      390px,
+      55%
+    );
+
+  min-height:
+    clamp(
+      115px,
+      9vw,
+      145px
+    );
 
   padding:
     clamp(
-      1.1rem,
-      2vw,
-      1.6rem
+      1.2rem,
+      1.7vw,
+      1.7rem
     );
 
-  background: #f4f0e9;
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  background: #f2eee8;
 
   border:
     1px solid
-    #eeeeee;
+    rgba(0, 0, 0, 0.025);
 
   box-shadow:
-    0 16px 35px
-    rgba(0, 0, 0, 0.08);
-}
-
-.quote p {
-  margin:
     0
-    0
-    0.8rem;
+    20px
+    45px
+    rgba(0, 0, 0, 0.07);
 
- font-family:
-    sans-serif;
-
-  font-size: clamp(
-    0.78rem,
-    0.86vw,
-    0.95rem
-  );
-
-  line-height: 1.6;
+  z-index: 3;
 }
 
-.quote span {
-  color: #777777;
 
-  font-size: clamp(
-    0.54rem,
-    0.58vw,
-    0.64rem
-  );
+.story-quote p {
+  max-width: 330px;
+
+  margin: 0;
+
+  color: #181818;
+
+  font-size:
+    clamp(
+      13px,
+      0.82vw,
+      15px
+    );
+
+  font-weight: 400;
+
+  line-height: 1.55;
 }
+
+
+.story-quote span {
+  display: block;
+
+  margin-top:
+    clamp(
+      0.8rem,
+      1.2vh,
+      1rem
+    );
+
+  color: #8e8a84;
+
+  font-family: sans-serif;
+
+  font-size:
+    clamp(
+      0.8rem,
+      0.5vw,
+      0.57rem
+    );
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1700px) {
+
+  .story-container {
+    width: min(82vw, 1500px);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .story-container {
+    width: 88vw;
+
+    grid-template-columns:
+      0.9fr
+      1.1fr;
+
+    gap: 4rem;
+  }
+
+
+  .story-image-wrap {
+    height: 430px;
+  }
+
+
+  .story-quote {
+    left: -2rem;
+
+    width: 65%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 800px) {
-  .grid {
-    grid-template-columns: 1fr;
+
+  .story-section {
+    padding:
+      4rem
+      0;
   }
 
-  .quote {
-    left: 4%;
-    bottom: 4%;
+
+  .story-container {
+    width: 88vw;
+
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
   }
+
+
+  .story-content {
+    max-width: 600px;
+  }
+
+
+  .story-title {
+    font-size:
+      clamp(
+        2.4rem,
+        10vw,
+        4rem
+      );
+  }
+
+
+  .story-visual {
+    padding-bottom: 0;
+  }
+
+
+  .story-image-wrap {
+    height:
+      clamp(
+        360px,
+        75vw,
+        500px
+      );
+  }
+
+
+  .story-quote {
+    position: relative;
+
+    left: auto;
+
+    bottom: auto;
+
+    width: 86%;
+
+    margin:
+      -3rem
+      0
+      0
+      auto;
+  }
+
 }
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+  .story-section {
+    padding:
+      3.5rem
+      0;
+  }
+
+
+  .story-container {
+    width: 90vw;
+
+    gap: 2.5rem;
+  }
+
+
+  .story-title {
+    font-size:
+      clamp(
+        2.1rem,
+        11vw,
+        3rem
+      );
+
+    line-height: 1.15;
+  }
+
+
+  .story-description {
+    font-size: 0.72rem;
+
+    line-height: 1.75;
+  }
+
+
+  .story-image-wrap {
+    height: 340px;
+  }
+
+
+  .story-quote {
+    width: 92%;
+
+    margin-top: -2.2rem;
+
+    padding: 1.2rem;
+  }
+
+
+  .story-button {
+    min-width: 190px;
+
+    height: 46px;
+  }
+
+}
+
 </style>

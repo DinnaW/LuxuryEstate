@@ -1,15 +1,10 @@
 <template>
   <section class="featured">
-
     <div class="shell">
 
-      <!-- =========================
-           HEADER
-      ========================== -->
+      <!-- HEADER -->
       <div class="section-head">
-
         <div>
-
           <p class="eyebrow">
             CURATED COLLECTION
           </p>
@@ -22,74 +17,53 @@
             A selected collection of premium residences
             across Sri Lanka’s most desirable addresses.
           </p>
-
         </div>
-
 
         <a href="#" class="view-all">
           View all
           <span>→</span>
         </a>
-
       </div>
 
 
- 
-
-
-      <!-- =========================
-           PROPERTY GRID
-      ========================== -->
+      <!-- PROPERTY GRID -->
       <div class="property-grid">
 
-            <article
-        v-for="property in properties"
-        :key="property.name"
-        class="property-card"
-      >
+        <article
+          v-for="property in properties"
+          :key="property.name"
+          class="property-card"
+        >
 
-          <!-- =========================
-               IMAGE
-          ========================== -->
+          <!-- IMAGE -->
           <div class="image-box">
-
             <img
               :src="property.image"
               :alt="property.name"
             />
 
-
-            <!-- SMALL VERTICAL STATUS -->
             <div class="status-side">
               <span>
                 {{ property.status }}
               </span>
             </div>
-
           </div>
 
 
-          <!-- =========================
-               CARD CONTENT
-          ========================== -->
+          <!-- CARD CONTENT -->
           <div class="card-content">
 
             <span class="property-type">
               {{ property.type }}
             </span>
 
-
-            <!-- PROPERTY NAME -->
             <h3>
               {{ property.name }}
             </h3>
 
 
-            <!-- =========================
-                 LOCATION BELOW TITLE
-            ========================== -->
+            <!-- LOCATION -->
             <div class="location-row">
-
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -112,44 +86,32 @@
               <span>
                 {{ property.location }}
               </span>
-
             </div>
 
 
-            <!-- =========================
-                 BUILDER
-            ========================== -->
+            <!-- BUILDER -->
             <div class="builder">
-
-              <span>
-                PRESENTED BY
-              </span>
+              <span>PRESENTED BY</span>
 
               <i></i>
 
               <strong>
                 {{ property.builder }}
               </strong>
-
             </div>
 
 
-            <!-- =========================
-                 DESCRIPTION
-            ========================== -->
+            <!-- DESCRIPTION -->
             <p class="description">
               {{ property.description }}
             </p>
 
 
-            <!-- =========================
-                 DETAILS
-            ========================== -->
+            <!-- DETAILS -->
             <div class="details-row">
 
               <!-- BED -->
               <div class="detail">
-
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -167,13 +129,11 @@
                 <span>
                   {{ property.bedrooms }}
                 </span>
-
               </div>
 
 
               <!-- SIZE -->
               <div class="detail">
-
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -191,13 +151,11 @@
                 <span>
                   {{ property.size }}
                 </span>
-
               </div>
 
 
               <!-- BATH -->
               <div class="detail">
-
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -220,15 +178,12 @@
                 <span>
                   {{ property.bathrooms }}
                 </span>
-
               </div>
 
             </div>
 
 
-            <!-- =========================
-                 FOOTER
-            ========================== -->
+            <!-- CARD FOOTER -->
             <div class="card-footer">
 
               <a
@@ -242,161 +197,113 @@
 
               <!-- PRICE -->
               <div class="price-right">
-
                 <small>
                   STARTING FROM
                 </small>
 
                 <div>
-
-                  <span>
-                    LKR
-                  </span>
+                  <span>LKR</span>
 
                   <strong>
                     {{ property.price }}
                   </strong>
-
                 </div>
-
               </div>
 
             </div>
 
           </div>
-
         </article>
 
       </div>
 
     </div>
-
   </section>
 </template>
 
 
 <script setup>
-import {
-  ref,
-  computed
-} from "vue";
-
 const properties = [
-
   {
     name: "Icon V Thalpe",
     type: "Beachfront Residence",
-
     location: "Thalpe, Galle",
-    filterLocation: "Thalpe",
-
     builder: "Odiliya Premier",
 
     description:
-      "Refined beachfront living with ocean views, privacy and contemporary coastal design.",
+      "Refined beachfront living with ocean views, privacy and contemporary design.",
 
     bedrooms: "2–3 Bed",
-
     size: "1,150–1,850 sq.ft",
-
     bathrooms: "2 Bath",
 
     price: "24M",
-
     status: "FEATURED",
 
-    image:
-      "src/images/Thalpe.webp"
+    image: "src/images/Thalpe.webp"
   },
-
 
   {
     name: "Oceanista Residences",
     type: "Beachfront Apartments",
-
     location: "Panadura",
-    filterLocation: "Colombo",
-
     builder: "Odiliya Premier",
 
     description:
-      "Contemporary coastal apartments designed around light, comfort and long-term value.",
+      "Contemporary coastal living shaped by light, comfort and lasting value.",
 
     bedrooms: "1–3 Bed",
-
     size: "800–2,400 sq.ft",
-
     bathrooms: "2 Bath",
 
     price: "25M",
-
     status: "NEW",
 
-    image:
-      "src/images/weligama.webp"
+    image: "src/images/weligama.webp"
   },
-
 
   {
     name: "Platinum 10",
     type: "Private Pool Villas",
-
     location: "Colombo",
-    filterLocation: "Colombo",
-
     builder: "Odiliya Premier",
 
     description:
-      "Private residences combining generous spaces, refined architecture and city convenience.",
+      "Private city residences combining generous space, refined design and convenience.",
 
     bedrooms: "4 Bed",
-
     size: "3,500+ sq.ft",
-
     bathrooms: "4 Bath",
 
     price: "84M",
-
     status: "LIMITED",
 
-    image:
-      "src/images/Colombo.jpeg"
+    image: "src/images/Colombo.jpeg"
   },
-
 
   {
     name: "Ocean House",
     type: "Luxury Coastal Residence",
-
     location: "Galle",
-    filterLocation: "Galle",
-
     builder: "Odiliya Premier",
 
     description:
-      "A peaceful coastal residence shaped around natural light, privacy and elegant living.",
+      "Elegant coastal living shaped around natural light, privacy and calm.",
 
     bedrooms: "3 Bed",
-
     size: "1,750–2,600 sq.ft",
-
     bathrooms: "3 Bath",
 
     price: "42M",
-
     status: "READY",
 
-    image:
-      "src/images/nuwaraeliya.webp"
+    image: "src/images/nuwaraeliya.webp"
   }
-
 ];
-
 </script>
 
 
 <style scoped>
-
 /* =========================================================
    GLOBAL
 ========================================================= */
@@ -406,7 +313,6 @@ const properties = [
 .featured *::before,
 .featured *::after {
   box-sizing: border-box;
-
   font-family: sans-serif;
 }
 
@@ -419,7 +325,7 @@ const properties = [
   width: 100%;
 
   padding:
-    clamp(3.8rem, 7vh, 6rem)
+    clamp(70px, 7vh, 105px)
     0;
 
   background: #f5f4f1;
@@ -429,11 +335,9 @@ const properties = [
 
 
 .shell {
-  width:
-    min(94vw, 1650px);
+  width: min(94vw, 1650px);
 
-  margin:
-    0 auto;
+  margin: 0 auto;
 }
 
 
@@ -450,67 +354,86 @@ const properties = [
 
   gap: 3rem;
 
-  padding-bottom: 1.5rem;
+  padding-bottom: 28px;
+
+  margin-bottom: 34px;
 
   border-bottom:
     1px solid #dedbd5;
 }
 
 
+/* SMALL LABEL */
+
 .eyebrow {
   margin:
     0
     0
-    0.6rem;
+    9px;
 
   color: #9d7e46;
 
-  font-size: 0.62rem;
+  font-size:
+    clamp(
+      10px,
+      0.68vw,
+      12px
+    );
 
   font-weight: 700;
 
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
+
+  line-height: 1.4;
 
   text-transform: uppercase;
 }
 
 
+/* MAIN SECTION TITLE */
+
 .section-head h2 {
   margin: 0;
 
+  color: #111111;
+
   font-size:
     clamp(
-      2.1rem,
-      2.3vw,
-      3.7rem
+      32px,
+      2.35vw,
+      44px
     );
 
   font-weight: 400;
 
-  line-height: 1;
+  line-height: 1.15;
 
-  letter-spacing: -0.045em;
+  letter-spacing: -0.035em;
 }
 
 
+/* HEADER DESCRIPTION */
+
 .section-description {
-  max-width: 470px;
+  max-width: 500px;
 
   margin:
-    0.75rem
+    13px
     0
     0;
 
-  color: #858079;
+  color: #77736d;
 
   font-size:
     clamp(
-      0.48rem,
-      0.72vw,
-      0.82rem
+      13px,
+      0.82vw,
+      15px
     );
 
-  line-height: 1.6;
+  font-weight: 400;
+
+  line-height: 1.7;
 }
 
 
@@ -523,28 +446,39 @@ const properties = [
 
   align-items: center;
 
-  gap: 0.7rem;
+  gap: 9px;
 
-  padding-bottom: 0.3rem;
+  padding-bottom: 5px;
 
   border-bottom:
     1px solid #111111;
 
   color: #111111;
 
-  font-size: 0.58rem;
+  font-size:
+    clamp(
+      10px,
+      0.65vw,
+      12px
+    );
 
   font-weight: 700;
 
   letter-spacing: 0.08em;
 
+  line-height: 1.3;
+
   text-decoration: none;
 
   text-transform: uppercase;
+
+  white-space: nowrap;
 }
 
 
 .view-all span {
+  font-size: 15px;
+
   transition:
     transform 0.3s ease;
 }
@@ -554,8 +488,10 @@ const properties = [
   transform:
     translateX(4px);
 }
+
+
 /* =========================================================
-   GRID
+   PROPERTY GRID
 ========================================================= */
 
 .property-grid {
@@ -569,9 +505,9 @@ const properties = [
 
   gap:
     clamp(
-      0.8rem,
-      1vw,
-      1.1rem
+      16px,
+      1.2vw,
+      22px
     );
 }
 
@@ -592,7 +528,8 @@ const properties = [
 
   transition:
     transform 0.4s ease,
-    box-shadow 0.4s ease;
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
 }
 
 
@@ -600,10 +537,11 @@ const properties = [
   transform:
     translateY(-5px);
 
+  border-color:
+    #d3cec6;
+
   box-shadow:
-    0
-    18px
-    45px
+    0 20px 50px
     rgba(0, 0, 0, 0.07);
 }
 
@@ -619,7 +557,7 @@ const properties = [
 
   height:
     clamp(
-      230px,
+      240px,
       21vw,
       340px
     );
@@ -632,7 +570,6 @@ const properties = [
 
 .image-box img {
   width: 100%;
-
   height: 100%;
 
   display: block;
@@ -640,43 +577,37 @@ const properties = [
   object-fit: cover;
 
   transition:
-    transform 0.7s ease;
+    transform 0.8s ease;
 }
 
 
 .property-card:hover
 .image-box img {
   transform:
-    scale(1.04);
+    scale(1.035);
 }
 
 
 /* =========================================================
-   SMALL VERTICAL STATUS
+   VERTICAL STATUS
 ========================================================= */
 
 .status-side {
   position: absolute;
 
-  z-index: 6;
+  z-index: 5;
 
   top: 0;
-
   left: 0;
 
   width:
     clamp(
       30px,
-      2.2vw,
+      2vw,
       36px
     );
 
-  height:
-    clamp(
-      155px,
-      9vw,
-      135px
-    );
+  height: 130px;
 
   display: flex;
 
@@ -684,15 +615,12 @@ const properties = [
 
   justify-content: center;
 
-  background:
-    rgba(15, 15, 15, 0.95);
-
-  color: #ffffff;
-
   overflow: hidden;
 
-  transition:
-    background 0.3s ease;
+  background:
+    rgba(12, 12, 12, 0.94);
+
+  color: #ffffff;
 }
 
 
@@ -703,14 +631,14 @@ const properties = [
 
   font-size:
     clamp(
-      0.66rem,
-      0.4vw,
-      0.46rem
+      9px,
+      0.55vw,
+      10px
     );
 
-  font-weight: 500;
+  font-weight: 600;
 
-  letter-spacing: 0.17em;
+  letter-spacing: 0.16em;
 
   line-height: 1;
 
@@ -724,43 +652,43 @@ const properties = [
 }
 
 
-.property-card:hover
-.status-side {
-  background: #000000;
-}
-
-
 /* =========================================================
-   CONTENT
+   CARD CONTENT
 ========================================================= */
 
 .card-content {
   padding:
     clamp(
-      1rem,
-      1.25vw,
-      1.3rem
+      18px,
+      1.35vw,
+      24px
     );
 }
 
+
+/* PROPERTY TYPE */
 
 .property-type {
   display: block;
 
-  margin-bottom: 0.35rem;
+  margin-bottom: 7px;
 
-  color: #96918a;
+  color: #8d8881;
 
   font-size:
     clamp(
-      0.53rem,
-      0.57vw,
-      0.62rem
+      11px,
+      0.68vw,
+      13px
     );
 
   font-weight: 500;
+
+  line-height: 1.4;
 }
 
+
+/* PROPERTY NAME */
 
 .card-content h3 {
   margin: 0;
@@ -769,21 +697,22 @@ const properties = [
 
   font-size:
     clamp(
-      1.1rem,
+      20px,
       1.35vw,
-      1.6rem
+      25px
     );
 
   font-weight: 400;
 
-  line-height: 1.15;
+  line-height: 1.2;
 
-  letter-spacing: -0.025em;
+  letter-spacing:
+    -0.025em;
 }
 
 
 /* =========================================================
-   LOCATION BELOW TITLE
+   LOCATION
 ========================================================= */
 
 .location-row {
@@ -791,18 +720,17 @@ const properties = [
 
   align-items: center;
 
-  gap: 0.38rem;
+  gap: 6px;
 
-  margin-top: 0.55rem;
+  margin-top: 10px;
 
-  color: #35312d;
+  color: #393531;
 }
 
 
 .location-row svg {
-  width: 13px;
-
-  height: 13px;
+  width: 14px;
+  height: 14px;
 
   flex-shrink: 0;
 
@@ -813,12 +741,14 @@ const properties = [
 .location-row span {
   font-size:
     clamp(
-      0.56rem,
-      0.6vw,
-      0.67rem
+      11px,
+      0.68vw,
+      13px
     );
 
   font-weight: 600;
+
+  line-height: 1.4;
 }
 
 
@@ -831,20 +761,27 @@ const properties = [
 
   align-items: center;
 
-  gap: 0.4rem;
+  gap: 7px;
 
-  margin-top: 0.5rem;
+  margin-top: 9px;
 }
 
 
 .builder span {
-  color: #aaa49c;
+  color: #99938b;
 
-  font-size: 0.42rem;
+  font-size:
+    clamp(
+      8px,
+      0.48vw,
+      9px
+    );
 
   font-weight: 700;
 
-  letter-spacing: 0.12em;
+  letter-spacing: 0.11em;
+
+  line-height: 1.3;
 
   white-space: nowrap;
 }
@@ -852,8 +789,9 @@ const properties = [
 
 .builder i {
   width: 15px;
-
   height: 1px;
+
+  flex-shrink: 0;
 
   display: block;
 
@@ -862,16 +800,22 @@ const properties = [
 
 
 .builder strong {
+  overflow: hidden;
+
   color: #96773e;
 
   font-size:
     clamp(
-      0.56rem,
-      0.6vw,
-      0.67rem
+      10px,
+      0.62vw,
+      12px
     );
 
   font-weight: 700;
+
+  line-height: 1.3;
+
+  text-overflow: ellipsis;
 
   white-space: nowrap;
 }
@@ -882,38 +826,34 @@ const properties = [
 ========================================================= */
 
 .description {
-  display: -webkit-box;
-
-  min-height: 2.8em;
 
   overflow: hidden;
 
   margin:
-    0.65rem
+    13px
     0
     0;
 
-  color: #817c75;
+  color: #716d67;
 
   font-size:
     clamp(
-      0.58rem,
-      0.62vw,
-      0.68rem
+      12px,
+      0.72vw,
+      14px
     );
 
   font-weight: 400;
 
-  line-height: 1.5;
+  line-height: 1.6;
 
-  -webkit-line-clamp: 2;
-
-  -webkit-box-orient: vertical;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 
 /* =========================================================
-   DETAILS
+   PROPERTY DETAILS
 ========================================================= */
 
 .details-row {
@@ -926,12 +866,12 @@ const properties = [
 
   align-items: center;
 
-  gap: 0.5rem;
+  gap: 8px;
 
-  margin-top: 0.9rem;
+  margin-top: 16px;
 
   padding:
-    0.85rem
+    14px
     0;
 
   border-top:
@@ -949,34 +889,35 @@ const properties = [
 
   align-items: center;
 
-  gap: 0.32rem;
+  gap: 6px;
 }
 
 
 .detail svg {
   width: 15px;
-
   height: 15px;
 
   flex-shrink: 0;
 
-  color: #767069;
+  color: #706a64;
 }
 
 
 .detail span {
   overflow: hidden;
 
-  color: #5c5751;
+  color: #514c47;
 
   font-size:
     clamp(
-      0.52rem,
-      0.57vw,
-      0.65rem
+      10px,
+      0.65vw,
+      12px
     );
 
   font-weight: 500;
+
+  line-height: 1.4;
 
   text-overflow: ellipsis;
 
@@ -985,7 +926,7 @@ const properties = [
 
 
 /* =========================================================
-   FOOTER
+   CARD FOOTER
 ========================================================= */
 
 .card-footer {
@@ -995,14 +936,14 @@ const properties = [
 
   justify-content: space-between;
 
-  gap: 1rem;
+  gap: 16px;
 
-  margin-top: 1rem;
+  margin-top: 18px;
 }
 
 
 /* =========================================================
-   EXPLORE
+   EXPLORE LINK
 ========================================================= */
 
 .explore-link {
@@ -1010,9 +951,9 @@ const properties = [
 
   align-items: center;
 
-  gap: 0.65rem;
+  gap: 8px;
 
-  padding-bottom: 0.22rem;
+  padding-bottom: 4px;
 
   border-bottom:
     1px solid #111111;
@@ -1021,22 +962,28 @@ const properties = [
 
   font-size:
     clamp(
-      0.5rem,
-      0.54vw,
-      0.6rem
+      9px,
+      0.58vw,
+      11px
     );
 
-  font-weight: 650;
+  font-weight: 700;
 
   letter-spacing: 0.05em;
+
+  line-height: 1.3;
 
   text-decoration: none;
 
   text-transform: uppercase;
+
+  white-space: nowrap;
 }
 
 
 .explore-link span {
+  font-size: 13px;
+
   transition:
     transform 0.3s ease;
 }
@@ -1052,7 +999,7 @@ const properties = [
 
 
 /* =========================================================
-   PRICE RIGHT
+   PRICE
 ========================================================= */
 
 .price-right {
@@ -1063,19 +1010,28 @@ const properties = [
   align-items: flex-end;
 
   text-align: right;
+
+  white-space: nowrap;
 }
 
 
 .price-right > small {
-  margin-bottom: 0.14rem;
+  margin-bottom: 4px;
 
-  color: #aaa49d;
+  color: #969089;
 
-  font-size: 0.38rem;
+  font-size:
+    clamp(
+      3px,
+      0.46vw,
+      16px
+    );
 
   font-weight: 700;
 
-  letter-spacing: 0.1em;
+  letter-spacing: 0.09em;
+
+  line-height: 1.3;
 
   text-transform: uppercase;
 }
@@ -1086,26 +1042,37 @@ const properties = [
 
   align-items: baseline;
 
-  gap: 0.23rem;
+  gap: 5px;
 }
 
 
 .price-right > div span {
   color: #a4864d;
 
-  font-size: 0.5rem;
+  font-size:
+    clamp(
+      11px,
+      0.6vw,
+      12px
+    );
 
-  font-weight: 700;
+  font-weight: 900;
 }
 
 
 .price-right > div strong {
+  color: #111111;
+
   font-size:
     clamp(
-      1.4rem,
-      1.7vw,
-      1.9rem
+      36px,
+      1.55vw,
+      59px
     );
+
+  font-weight: 500;
+
+  line-height: 1;
 }
 
 
@@ -1121,6 +1088,8 @@ const properties = [
         2,
         minmax(0, 1fr)
       );
+
+    gap: 22px;
   }
 
 
@@ -1133,6 +1102,20 @@ const properties = [
       );
   }
 
+
+  .card-content h3 {
+    font-size: 23px;
+  }
+
+
+  .description {
+    font-size: 13px;
+  }
+
+
+  .detail span {
+    font-size: 11px;
+  }
 }
 
 
@@ -1144,14 +1127,13 @@ const properties = [
 
   .featured {
     padding:
-      3rem
+      55px
       0;
   }
 
 
   .shell {
-    width:
-      91vw;
+    width: 91vw;
   }
 
 
@@ -1160,13 +1142,45 @@ const properties = [
 
     align-items: flex-start;
 
-    gap: 1rem;
+    gap: 18px;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 22px;
+  }
+
+
+  .eyebrow {
+    font-size: 10px;
+  }
+
+
+  .section-head h2 {
+    font-size: 30px;
+
+    line-height: 1.15;
+  }
+
+
+  .section-description {
+    max-width: 100%;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+
+
+  .view-all {
+    font-size: 10px;
   }
 
 
   .property-grid {
     grid-template-columns:
       1fr;
+
+    gap: 24px;
   }
 
 
@@ -1175,20 +1189,57 @@ const properties = [
       clamp(
         270px,
         75vw,
-        370px
+        380px
       );
   }
 
 
   .status-side {
-    width: 30px;
+    width: 31px;
 
-    height: 105px;
+    height: 110px;
   }
 
 
   .status-side span {
-    font-size: 0.36rem;
+    font-size: 8px;
+  }
+
+
+  .card-content {
+    padding: 20px;
+  }
+
+
+  .property-type {
+    font-size: 11px;
+  }
+
+
+  .card-content h3 {
+    font-size: 22px;
+  }
+
+
+  .location-row span {
+    font-size: 12px;
+  }
+
+
+  .builder span {
+    font-size: 8px;
+  }
+
+
+  .builder strong {
+    font-size: 10px;
+  }
+
+
+  .description {
+    font-size: 13px;
+
+    line-height: 1.6;
   }
 
 
@@ -1198,7 +1249,65 @@ const properties = [
         3,
         minmax(0, 1fr)
       );
+
+    gap: 5px;
   }
 
+
+  .detail span {
+    font-size: 10px;
+  }
+
+
+  .explore-link {
+    font-size: 9px;
+  }
+
+
+  .price-right > small {
+    font-size: 8px;
+  }
+
+
+  .price-right > div span {
+    font-size: 10px;
+  }
+
+
+  .price-right > div strong {
+    font-size: 25px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .card-footer {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+
+  .price-right {
+    align-items: flex-start;
+
+    text-align: left;
+  }
+
+
+  .details-row {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .detail {
+    min-height: 25px;
+  }
 }
 </style>
