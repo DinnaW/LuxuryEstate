@@ -32,14 +32,15 @@ import LifestyleWellbeing from './components/LifestyleWellbeing.vue'
        
 
   <HotDeals />
+  
     <LifestyleWellbeing />
   
 
-  <!--
-  <PropertyJourney />
-  -->
+  
+  <!-- <PropertyJourney /> -->
+ 
 
-  <!--
+<!--   
   <MarketTrends />
   -->
 
@@ -49,14 +50,15 @@ import LifestyleWellbeing from './components/LifestyleWellbeing.vue'
 
   <!-- <InteractiveMap /> -->
    
-
+ 
 
 <PropertyFilters />
 
+ <FeaturedDevelopment />
 
 
-  <!-- <FeaturedDevelopment /> -->
    <ProjectGallery />
+   
 
   <PopularSearches />
  

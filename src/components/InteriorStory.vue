@@ -74,7 +74,7 @@
 
 
 <script setup>
-import colomboImage from "../images/Colombo.jpeg";
+import colomboImage from "/Users/naduniameesha/LuxuryEstate/src/images/5.png";
 </script>
 
 

@@ -127,7 +127,7 @@
 
 
 <script setup>
-import colomboImage from "../images/Colombo.jpeg";
+import colomboImage from "../images/new.png";
 </script>
 
 

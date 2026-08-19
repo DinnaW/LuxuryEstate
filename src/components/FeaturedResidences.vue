@@ -240,7 +240,7 @@ const properties = [
     price: "24M",
     status: "FEATURED",
 
-    image: "src/images/Thalpe.webp"
+    image: "src/images/1.jpg"
   },
 
   {
@@ -259,7 +259,7 @@ const properties = [
     price: "25M",
     status: "NEW",
 
-    image: "src/images/weligama.webp"
+    image: "src/images/3.jpg"
   },
 
   {
@@ -278,7 +278,7 @@ const properties = [
     price: "84M",
     status: "LIMITED",
 
-    image: "src/images/Colombo.jpeg"
+    image: "https://images.unsplash.com/photo-1596178067639-5c6e68aea6dc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
 
   {
@@ -297,7 +297,7 @@ const properties = [
     price: "42M",
     status: "READY",
 
-    image: "src/images/nuwaraeliya.webp"
+    image: "https://i.pinimg.com/1200x/9c/9c/24/9c9c246228431e0d4af293d4603da044.jpg"
   }
 ];
 </script>

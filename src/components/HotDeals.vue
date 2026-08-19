@@ -358,7 +358,7 @@ const hotProperties = [
     status: "HOT DEAL",
 
     image:
-      "src/images/mirissa.webp"
+      "src/images/2.jpg"
   },
 
 
@@ -379,7 +379,7 @@ const hotProperties = [
     status: "SPECIAL",
 
     image:
-      "src/images/weligama.webp"
+      "https://i.pinimg.com/1200x/cd/cf/e7/cdcfe74e7bdba70e13080c05a833318e.jpg"
   },
 
 
@@ -400,7 +400,7 @@ const hotProperties = [
     status: "READY",
 
     image:
-      "src/images/Galle.webp"
+      "https://i.pinimg.com/1200x/07/82/ae/0782ae978947f00bf0c6ac8808170822.jpg"
   },
 
 
@@ -421,7 +421,7 @@ const hotProperties = [
     status: "LIMITED",
 
     image:
-      "src/images/Thalpe.webp"
+      "https://i.pinimg.com/736x/87/49/51/874951812f5ee89e54c6c100c1d4cf81.jpg"
   }
 
 ];
@@ -451,7 +451,7 @@ const trendingProperties = [
     status: "TRENDING",
 
     image:
-      "src/images/Thalpe.webp"
+      "https://i.pinimg.com/736x/7a/37/6f/7a376f13c7fe11bde817fcd70ddb7425.jpg"
   },
 
 
@@ -472,7 +472,7 @@ const trendingProperties = [
     status: "POPULAR",
 
     image:
-      "src/images/Colombo.jpeg"
+      "https://i.pinimg.com/1200x/58/27/02/58270273632a4295a47748abb7160e5e.jpg"
   },
 
 
@@ -493,7 +493,7 @@ const trendingProperties = [
     status: "TRENDING",
 
     image:
-      "src/images/Galle.webp"
+      "https://i.pinimg.com/736x/f9/26/92/f926926fbbd48ff445cf642985355705.jpg"
   },
 
 
@@ -514,7 +514,7 @@ const trendingProperties = [
     status: "LIMITED",
 
     image:
-      "src/images/mirissa.webp"
+      "https://i.pinimg.com/736x/d3/59/f3/d359f321a1a7b4ae01b67286afc47c3a.jpg"
   }
 
 ];
