@@ -42,11 +42,11 @@
 
         <div class="story-image-wrap">
 
-          <img
-            :src="colomboImage"
-            alt="Luxury residence"
-            class="story-image"
-          />
+         <img
+  :src="interiorImage"
+  alt="Luxury residence"
+  class="story-image"
+/>
 
         </div>
 
@@ -74,7 +74,7 @@
 
 
 <script setup>
-import colomboImage from "/Users/naduniameesha/LuxuryEstate/src/images/5.png";
+import interiorImage from "../images/5.png";
 </script>
 
 
