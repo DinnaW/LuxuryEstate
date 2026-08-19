@@ -993,16 +993,17 @@ import {
 ========================= */
 
 import thalpeImage
-  from "../images/Thalpe.webp";
+  from "../images/1.jpg";
 
 import colomboImage
-  from "../images/Colombo.jpeg";
+  from "../images/3.jpg";
 
 import galleImage
-  from "../images/Galle.webp";
+  from "../images/11.png";
 
 import weligamaImage
-  from "../images/weligama.webp";
+  from "../images/5.png";
+
 
 
 /* =========================

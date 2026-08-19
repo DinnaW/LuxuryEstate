@@ -69,17 +69,17 @@
 
 <script setup>
 const images = [
-  "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=90",
+  "https://i.pinimg.com/736x/7a/37/6f/7a376f13c7fe11bde817fcd70ddb7425.jpg",
 
-  "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=90",
+  "https://i.pinimg.com/1200x/58/27/02/58270273632a4295a47748abb7160e5e.jpg",
 
-  "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1200&q=90",
+  "https://i.pinimg.com/736x/f9/26/92/f926926fbbd48ff445cf642985355705.jpg",
 
-  "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=90",
+  "https://i.pinimg.com/736x/d3/59/f3/d359f321a1a7b4ae01b67286afc47c3a.jpg",
 
-  "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=90",
+  "https://i.pinimg.com/1200x/07/82/ae/0782ae978947f00bf0c6ac8808170822.jpg",
 
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=90"
+  "https://i.pinimg.com/1200x/cd/cf/e7/cdcfe74e7bdba70e13080c05a833318e.jpg"
 ];
 </script>
 

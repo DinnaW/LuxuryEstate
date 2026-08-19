@@ -123,7 +123,7 @@ const areas = [
       "Contemporary apartments designed for connected city living and everyday comfort.",
 
     img:
-      "src/images/Colombo.jpeg"
+      "https://images.unsplash.com/photo-1705990200606-59976a786406?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
 
 
@@ -137,7 +137,7 @@ const areas = [
       "Premium hospitality properties positioned in distinctive leisure and city destinations.",
 
     img:
-      "src/images/Galle.webp"
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
 
 
@@ -151,7 +151,7 @@ const areas = [
       "Distinctive private homes shaped around space, privacy and refined modern living.",
 
     img:
-      "src/images/mirissa.webp"
+      "https://i.pinimg.com/1200x/c0/6a/65/c06a65efc3e7785f9d9977a05b0b70e9.jpg"
   },
 
 
@@ -165,7 +165,7 @@ const areas = [
       "Exceptional residences positioned close to the ocean for relaxed coastal lifestyles.",
 
     img:
-      "src/images/Thalpe.webp"
+      "https://i.pinimg.com/1200x/50/8d/ee/508deeacd2b1035a2fc7d98dfc29701a.jpg"
   },
 
 
@@ -179,7 +179,7 @@ const areas = [
       "Private luxury villas combining generous spaces, premium amenities and distinctive surroundings.",
 
     img:
-      "src/images/weligama.webp"
+      "https://i.pinimg.com/736x/97/47/e5/9747e593020ae30db0e85a808e54e0ba.jpg"
   }
 
 ];

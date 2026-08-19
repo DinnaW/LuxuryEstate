@@ -1,127 +1,128 @@
 <template>
-  <section class="featured-banner">
+  <section class="testimonials">
 
-    <!-- LEFT CONTENT -->
-    <div class="banner-content">
+    <div class="testimonials-container">
 
-      <div class="banner-top">
+      <!-- HEADER -->
+      <div class="testimonials-header">
 
         <p class="kicker">
-          FEATURED DEVELOPMENT
+          <span class="kicker-line"></span>
+          Client Stories
+          <span class="kicker-line"></span>
         </p>
-        
-      </div>
 
+        <h2 class="title">
+          Stories Behind The Residences
+        </h2>
 
-      <h2 class="title">
-        Architecture
-        <br />
-        with a lasting
-        <br />
-        identity.
-      </h2>
-
-
-      <p class="description">
-        A contemporary residence shaped around intelligent layouts,
-        natural light and refined private amenities. Designed for
-        calm, connected and enduring modern living.
-      </p>
-
-
-      <!-- DETAILS -->
-      <div class="property-details">
-
-        <div class="detail-item">
-          <span>Bedrooms</span>
-          <strong>3–4</strong>
-        </div>
-
-
-        <div class="detail-item">
-          <span>Residence Size</span>
-          <strong>2,200–3,600</strong>
-          <small>sq.ft</small>
-        </div>
-
-
-        <div class="detail-item">
-          <span>Location</span>
-          <strong>Thalpe</strong>
-          <small>Galle</small>
-        </div>
+        <p class="subtitle">
+          Discover heartfelt accounts of joy and fulfillment as our valued
+          clients embark on the quest for their dream homes and prime
+          investments.
+        </p>
 
       </div>
 
 
-      <!-- BOTTOM -->
-      <div class="banner-bottom">
+      <!-- BENTO LAYOUT -->
+      <div class="testimonials-bento">
 
-        <a href="#" class="discover-btn">
+        <!-- FEATURED CARD -->
+        <div class="featured-card">
 
-          <span>
-            Discover Development
-          </span>
+          <div class="featured-top">
 
-          <span class="arrow">
-            →
-          </span>
+            <span class="index">01</span>
 
-        </a>
+            <div class="stars">
 
+              <span
+                v-for="n in 5"
+                :key="n"
+                class="star"
+                :class="{
+                  filled: n <= featured.rating,
+                  half: n - featured.rating === 0.5
+                }"
+              >
+                ★
+              </span>
 
-        <div class="starting-price">
+            </div>
 
-          <span>
-            Starting From
-          </span>
+          </div>
 
-          <div>
-            <small>LKR</small>
-            <strong>84M</strong>
+          <p class="featured-quote">
+            {{ featured.quote }}
+          </p>
+
+          <div class="featured-identity">
+
+            <img
+              :src="featured.avatar"
+              :alt="featured.name"
+              class="avatar-lg"
+            />
+
+            <div>
+              <span class="name">{{ featured.name }}</span>
+              <span class="role">Verified Client</span>
+            </div>
+
           </div>
 
         </div>
 
-      </div>
 
-    </div>
+        <!-- COMPACT LIST -->
+        <div class="compact-list">
 
+          <div
+            v-for="(item, i) in restTestimonials"
+            :key="item.name"
+            class="compact-card"
+          >
 
-    <!-- RIGHT IMAGE -->
-    <div class="banner-image">
+            <img
+              :src="item.avatar"
+              :alt="item.name"
+              class="avatar-sm"
+            />
 
-      <img
-        :src="thalpeImage"
-        alt="Featured luxury development"
-      />
+            <div class="compact-body">
 
-      <div class="image-overlay"></div>
+              <div class="compact-head">
 
+                <span class="name">{{ item.name }}</span>
 
-      <div class="image-top">
+                <div class="stars">
 
-        <span class="image-number">
-          01
-        </span>
+                  <span
+                    v-for="n in 5"
+                    :key="n"
+                    class="star"
+                    :class="{
+                      filled: n <= item.rating,
+                      half: n - item.rating === 0.5
+                    }"
+                  >
+                    ★
+                  </span>
 
-        <span class="image-location">
-          THALPE · GALLE
-        </span>
+                </div>
 
-      </div>
+              </div>
 
+              <p class="compact-quote">
+                {{ item.quote }}
+              </p>
 
-      <div class="image-caption">
+            </div>
 
-        <span>
-          COASTAL LIVING
-        </span>
+          </div>
 
-        <p>
-          Contemporary architecture shaped around privacy,
-          natural light and connection to place.
-        </p>
+        </div>
 
       </div>
 
@@ -132,7 +133,46 @@
 
 
 <script setup>
-import thalpeImage from "../images/Thalpe.webp";
+import { ref, computed } from "vue";
+
+const testimonials = ref([
+
+  {
+    name: "Rachel Hadid",
+    avatar: "https://i.pravatar.cc/160?img=47",
+    rating: 5,
+    quote:
+      "Choosing this real estate service was the best decision I ever made. Their team demonstrated exceptional professionalism and expertise from the very first meeting through to closing. I highly recommend their services to anyone searching for their next home."
+  },
+
+  {
+    name: "Louis Padtrige",
+    avatar: "https://i.pravatar.cc/140?img=13",
+    rating: 4.5,
+    quote:
+      "Their expert negotiation skills helped me sell my property at a great price in no time. I would definitely work with them again."
+  },
+
+  {
+    name: "Anastasia Baldwin",
+    avatar: "https://i.pravatar.cc/140?img=32",
+    rating: 4.5,
+    quote:
+      "They patiently answered all our questions, provided valuable insights, and helped us secure our dream home within our budget."
+  },
+
+  {
+    name: "Harry Jenda",
+    avatar: "https://i.pravatar.cc/140?img=11",
+    rating: 5,
+    quote:
+      "They presented us with a stunning selection of homes that perfectly matched our preferences and impressed us with their local knowledge."
+  }
+
+]);
+
+const featured = computed(() => testimonials.value[0]);
+const restTestimonials = computed(() => testimonials.value.slice(1));
 </script>
 
 
@@ -142,697 +182,342 @@ import thalpeImage from "../images/Thalpe.webp";
    RESET
 ========================================================= */
 
-.featured-banner,
-.featured-banner *,
-.featured-banner *::before,
-.featured-banner *::after {
+.testimonials,
+.testimonials *,
+.testimonials *::before,
+.testimonials *::after {
   box-sizing: border-box;
   font-family: sans-serif;
 }
 
+.testimonials {
+  --gold: #c6a87c;
+  --ink: #0a0a0a;
+}
+
 
 /* =========================================================
-   FULL WIDTH BANNER
+   SECTION
 ========================================================= */
 
-.featured-banner {
+.testimonials {
   width: 100%;
 
-  min-height:
-    clamp(
-      470px,
-      56vh,
-      620px
-    );
-
-  display: grid;
-
-  grid-template-columns:
-    0.9fr
-    1.1fr;
-
-  background: #111111;
-
-  overflow: hidden;
-
-  color: #ffffff;
-}
-
-
-/* =========================================================
-   LEFT CONTENT
-========================================================= */
-
-.banner-content {
-  min-width: 0;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
   padding:
-    clamp(
-      2.5rem,
-      4.5vw,
-      5.5rem
-    )
-    clamp(
-      2rem,
-      5vw,
-      6.5rem
-    );
+    clamp(3.5rem, 6vh, 5.5rem)
+    0
+    clamp(4rem, 7vh, 6rem);
 
-  background: #111111;
+  background: #ffffff;
+
+  color: var(--ink);
+}
+
+
+.testimonials-container {
+  width: min(86vw, 1180px);
+  margin: 0 auto;
 }
 
 
 /* =========================================================
-   TOP
+   HEADER
 ========================================================= */
 
-.banner-top {
-  display: flex;
+.testimonials-header {
+  max-width: 620px;
+  margin: 0 auto clamp(2.6rem, 4.5vh, 3.6rem);
 
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 1rem;
-
-  margin-bottom:
-    clamp(
-      1rem,
-      1.8vh,
-      1.5rem
-    );
+  text-align: center;
 }
 
 
 .kicker {
-  margin: 0;
+  margin:
+    0
+    0
+    0.6rem;
 
-  color: #b99c68;
+  color: #9d7e46;
+  font-size: clamp(10px, 0.68vw, 12px);
 
-  font-size:
-    clamp(
-      0.45rem,
-      0.5vw,
-      0.58rem
-    );
-
-  font-weight: 650;
+  font-weight: 700;
 
   letter-spacing: 0.2em;
 
   text-transform: uppercase;
 }
 
-
-.project-status {
-  padding:
-    0.42rem
-    0.68rem;
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.14);
-
-  color:
-    rgba(255, 255, 255, 0.55);
-
-  font-size:
-    clamp(
-      0.36rem,
-      0.4vw,
-      0.46rem
-    );
-
-  font-weight: 600;
-
-  letter-spacing: 0.09em;
-
-  white-space: nowrap;
+.kicker-line {
+  width: 26px;
+  height: 1px;
+  background: var(--gold);
 }
 
-
-/* =========================================================
-   TITLE
-========================================================= */
 
 .title {
-  max-width: 620px;
-
-  margin: 0;
-
-  color: #f6f5f2;
-
-  font-size:
-    clamp(
-      2rem,
-      3vw,
-      4rem
-    );
-
-  font-weight: 300;
-
-  line-height: 1.12;
-
-  letter-spacing: -0.045em;
-}
-
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
-
-.description {
-  max-width: 540px;
-
-  margin:
-    clamp(
-      1.2rem,
-      2.1vh,
-      1.7rem
-    )
-    0
-    0;
-
-  color:
-    rgba(255, 255, 255, 0.53);
-
-  font-size:
-    clamp(
-      0.65rem,
-      0.72vw,
-      0.82rem
-    );
-
-  line-height: 1.8;
-}
-
-
-/* =========================================================
-   DETAILS
-========================================================= */
-
-.property-details {
-  display: grid;
-
-  grid-template-columns:
-    repeat(
-      3,
-      minmax(0, 1fr)
-    );
-
-  margin-top:
-    clamp(
-      1.5rem,
-      2.6vh,
-      2.2rem
-    );
-
-  border-top:
-    1px solid
-    rgba(255, 255, 255, 0.12);
-
-  border-bottom:
-    1px solid
-    rgba(255, 255, 255, 0.12);
-}
-
-
-.detail-item {
-  min-width: 0;
-
-  padding:
-    clamp(
-      1rem,
-      1.4vw,
-      1.25rem
-    );
-
-  border-right:
-    1px solid
-    rgba(255, 255, 255, 0.11);
-}
-
-
-.detail-item:first-child {
-  padding-left: 0;
-}
-
-
-.detail-item:last-child {
-  border-right: none;
-}
-
-
-.detail-item > span {
-  display: block;
-
-  margin-bottom: 0.4rem;
-
-  color:
-    rgba(255, 255, 255, 0.35);
-
-  font-size:
-    clamp(
-      0.37rem,
-      0.42vw,
-      0.48rem
-    );
-
-  font-weight: 650;
-
-  letter-spacing: 0.1em;
-
-  text-transform: uppercase;
-}
-
-
-.detail-item strong {
-  display: block;
-
-  color: #ffffff;
-
-  font-size:
-    clamp(
-      1rem,
-      1.25vw,
-      1.5rem
-    );
+margin: 0;
+  font-size: clamp(32px, 2.35vw, 44px);
 
   font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
 }
 
 
-.detail-item small {
-  display: block;
+.subtitle {
+  max-width: 520px;
+  margin: 0.9rem auto 0;
 
-  margin-top: 0.2rem;
+  color: rgba(0, 0, 0, 0.52);
 
-  color:
-    rgba(255, 255, 255, 0.38);
+  font-size: clamp(13px, 0.82vw, 15px);
+  font-weight: 300;
 
-  font-size:
-    clamp(
-      0.37rem,
-      0.41vw,
-      0.47rem
-    );
+  line-height: 1.7;
+}
 
-  text-transform: uppercase;
 
-  letter-spacing: 0.06em;
+
+
+/* =========================================================
+   BENTO LAYOUT
+========================================================= */
+
+.testimonials-bento {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(1rem, 1.6vw, 1.4rem);
 }
 
 
 /* =========================================================
-   BOTTOM
+   FEATURED CARD
 ========================================================= */
 
-.banner-bottom {
-  display: flex;
-
-  align-items: flex-end;
-
-  justify-content: space-between;
-
-  gap: 2rem;
-
-  margin-top:
-    clamp(
-      1.5rem,
-      2.6vh,
-      2rem
-    );
-}
-
-
-/* =========================================================
-   BUTTON
-========================================================= */
-
-.discover-btn {
-  width:
-    clamp(
-      210px,
-      17vw,
-      270px
-    );
-
-  min-height: 52px;
-
-  padding:
-    0
-    1.2rem;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 1rem;
-
-  background: #f4f2ee;
-
-  color: #111111;
-
-  border:
-    1px solid #f4f2ee;
-
-  text-decoration: none;
-
-  text-transform: uppercase;
-
-  font-size:
-    clamp(
-      0.43rem,
-      0.48vw,
-      0.55rem
-    );
-
-  font-weight: 650;
-
-  letter-spacing: 0.08em;
-
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
-}
-
-
-.discover-btn:hover {
-  background: transparent;
-
-  color: #ffffff;
-
-  transform: translateY(-2px);
-}
-
-
-.arrow {
-  font-size: 1rem;
-
-  transition:
-    transform 0.3s ease;
-}
-
-
-.discover-btn:hover
-.arrow {
-  transform: translateX(5px);
-}
-
-
-/* =========================================================
-   PRICE
-========================================================= */
-
-.starting-price {
-  text-align: right;
-}
-
-
-.starting-price > span {
-  display: block;
-
-  margin-bottom: 0.3rem;
-
-  color:
-    rgba(255, 255, 255, 0.35);
-
-  font-size:
-    clamp(
-      0.36rem,
-      0.4vw,
-      0.46rem
-    );
-
-  font-weight: 650;
-
-  letter-spacing: 0.1em;
-
-  text-transform: uppercase;
-}
-
-
-.starting-price > div {
-  display: flex;
-
-  align-items: baseline;
-
-  justify-content: flex-end;
-
-  gap: 0.35rem;
-}
-
-
-.starting-price small {
-  color: #b99c68;
-
-  font-size:
-    clamp(
-      0.46rem,
-      0.52vw,
-      0.6rem
-    );
-
-  font-weight: 700;
-}
-
-
-.starting-price strong {
-  color: #ffffff;
-
-  font-size:
-    clamp(
-      1.6rem,
-      2.15vw,
-      2.7rem
-    );
-
-  font-weight: 500;
-
-  line-height: 1;
-
-  letter-spacing: -0.04em;
-}
-
-
-/* =========================================================
-   RIGHT IMAGE
-========================================================= */
-
-.banner-image {
+.featured-card {
   position: relative;
 
-  min-width: 0;
-
-  min-height: 100%;
-
-  overflow: hidden;
-
-  background: #222222;
-}
-
-
-.banner-image > img {
-  position: absolute;
-
-  inset: 0;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  object-position: center;
-
-  transition:
-    transform
-    1s
-    cubic-bezier(
-      0.22,
-      1,
-      0.36,
-      1
-    );
-}
-
-
-.featured-banner:hover
-.banner-image > img {
-  transform: scale(1.025);
-}
-
-
-/* =========================================================
-   OVERLAY
-========================================================= */
-
-.image-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  z-index: 1;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.13)
-      0%,
-      rgba(0, 0, 0, 0.01)
-      50%,
-      rgba(0, 0, 0, 0.52)
-      100%
-    );
-
-  pointer-events: none;
-}
-
-
-/* =========================================================
-   IMAGE TOP
-========================================================= */
-
-.image-top {
-  position: absolute;
-
-  z-index: 3;
-
-  top:
-    clamp(
-      1.4rem,
-      2vw,
-      2rem
-    );
-
-  left:
-    clamp(
-      1.5rem,
-      2.4vw,
-      2.8rem
-    );
-
-  right:
-    clamp(
-      1.5rem,
-      2.4vw,
-      2.8rem
-    );
+  padding: clamp(2rem, 2.8vw, 2.7rem);
 
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
+  background: var(--ink);
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+
+.featured-top {
+  display: flex;
   align-items: center;
-
   justify-content: space-between;
 }
 
 
-.image-number {
-  width: 38px;
-  height: 38px;
+.index {
+  color: rgba(255, 255, 255, 0.25);
 
-  display: grid;
+  font-family: sans-serif;
+  font-size: clamp(2.4rem, 3.2vw, 3.2rem);
+  font-weight: 400;
 
-  place-items: center;
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.65);
-
-  color: #ffffff;
-
-  font-size: 0.55rem;
+  line-height: 1;
 }
 
 
-.image-location {
-  color:
-    rgba(255, 255, 255, 0.75);
+.featured-quote {
+  margin: clamp(1.6rem, 2.4vw, 2.2rem) 0;
 
-  font-size:
-    clamp(
-      0.4rem,
-      0.45vw,
-      0.52rem
-    );
+  color: rgba(255, 255, 255, 0.9);
 
-  font-weight: 650;
+  font-family: sans-serif;
+  font-size: clamp(16px, 1.15vw, 20px);
+  font-weight: 200;
 
-  letter-spacing: 0.16em;
+  line-height: 1.55;
+}
+
+
+.featured-identity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding-top: clamp(1.2rem, 1.8vw, 1.6rem);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+
+.avatar-lg {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+.featured-identity div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+
+.featured-identity .name {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+.featured-identity .role {
+  color: var(--gold);
+
+  font-size: 10.5px;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 
 /* =========================================================
-   CAPTION
+   STARS (shared)
 ========================================================= */
 
-.image-caption {
+.stars {
+  display: flex;
+  gap: 3px;
+}
+
+.star {
+  color: rgba(0, 0, 0, 0.16);
+  font-size: 13px;
+}
+
+.featured-card .star {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.star.filled {
+  color: var(--gold);
+}
+
+.star.half {
+  position: relative;
+  color: rgba(0, 0, 0, 0.16);
+}
+
+.featured-card .star.half {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.star.half::before {
+  content: "★";
+
   position: absolute;
+  inset: 0;
 
-  z-index: 3;
+  width: 50%;
+  overflow: hidden;
 
-  left:
-    clamp(
-      1.5rem,
-      2.4vw,
-      2.8rem
-    );
-
-  bottom:
-    clamp(
-      1.5rem,
-      2.4vw,
-      2.8rem
-    );
-
-  width:
-    min(
-      360px,
-      60%
-    );
+  color: var(--gold);
 }
 
 
-.image-caption > span {
-  display: block;
+/* =========================================================
+   COMPACT LIST
+========================================================= */
 
-  margin-bottom: 0.45rem;
+.compact-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 1.6vw, 1.4rem);
+}
 
-  color: #d2b77f;
 
-  font-size:
-    clamp(
-      0.4rem,
-      0.45vw,
-      0.52rem
-    );
+.compact-card {
+  flex: 1;
 
+  padding: clamp(1.2rem, 1.6vw, 1.5rem);
+
+  display: flex;
+  gap: 14px;
+
+  background: #f5f4f1;
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.compact-card:hover {
+  border-color: rgba(198, 168, 124, 0.4);
+  background: #ffffff;
+}
+
+
+.avatar-sm {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+
+  margin-top: 2px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+
+.compact-body {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+
+.compact-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+
+.compact-head .name {
+  color: var(--ink);
+  font-size: 13px;
   font-weight: 700;
 
-  letter-spacing: 0.17em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
-.image-caption p {
+.compact-quote {
   margin: 0;
 
-  color:
-    rgba(255, 255, 255, 0.79);
+  color: rgba(0, 0, 0, 0.58);
 
-  font-size:
-    clamp(
-      0.61rem,
-      0.67vw,
-      0.77rem
-    );
+  font-size: 12.5px;
+  font-weight: 300;
 
   line-height: 1.6;
 }
@@ -842,39 +527,15 @@ import thalpeImage from "../images/Thalpe.webp";
    TABLET
 ========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 
-  .featured-banner {
-    grid-template-columns:
-      0.95fr
-      1.05fr;
+  .testimonials-bento {
+    grid-template-columns: 1fr;
   }
 
 
-  .banner-content {
-    padding:
-      2.5rem;
-  }
-
-
-  .property-details {
-    grid-template-columns:
-      1fr
-      1fr;
-  }
-
-
-  .detail-item:nth-child(2) {
-    border-right: none;
-  }
-
-
-  .detail-item:last-child {
-    grid-column: 1 / -1;
-
-    border-top:
-      1px solid
-      rgba(255, 255, 255, 0.11);
+  .featured-card {
+    min-height: 0;
   }
 
 }
@@ -884,115 +545,40 @@ import thalpeImage from "../images/Thalpe.webp";
    MOBILE
 ========================================================= */
 
-@media (max-width: 800px) {
+@media (max-width: 560px) {
 
-  .featured-banner {
-    grid-template-columns: 1fr;
-
-    min-height: 0;
+  .testimonials {
+    padding: 3rem 0 3.6rem;
   }
 
 
-  .banner-image {
-    order: 1;
-
-    min-height:
-      clamp(
-        360px,
-        85vw,
-        500px
-      );
+  .testimonials-container {
+    width: 90vw;
   }
 
 
-  .banner-content {
-    order: 2;
-
-    padding:
-      2.2rem
-      6vw
-      2.6rem;
-  }
-
-
-  .banner-bottom {
-    flex-direction: column;
-
-    align-items: flex-start;
-  }
-
-
-  .starting-price {
-    text-align: left;
-  }
-
-
-  .starting-price > div {
-    justify-content: flex-start;
-  }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 520px) {
-
-  .banner-top {
-    flex-direction: column;
-
-    align-items: flex-start;
+  .testimonials-header {
+    margin-bottom: 2.2rem;
   }
 
 
   .title {
-    font-size:
-      clamp(
-        2rem,
-        10vw,
-        3rem
-      );
+    font-size: clamp(1.5rem, 7.5vw, 1.9rem);
   }
 
 
-  .property-details {
-    grid-template-columns: 1fr;
+  .featured-quote {
+    font-size: 15px;
   }
 
 
-  .detail-item {
-    padding:
-      0.9rem
-      0;
-
-    border-right: none;
-
-    border-bottom:
-      1px solid
-      rgba(255, 255, 255, 0.11);
+  .compact-card {
+    flex-direction: column;
   }
 
 
-  .detail-item:last-child {
-    grid-column: auto;
-
-    border-top: none;
-
-    border-bottom: none;
-  }
-
-
-  .discover-btn {
-    width: 100%;
-
-    max-width: 280px;
-  }
-
-
-  .image-caption {
-    width: 78%;
+  .avatar-sm {
+    margin-top: 0;
   }
 
 }
