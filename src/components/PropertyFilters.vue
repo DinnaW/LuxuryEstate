@@ -294,33 +294,232 @@
 
 
         <!-- =================================
-             LOCATION
+             GLOBAL LOCATION
         ================================== -->
-        <div class="filter-section">
+        <div class="filter-section global-location-section">
 
-          <h4>
-            Location
-          </h4>
+          <div class="global-location-head">
+            <div>
+              
 
-          <div class="location-pills">
+              <h4>
+                Location
+              </h4>
+            </div>
 
             <button
-              v-for="location in locations"
-              :key="location"
+              v-if="filters.country || filters.location"
               type="button"
-              :class="{
-                selected:
-                  filters.location === location
-              }"
-              @click="
-                filters.location =
-                  filters.location === location
-                    ? ''
-                    : location
-              "
+              class="global-location-clear"
+              @click="clearLocation"
             >
-              {{ location }}
+              Clear
             </button>
+          </div>
+
+
+          <!-- COUNTRY -->
+          <label class="global-field">
+
+            <span>
+              Country
+            </span>
+
+            <div class="global-select-wrap">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18" />
+                <path d="M12 3a15 15 0 0 1 0 18" />
+                <path d="M12 3a15 15 0 0 0 0 18" />
+              </svg>
+
+              <select v-model="filters.country">
+
+                <option value="">
+                  All countries
+                </option>
+
+                <option
+                  v-for="country in countries"
+                  :key="country.code"
+                  :value="country.name"
+                >
+                  {{ country.flag }} {{ country.name }}
+                </option>
+
+              </select>
+
+              <svg
+                class="select-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="m7 10 5 5 5-5" />
+              </svg>
+
+            </div>
+
+          </label>
+
+
+          <!-- CITY / AREA -->
+          <label class="global-field">
+
+            <span>
+              City / Area
+            </span>
+
+            <div class="global-location-search">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"
+                />
+
+                <circle
+                  cx="12"
+                  cy="10"
+                  r="2.5"
+                />
+              </svg>
+
+              <input
+                v-model="filters.location"
+                type="text"
+                placeholder="Search city or area"
+                autocomplete="off"
+              />
+
+              <button
+                v-if="filters.location"
+                type="button"
+                class="location-input-clear"
+                aria-label="Clear city or area"
+                @click="filters.location = ''"
+              >
+                ×
+              </button>
+
+            </div>
+
+          </label>
+
+
+          <!-- AVAILABLE LOCATIONS -->
+          <div
+            v-if="availableLocations.length"
+            class="available-location-block"
+          >
+
+            <div class="available-location-title">
+              <span>
+                Available locations
+              </span>
+
+              <small>
+                {{ availableLocations.length }}
+              </small>
+            </div>
+
+            <div class="available-location-list">
+
+              <button
+                v-for="location in availableLocations"
+                :key="location"
+                type="button"
+                :class="{
+                  selected:
+                    filters.location === location
+                }"
+                @click="
+                  filters.location =
+                    filters.location === location
+                      ? ''
+                      : location
+                "
+              >
+                <span>
+                  {{ location }}
+                </span>
+
+                <span class="available-location-check">
+                  ✓
+                </span>
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- SELECTED SUMMARY -->
+          <div
+            v-if="filters.country || filters.location"
+            class="global-location-summary"
+          >
+
+            <div class="summary-icon">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"
+                />
+
+                <circle
+                  cx="12"
+                  cy="10"
+                  r="2.5"
+                />
+              </svg>
+
+            </div>
+
+            <div>
+              <small>
+                SEARCHING IN
+              </small>
+
+              <strong>
+                {{
+                  filters.location ||
+                  filters.country ||
+                  "Worldwide"
+                }}
+              </strong>
+
+              <span
+                v-if="
+                  filters.location &&
+                  filters.country
+                "
+              >
+                {{ filters.country }}
+              </span>
+            </div>
 
           </div>
 
@@ -1029,6 +1228,8 @@ const filters =
 
     propertyType: "",
 
+    country: "",
+
     location: "",
 
     bedrooms: "Any",
@@ -1310,14 +1511,76 @@ const propertyTypes = [
 ];
 
 
-const locations = [
-  "Colombo",
-  "Thalawathugoda",
-  "Galle",
-  "Thalpe",
-  "Negombo",
-  "Nuwara Eliya"
+/* =========================================================
+   WORLD COUNTRIES
+   Uses ISO country codes + Intl.DisplayNames so the filter
+   can support a worldwide property collection.
+========================================================= */
+
+const countryCodes = [
+  "AF","AL","DZ","AD","AO","AG","AR","AM","AU","AT","AZ",
+  "BS","BH","BD","BB","BY","BE","BZ","BJ","BT","BO","BA","BW","BR","BN","BG","BF","BI",
+  "CV","KH","CM","CA","CF","TD","CL","CN","CO","KM","CG","CD","CR","CI","HR","CU","CY","CZ",
+  "DK","DJ","DM","DO",
+  "EC","EG","SV","GQ","ER","EE","SZ","ET",
+  "FJ","FI","FR",
+  "GA","GM","GE","DE","GH","GR","GD","GT","GN","GW","GY",
+  "HT","HN","HU",
+  "IS","IN","ID","IR","IQ","IE","IL","IT",
+  "JM","JP","JO",
+  "KZ","KE","KI","KP","KR","KW","KG",
+  "LA","LV","LB","LS","LR","LY","LI","LT","LU",
+  "MG","MW","MY","MV","ML","MT","MH","MR","MU","MX","FM","MD","MC","MN","ME","MA","MZ","MM",
+  "NA","NR","NP","NL","NZ","NI","NE","NG","MK","NO",
+  "OM",
+  "PK","PW","PS","PA","PG","PY","PE","PH","PL","PT",
+  "QA",
+  "RO","RU","RW",
+  "KN","LC","VC","WS","SM","ST","SA","SN","RS","SC","SL","SG","SK","SI","SB","SO","ZA","SS","ES","LK","SD","SR","SE","CH","SY",
+  "TJ","TZ","TH","TL","TG","TO","TT","TN","TR","TM","TV",
+  "UG","UA","AE","GB","US","UY","UZ",
+  "VU","VA","VE","VN",
+  "YE",
+  "ZM","ZW"
 ];
+
+
+const regionNames =
+  new Intl.DisplayNames(
+    ["en"],
+    {
+      type: "region"
+    }
+  );
+
+
+function countryFlag(code) {
+
+  return code
+    .toUpperCase()
+    .replace(
+      /./g,
+      character =>
+        String.fromCodePoint(
+          127397 +
+          character.charCodeAt()
+        )
+    );
+
+}
+
+
+const countries =
+  countryCodes
+    .map(code => ({
+      code,
+      name: regionNames.of(code),
+      flag: countryFlag(code)
+    }))
+    .sort(
+      (a, b) =>
+        a.name.localeCompare(b.name)
+    );
 
 
 const bedroomOptions = [
@@ -1440,6 +1703,9 @@ const properties = [
     locationFilter:
       "Thalpe",
 
+    country:
+      "Sri Lanka",
+
     developer:
       "Odiliya Premier",
 
@@ -1512,6 +1778,9 @@ const properties = [
     locationFilter:
       "Galle",
 
+    country:
+      "Sri Lanka",
+
     developer:
       "Odiliya Premier",
 
@@ -1583,6 +1852,9 @@ const properties = [
 
     locationFilter:
       "Colombo",
+
+    country:
+      "Sri Lanka",
 
     developer:
       "Odiliya Premier",
@@ -1657,6 +1929,9 @@ const properties = [
     locationFilter:
       "Galle",
 
+    country:
+      "Sri Lanka",
+
     developer:
       "Odiliya Premier",
 
@@ -1729,6 +2004,9 @@ const properties = [
     locationFilter:
       "Colombo",
 
+    country:
+      "Sri Lanka",
+
     developer:
       "Prime Residencies",
 
@@ -1784,6 +2062,59 @@ const properties = [
   }
 
 ];
+
+
+/* =========================================================
+   GLOBAL LOCATION HELPERS
+========================================================= */
+
+const availableLocations =
+  computed(() => {
+
+    const filtered =
+      properties.filter(
+        property => {
+
+          if (
+            filters.country &&
+            property.country !==
+              filters.country
+          ) {
+            return false;
+          }
+
+          return true;
+
+        }
+      );
+
+
+    return [
+      ...new Set(
+        filtered.map(
+          property =>
+            property.locationFilter ||
+            property.location
+        )
+      )
+    ].sort(
+      (a, b) =>
+        a.localeCompare(b)
+    );
+
+  });
+
+
+function clearLocation() {
+
+  filters.country =
+    "";
+
+  filters.location =
+    "";
+
+}
+
 
 
 /* =========================
@@ -1924,11 +2255,35 @@ const filteredProperties =
 
 
         if (
-          filters.location &&
-          property.locationFilter !==
-          filters.location
+          filters.country &&
+          property.country !==
+          filters.country
         ) {
           return false;
+        }
+
+
+        if (
+          filters.location
+        ) {
+
+          const locationQuery =
+            filters.location
+              .trim()
+              .toLowerCase();
+
+          const locationText =
+            `${property.location} ${property.locationFilter || ""}`
+              .toLowerCase();
+
+          if (
+            !locationText.includes(
+              locationQuery
+            )
+          ) {
+            return false;
+          }
+
         }
 
 
@@ -2121,6 +2476,11 @@ const activeFilterCount =
 
 
     if (
+      filters.country
+    ) count++;
+
+
+    if (
       filters.location
     ) count++;
 
@@ -2165,6 +2525,9 @@ function clearAll() {
     100;
 
   filters.propertyType =
+    "";
+
+  filters.country =
     "";
 
   filters.location =
@@ -2918,30 +3281,176 @@ input::-webkit-outer-spin-button {
 
 
 /* =========================================================
-   LOCATIONS
+   GLOBAL LOCATION FILTER
 ========================================================= */
 
-.location-pills {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 5px;
+.global-location-section {
+  padding:
+    17px
+    17px
+    16px;
 }
 
 
-.location-pills button {
-  min-height: 30px;
+.global-location-head {
+  display: flex;
 
-  padding: 0 10px;
+  align-items: flex-end;
 
-  border: 1px solid #dfddda;
+  justify-content: space-between;
 
-  border-radius: 100px;
+  gap: 12px;
+
+  margin-bottom: 13px;
+}
+
+
+.global-location-head h4 {
+  margin: 2px 0 0;
+}
+
+
+.global-location-label {
+  display: block;
+
+  color: #a4864d;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.global-location-clear {
+  padding: 0 0 2px;
+
+  border: 0;
+
+  border-bottom:
+    1px solid
+    #8e7852;
+
+  background: transparent;
+
+  color: #8e7852;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+
+/* FIELD */
+
+.global-field {
+  display: block;
+}
+
+
+.global-field + .global-field {
+  margin-top: 11px;
+}
+
+
+.global-field > span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #817b74;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+/* COUNTRY SELECT */
+
+.global-select-wrap {
+  position: relative;
+
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding:
+    0
+    32px
+    0
+    11px;
+
+  border:
+    1px solid
+    #dedbd6;
+
+  border-radius: 7px;
 
   background: #ffffff;
 
-  color: #66615c;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.global-select-wrap:focus-within {
+  border-color: #8f7850;
+
+  box-shadow:
+    0
+    0
+    0
+    2px
+    rgba(164, 134, 77, 0.07);
+}
+
+
+.global-select-wrap > svg:not(.select-chevron) {
+  width: 14px;
+  height: 14px;
+
+  flex-shrink: 0;
+
+  color: #987b49;
+}
+
+
+.global-select-wrap select {
+  width: 100%;
+
+  min-width: 0;
+
+  height: 100%;
+
+  padding: 0;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  border: 0;
+
+  outline: 0;
+
+  background: transparent;
+
+  color: #393531;
 
   font-size: 11px;
 
@@ -2949,13 +3458,410 @@ input::-webkit-outer-spin-button {
 }
 
 
-.location-pills button.selected,
-.location-pills button:hover {
+.select-chevron {
+  position: absolute;
+
+  right: 10px;
+
+  top: 50%;
+
+  width: 13px;
+  height: 13px;
+
+  transform:
+    translateY(-50%);
+
+  color: #8d8881;
+
+  pointer-events: none;
+}
+
+
+/* CITY / AREA SEARCH */
+
+.global-location-search {
+  position: relative;
+
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding:
+    0
+    34px
+    0
+    11px;
+
+  border:
+    1px solid
+    #dedbd6;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.global-location-search:focus-within {
+  border-color: #8f7850;
+
+  box-shadow:
+    0
+    0
+    0
+    2px
+    rgba(164, 134, 77, 0.07);
+}
+
+
+.global-location-search > svg {
+  width: 14px;
+  height: 14px;
+
+  flex-shrink: 0;
+
+  color: #987b49;
+}
+
+
+.global-location-search input {
+  width: 100%;
+
+  min-width: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  outline: 0;
+
+  background: transparent;
+
+  color: #393531;
+
+  font-size: 11px;
+}
+
+
+.global-location-search input::placeholder {
+  color: #aaa59f;
+}
+
+
+.location-input-clear {
+  position: absolute;
+
+  right: 8px;
+
+  top: 50%;
+
+  width: 22px;
+  height: 22px;
+
+  padding: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  transform:
+    translateY(-50%);
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: #f1efeb;
+
+  color: #77716a;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+
+/* AVAILABLE LOCATIONS */
+
+.available-location-block {
+  margin-top: 13px;
+
+  padding-top: 11px;
+
+  border-top:
+    1px solid
+    #ece9e4;
+}
+
+
+.available-location-title {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-bottom: 6px;
+}
+
+
+.available-location-title > span {
+  color: #8d8881;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+.available-location-title small {
+  min-width: 21px;
+
+  height: 19px;
+
+  padding:
+    0
+    6px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 100px;
+
+  background: #efede8;
+
+  color: #716b64;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+
+.available-location-list {
+  max-height: 142px;
+
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    #c8c3bb
+    transparent;
+}
+
+
+.available-location-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+
+.available-location-list::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+
+  background: #c8c3bb;
+}
+
+
+.available-location-list button {
+  width: 100%;
+
+  min-height: 34px;
+
+  padding:
+    0
+    5px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  border: 0;
+
+  border-bottom:
+    1px solid
+    #f0eeea;
+
+  background: transparent;
+
+  color: #66615c;
+
+  font-size: 10px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.available-location-list button:hover {
+  background: #f7f5f1;
+
+  color: #171717;
+}
+
+
+.available-location-list button.selected {
+  color: #171717;
+
+  font-weight: 700;
+}
+
+
+.available-location-check {
+  width: 17px;
+  height: 17px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border:
+    1px solid
+    #d7d3cd;
+
+  border-radius: 50%;
+
+  color: transparent;
+
+  font-size: 8px;
+}
+
+
+.available-location-list
+button.selected
+.available-location-check {
   border-color: #222222;
 
   background: #222222;
 
   color: #ffffff;
+}
+
+
+/* SELECTED SUMMARY */
+
+.global-location-summary {
+  margin-top: 12px;
+
+  min-height: 53px;
+
+  padding:
+    9px
+    10px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  background: #252525;
+
+  color: #ffffff;
+
+  border-radius: 7px;
+}
+
+
+.summary-icon {
+  width: 31px;
+  height: 31px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+
+  border-radius: 50%;
+}
+
+
+.summary-icon svg {
+  width: 13px;
+  height: 13px;
+
+  color: #c8aa72;
+}
+
+
+.global-location-summary > div:last-child {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.global-location-summary small {
+  color:
+    rgba(255, 255, 255, 0.42);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+
+.global-location-summary strong {
+  margin-top: 2px;
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+.global-location-summary span {
+  margin-top: 1px;
+
+  color:
+    rgba(255, 255, 255, 0.55);
+
+  font-size: 9px;
 }
 
 
