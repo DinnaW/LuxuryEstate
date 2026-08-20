@@ -1102,13 +1102,13 @@ onBeforeUnmount(() => {
   border-radius: 50%;
 
   font-family: sans-serif;
-  font-size: clamp(11px, 0.72vw, 13px);
+  font-size: clamp(12px, 0.77vw, 14px);
   letter-spacing: 0.02em;
 }
 
 .brand-name {
    font-family: sans-serif;
-  font-size: clamp(17px, 1.15vw, 21px);
+  font-size: clamp(21px, 1.36vw, 25px);
   font-weight: 400;
   letter-spacing: 0.05em;
   white-space: nowrap;
@@ -1131,7 +1131,7 @@ onBeforeUnmount(() => {
   text-decoration: none;
   white-space: nowrap;
 
-  font-size: clamp(11px, 0.72vw, 13px);
+  font-size: clamp(12px, 0.77vw, 14px);
   font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -1171,7 +1171,7 @@ onBeforeUnmount(() => {
   background: transparent;
   color: rgba(255, 255, 255, 0.88);
 
-  font-size: clamp(11px, 0.72vw, 13px);
+  font-size: clamp(12px, 0.77vw, 14px);
   font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -1209,7 +1209,7 @@ onBeforeUnmount(() => {
 
   padding: 0.9rem 0.9rem;
   color: #1a1a1a;
-  font-size: clamp(11px, 0.72vw, 13px);
+  font-size: clamp(12px, 0.77vw, 14px);
   text-decoration: none;
   transition: background 0.25s ease;
 }
@@ -1220,7 +1220,7 @@ onBeforeUnmount(() => {
 
 .seller-dropdown a span {
   color: #999999;
-  font-size: clamp(9px, 0.58vw, 11px);
+  font-size: clamp(14px, 0.86vw, 16px);
 }
 
 
@@ -1278,7 +1278,7 @@ onBeforeUnmount(() => {
 }
 
 .currency {
-  font-size: clamp(11px, 0.72vw, 13px);
+  font-size: clamp(12px, 0.77vw, 14px);
   font-weight: 500;
   letter-spacing: 0.04em;
 }
@@ -1306,7 +1306,7 @@ onBeforeUnmount(() => {
   background: transparent;
   color: #ffffff;
   font-family: sans-serif;
-  font-size: clamp(11px, 0.72vw, 13px);
+  font-size: clamp(12px, 0.77vw, 14px);
   cursor: pointer;
 
   transition: border-color 0.3s ease, background 0.3s ease;
@@ -1334,7 +1334,7 @@ onBeforeUnmount(() => {
 
   padding: 0.65rem 1.3rem;
   color: #1a1a1a;
-  font-size: clamp(11px, 0.70vw, 13px);
+  font-size: clamp(14px, 0.86vw, 16px);
   font-weight: 400;
   text-decoration: none;
 }
@@ -1397,7 +1397,7 @@ onBeforeUnmount(() => {
   margin: 0 0 1.1rem;
 
   color: rgba(255, 255, 255, 0.75);
-  font-size: clamp(10px, 0.66vw, 12px);
+  font-size: clamp(12px, 0.77vw, 14px);
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -1414,7 +1414,7 @@ h1 {
   color: #ffffff;
 
   font-family: sans-serif;
-  font-size: clamp(46px, 4.1vw, 66px);
+  font-size: clamp(56px, 4.9vw, 78px);
   font-weight: 400;
   line-height: 1.04;
   letter-spacing: -0.025em;
@@ -1425,7 +1425,7 @@ h1 {
   margin: 1.1rem auto 2.2rem;
 
   color: rgba(255, 255, 255, 0.68);
-  font-size: clamp(13px, 0.86vw, 15px);
+  font-size: clamp(16px, 1.02vw, 18px);
   font-weight: 400;
   line-height: 1.7;
 }
@@ -1455,7 +1455,7 @@ h1 {
   backdrop-filter: blur(6px);
   color: rgba(255, 255, 255, 0.8);
 
-  font-size: clamp(10px, 0.66vw, 12px);
+  font-size: clamp(12px, 0.77vw, 14px);
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1499,7 +1499,7 @@ label {
 
 .field-title {
   color: #8a8a8a;
-  font-size: clamp(9px, 0.60vw, 11px);
+  font-size: clamp(12px, 0.77vw, 14px);
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1514,7 +1514,7 @@ select {
   background: transparent;
 
   color: var(--ink);
-  font-size: clamp(12px, 0.80vw, 14px);
+  font-size: clamp(15px, 0.95vw, 17px);
   cursor: pointer;
 }
 
@@ -1533,7 +1533,7 @@ select {
   background: var(--ink);
   color: #ffffff;
 
-  font-size: clamp(10px, 0.66vw, 12px);
+  font-size: clamp(12px, 0.77vw, 14px);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1562,7 +1562,7 @@ select {
   margin-top: 1.1rem;
 
   color: rgba(255, 255, 255, 0.6);
-  font-size: clamp(10px, 0.68vw, 12px);
+  font-size: clamp(13px, 0.84vw, 15px);
   letter-spacing: 0.02em;
 }
 
@@ -1573,7 +1573,7 @@ select {
   background: transparent;
   color: rgba(255, 255, 255, 0.85);
 
-  font-size: clamp(10px, 0.68vw, 12px);
+  font-size: clamp(13px, 0.84vw, 15px);
   cursor: pointer;
 
   transition: border-color 0.3s ease, color 0.3s ease;
@@ -1629,7 +1629,7 @@ select {
   margin: 0;
 
   font-family: sans-serif;
-  font-size: clamp(18px, 1.15vw, 21px);
+  font-size: clamp(22px, 1.38vw, 25px);
   font-weight: 400;
 }
 
@@ -1667,7 +1667,7 @@ select {
   background: transparent;
   color: #a3a3a3;
 
-  font-size: clamp(10px, 0.68vw, 12px);
+  font-size: clamp(13px, 0.84vw, 15px);
   font-weight: 500;
   letter-spacing: 0.03em;
   cursor: pointer;
@@ -1721,7 +1721,7 @@ select {
   background: transparent;
   color: #333333;
 
-  font-size: clamp(11px, 0.72vw, 13px);
+  font-size: clamp(12px, 0.77vw, 14px);
   cursor: pointer;
 
   transition: border-color 0.25s ease, background 0.25s ease;
@@ -1760,7 +1760,7 @@ select {
   background: #ffffff;
   color: #333333;
 
-  font-size: clamp(11px, 0.72vw, 13px);
+  font-size: clamp(12px, 0.77vw, 14px);
   cursor: pointer;
 
   transition: background 0.25s ease, border 0.25s ease;
@@ -1858,7 +1858,7 @@ select {
   .mobile-menu > a {
     padding: 0.75rem 0;
     color: #ffffff;
-    font-size: 0.76rem;
+    font-size: 0.91rem;
     text-decoration: none;
   }
 
@@ -1876,7 +1876,7 @@ select {
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     background: transparent;
     color: #ffffff;
-    font-size: 0.76rem;
+    font-size: 0.91rem;
   }
 
   .mobile-seller-links {
@@ -1889,7 +1889,7 @@ select {
   .mobile-seller-links a {
     padding: 0.5rem 0;
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.68rem;
+    font-size: 0.83rem;
     text-decoration: none;
   }
 
@@ -1926,7 +1926,7 @@ select {
   background: var(--ink);
   color: #ffffff;
 
-  font-size: clamp(10px, 0.66vw, 12px);
+  font-size: clamp(12px, 0.77vw, 14px);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1965,7 +1965,7 @@ select {
   }
 
   .brand-name {
-    font-size: 16px;
+    font-size: 19px;
   }
 
   .inner {
@@ -1974,12 +1974,12 @@ select {
   }
 
   h1 {
-    font-size: clamp(38px, 10.5vw, 50px);
+    font-size: clamp(45px, 11.5vw, 60px);
   }
 
   .desc {
     width: 94%;
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .search {
@@ -2020,7 +2020,7 @@ select {
   }
 
   .settings-tabs button {
-    font-size: 10px;
+    font-size: 13px;
     padding-bottom: 0.7rem;
   }
 

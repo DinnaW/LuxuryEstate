@@ -239,7 +239,7 @@ const restTestimonials = computed(() => testimonials.value.slice(1));
     0.6rem;
 
   color: #9d7e46;
-  font-size: clamp(10px, 0.68vw, 12px);
+  font-size: clamp(16px, 1.02vw, 18px);
 
   font-weight: 700;
 
@@ -257,7 +257,7 @@ const restTestimonials = computed(() => testimonials.value.slice(1));
 
 .title {
 margin: 0;
-  font-size: clamp(32px, 2.35vw, 44px);
+  font-size: clamp(48px, 3.4vw, 64px);
 
   font-weight: 400;
   line-height: 1.15;
@@ -271,7 +271,7 @@ margin: 0;
 
   color: rgba(0, 0, 0, 0.52);
 
-  font-size: clamp(13px, 0.82vw, 15px);
+  font-size: clamp(16px, 1.02vw, 18px);
   font-weight: 300;
 
   line-height: 1.7;
@@ -322,7 +322,7 @@ margin: 0;
   color: rgba(255, 255, 255, 0.25);
 
   font-family: sans-serif;
-  font-size: clamp(2.4rem, 3.2vw, 3.2rem);
+  font-size: clamp(3rem, 4vw, 4rem);
   font-weight: 400;
 
   line-height: 1;
@@ -335,7 +335,7 @@ margin: 0;
   color: rgba(255, 255, 255, 0.9);
 
   font-family: sans-serif;
-  font-size: clamp(16px, 1.15vw, 20px);
+  font-size: clamp(19px, 1.3vw, 23px);
   font-weight: 200;
 
   line-height: 1.55;
@@ -374,7 +374,7 @@ margin: 0;
 
 .featured-identity .name {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -382,7 +382,7 @@ margin: 0;
 .featured-identity .role {
   color: var(--gold);
 
-  font-size: 10.5px;
+  font-size: 12px;
   font-weight: 600;
 
   letter-spacing: 0.08em;
@@ -401,7 +401,7 @@ margin: 0;
 
 .star {
   color: rgba(0, 0, 0, 0.16);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .featured-card .star {
@@ -502,7 +502,7 @@ margin: 0;
 
 .compact-head .name {
   color: var(--ink);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
 
   white-space: nowrap;
@@ -516,7 +516,7 @@ margin: 0;
 
   color: rgba(0, 0, 0, 0.58);
 
-  font-size: 12.5px;
+  font-size: 16px;
   font-weight: 300;
 
   line-height: 1.6;
@@ -563,12 +563,12 @@ margin: 0;
 
 
   .title {
-    font-size: clamp(1.5rem, 7.5vw, 1.9rem);
+    font-size: clamp(40px, 10vw, 52px);
   }
 
 
   .featured-quote {
-    font-size: 15px;
+    font-size: 16px;
   }
 
 

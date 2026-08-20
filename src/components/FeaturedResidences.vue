@@ -440,9 +440,9 @@ const properties = [
 
   font-size:
     clamp(
-      10px,
-      0.68vw,
-      12px
+      16px,
+      1.02vw,
+      18px
     );
 
   font-weight: 700;
@@ -462,9 +462,9 @@ const properties = [
 
   font-size:
     clamp(
-      32px,
-      2.35vw,
-      44px
+      48px,
+      3.4vw,
+      64px
     );
 
   font-weight: 400;
@@ -487,9 +487,9 @@ const properties = [
 
   font-size:
     clamp(
-      13px,
-      0.82vw,
-      15px
+      16px,
+      1.02vw,
+      18px
     );
 
   font-weight: 400;
@@ -518,9 +518,9 @@ const properties = [
 
   font-size:
     clamp(
-      10px,
-      0.65vw,
-      12px
+      13px,
+      0.80vw,
+      15px
     );
 
   font-weight: 700;
@@ -538,7 +538,7 @@ const properties = [
 
 
 .view-all span {
-  font-size: 15px;
+  font-size: 18px;
 
   transition:
     transform 0.3s ease;
@@ -696,9 +696,9 @@ const properties = [
 
   font-size:
     clamp(
-      9px,
-      0.55vw,
-      10px
+      14px,
+      0.86vw,
+      12px
     );
 
   font-weight: 600;
@@ -740,9 +740,9 @@ const properties = [
 
   font-size:
     clamp(
-      11px,
-      0.68vw,
-      13px
+      14px,
+      0.86vw,
+      16px
     );
 
   font-weight: 500;
@@ -758,9 +758,9 @@ const properties = [
 
   font-size:
     clamp(
-      20px,
-      1.35vw,
-      25px
+      27px,
+      1.7vw,
+      32px
     );
 
   font-weight: 400;
@@ -803,9 +803,9 @@ const properties = [
 .location-row span {
   font-size:
     clamp(
-      11px,
-      0.68vw,
-      13px
+      14px,
+      0.86vw,
+      16px
     );
 
   font-weight: 600;
@@ -834,9 +834,9 @@ const properties = [
 
   font-size:
     clamp(
-      8px,
-      0.48vw,
-      9px
+      10px,
+      0.60vw,
+      12px
     );
 
   font-weight: 700;
@@ -869,9 +869,9 @@ const properties = [
 
   font-size:
     clamp(
-      10px,
-      0.62vw,
-      12px
+      13px,
+      0.78vw,
+      15px
     );
 
   font-weight: 700;
@@ -900,9 +900,9 @@ const properties = [
 
   font-size:
     clamp(
-      12px,
-      0.72vw,
-      14px
+      15px,
+      0.92vw,
+      17px
     );
 
   font-weight: 400;
@@ -974,9 +974,9 @@ const properties = [
 
   font-size:
     clamp(
-      10px,
-      0.65vw,
-      12px
+      13px,
+      0.80vw,
+      15px
     );
 
   font-weight: 500;
@@ -1026,9 +1026,9 @@ const properties = [
 
   font-size:
     clamp(
-      9px,
-      0.58vw,
-      11px
+      12px,
+      0.74vw,
+      14px
     );
 
   font-weight: 700;
@@ -1046,7 +1046,7 @@ const properties = [
 
 
 .explore-link span {
-  font-size: 13px;
+  font-size: 16px;
 
   transition:
     transform 0.3s ease;
@@ -1086,9 +1086,9 @@ const properties = [
 
   font-size:
     clamp(
-      8px,
-      0.46vw,
-      10px
+      10px,
+      0.60vw,
+      12px
     );
 
   font-weight: 700;
@@ -1115,9 +1115,9 @@ const properties = [
 
   font-size:
     clamp(
-      10px,
-      0.6vw,
-      12px
+      13px,
+      0.78vw,
+      15px
     );
 
   font-weight: 900;
@@ -1129,9 +1129,9 @@ const properties = [
 
   font-size:
     clamp(
-      30px,
-      1.55vw,
-      42px
+      34px,
+      2vw,
+      48px
     );
 
   font-weight: 500;
@@ -1168,17 +1168,17 @@ const properties = [
 
 
   .card-content h3 {
-    font-size: 23px;
+    font-size: 28px;
   }
 
 
   .description {
-    font-size: 13px;
+    font-size: 16px;
   }
 
 
   .detail span {
-    font-size: 11px;
+    font-size: 14px;
   }
 
 }
@@ -1216,12 +1216,12 @@ const properties = [
 
 
   .eyebrow {
-    font-size: 10px;
+    font-size: 14px;
   }
 
 
   .section-head h2 {
-    font-size: 30px;
+    font-size: 40px;
 
     line-height: 1.15;
   }
@@ -1230,14 +1230,14 @@ const properties = [
   .section-description {
     max-width: 100%;
 
-    font-size: 13px;
+    font-size: 16px;
 
     line-height: 1.65;
   }
 
 
   .view-all {
-    font-size: 10px;
+    font-size: 14px;
   }
 
 
@@ -1276,32 +1276,32 @@ const properties = [
 
 
   .property-type {
-    font-size: 11px;
+    font-size: 14px;
   }
 
 
   .card-content h3 {
-    font-size: 22px;
+    font-size: 27px;
   }
 
 
   .location-row span {
-    font-size: 12px;
+    font-size: 14px;
   }
 
 
   .builder span {
-    font-size: 8px;
-  }
-
-
-  .builder strong {
     font-size: 10px;
   }
 
 
+  .builder strong {
+    font-size: 14px;
+  }
+
+
   .description {
-    font-size: 13px;
+    font-size: 16px;
 
     line-height: 1.6;
   }
@@ -1319,27 +1319,27 @@ const properties = [
 
 
   .detail span {
-    font-size: 10px;
+    font-size: 14px;
   }
 
 
   .explore-link {
-    font-size: 9px;
+    font-size: 11px;
   }
 
 
   .price-right > small {
-    font-size: 8px;
-  }
-
-
-  .price-right > div span {
     font-size: 10px;
   }
 
 
+  .price-right > div span {
+    font-size: 14px;
+  }
+
+
   .price-right > div strong {
-    font-size: 25px;
+    font-size: 30px;
   }
 
 }

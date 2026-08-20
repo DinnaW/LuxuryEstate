@@ -343,7 +343,7 @@ import image2 from "../images/2.jpg";
 const hotProperties = [
 
   {
-    name: "Ocean Avenue Residence",
+    name: "Ocean Residence",
 
     type: "Luxury Apartment",
 
@@ -354,7 +354,7 @@ const hotProperties = [
 
     currency: "LKR",
 
-    price: "520M",
+    price: "52M",
 
     status: "HOT DEAL",
 
@@ -363,7 +363,7 @@ const hotProperties = [
 
 
   {
-    name: "Parkside Penthouse",
+    name: "Parkside Pehouse",
 
     type: "Penthouse Residence",
 
@@ -374,7 +374,7 @@ const hotProperties = [
 
     currency: "LKR",
 
-    price: "780M",
+    price: "78M",
 
     status: "SPECIAL",
 
@@ -384,7 +384,7 @@ const hotProperties = [
 
 
   {
-    name: "South Coast Residence",
+    name: "South Residence",
 
     type: "Coastal Residence",
 
@@ -395,7 +395,7 @@ const hotProperties = [
 
     currency: "LKR",
 
-    price: "465M",
+    price: "46M",
 
     status: "READY",
 
@@ -405,7 +405,7 @@ const hotProperties = [
 
 
   {
-    name: "Garden Courtyard Home",
+    name: "Garden Home",
 
     type: "Private Residence",
 
@@ -416,7 +416,7 @@ const hotProperties = [
 
     currency: "LKR",
 
-    price: "355M",
+    price: "35M",
 
     status: "LIMITED",
 
@@ -456,7 +456,7 @@ const trendingProperties = [
 
 
   {
-    name: "City Central Residence",
+    name: "City Residence",
 
     type: "City Residence",
 
@@ -467,7 +467,7 @@ const trendingProperties = [
 
     currency: "USD",
 
-    price: "340K",
+    price: "34K",
 
     status: "POPULAR",
 
@@ -477,7 +477,7 @@ const trendingProperties = [
 
 
   {
-    name: "Galle Ocean Residence",
+    name: "Galle Residence",
 
     type: "Ocean View Apartment",
 
@@ -488,7 +488,7 @@ const trendingProperties = [
 
     currency: "USD",
 
-    price: "490K",
+    price: "49K",
 
     status: "TRENDING",
 
@@ -498,7 +498,7 @@ const trendingProperties = [
 
 
   {
-    name: "Thalpe Private Collection",
+    name: "Thalpe Collection",
 
     type: "Boutique Residence",
 
@@ -509,7 +509,7 @@ const trendingProperties = [
 
     currency: "USD",
 
-    price: "375K",
+    price: "37K",
 
     status: "LIMITED",
 
@@ -605,7 +605,7 @@ const trendingProperties = [
     0.6rem;
 
   color: #9d7e46;
-  font-size: clamp(10px, 0.68vw, 12px);
+  font-size: clamp(16px, 1.02vw, 18px);
 
   font-weight: 700;
 
@@ -617,7 +617,13 @@ const trendingProperties = [
 
 .section-head h2 {
  margin: 0;
-  font-size: clamp(32px, 2.35vw, 44px);
+  
+  font-size:
+    clamp(
+      48px,
+      3.4vw,
+      64px
+    );
 
   font-weight: 400;
   line-height: 1.15;
@@ -634,7 +640,7 @@ const trendingProperties = [
     0;
 
   color: #858079;
-  font-size: clamp(13px, 0.82vw, 15px);
+  font-size: clamp(16px, 1.02vw, 18px);
   line-height: 1.7;
 }
 
@@ -656,7 +662,7 @@ const trendingProperties = [
     1px solid #111111;
 
   color: #111111;
-  font-size: clamp(10px, 0.65vw, 12px);
+  font-size: clamp(13px, 0.82vw, 15px);
 
   font-weight: 700;
 
@@ -879,7 +885,7 @@ const trendingProperties = [
   overflow: hidden;
 
   color: #96918a;
-  font-size: clamp(11px, 0.68vw, 13px);
+  font-size: clamp(14px, 0.86vw, 16px);
 
   font-weight: 500;
 
@@ -918,7 +924,7 @@ const trendingProperties = [
 
 
 .location span {
-  font-size: clamp(11px, 0.68vw, 13px);
+  font-size: clamp(14px, 0.86vw, 16px);
 
   font-weight: 650;
 }
@@ -932,7 +938,12 @@ const trendingProperties = [
   margin: 0;
 
   color: #111111;
-  font-size: clamp(20px, 1.35vw, 25px);
+  font-size:
+    clamp(
+      27px,
+      1.7vw,
+      30px
+    );
   font-weight: 400;
   line-height: 1.2;
 
@@ -957,7 +968,7 @@ const trendingProperties = [
     0;
 
   color: #858079;
-  font-size: clamp(12px, 0.72vw, 14px);
+  font-size: clamp(15px, 0.92vw, 17px);
   line-height: 1.6;
 
   -webkit-line-clamp: 2;
@@ -1005,7 +1016,7 @@ const trendingProperties = [
     1px solid #111111;
 
   color: #111111;
-  font-size: clamp(9px, 0.58vw, 11px);
+  font-size: clamp(12px, 0.74vw, 14px);
 
   font-weight: 650;
 
@@ -1051,7 +1062,7 @@ const trendingProperties = [
   margin-bottom: 0.14rem;
 
   color: #aaa49c;
-  font-size: clamp(8px, 0.46vw, 9px);
+  font-size: clamp(10px, 0.60vw, 12px);
 
   font-weight: 700;
 
@@ -1074,7 +1085,7 @@ const trendingProperties = [
 
 .price-right > div span {
   color: #9b7a42;
-  font-size: clamp(10px, 0.6vw, 12px);
+  font-size: clamp(13px, 0.78vw, 15px);
 
   font-weight: 700;
 }
@@ -1082,7 +1093,7 @@ const trendingProperties = [
 
 .price-right > div strong {
   color: #111111;
-  font-size: clamp(23px, 1.55vw, 29px);
+  font-size: clamp(34px, 2vw, 48px);
 
   font-weight: 500;
 
@@ -1125,21 +1136,21 @@ const trendingProperties = [
 
   /* Featured Residences typography scale */
   .eyebrow {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .section-head h2 {
-    font-size: 30px;
+    font-size: 40px;
     line-height: 1.15;
   }
 
   .section-description {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.65;
   }
 
   .view-all {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .status-side span {
@@ -1147,24 +1158,24 @@ const trendingProperties = [
   }
 
   .property-type {
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .location span {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .card-content h3 {
-    font-size: 22px;
+    font-size: 27px;
   }
 
   .description {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.6;
   }
 
   .explore-link {
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .price-right > small {
@@ -1172,11 +1183,11 @@ const trendingProperties = [
   }
 
   .price-right > div span {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .price-right > div strong {
-    font-size: 25px;
+    font-size: 30px;
   }
 
 

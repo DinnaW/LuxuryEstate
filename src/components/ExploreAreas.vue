@@ -262,9 +262,9 @@ const areas = [
 
   font-size:
     clamp(
-      10px,
-      0.68vw,
-      12px
+      16px,
+      1.02vw,
+      18px
     );
 
   font-weight: 700;
@@ -285,9 +285,9 @@ const areas = [
 
   font-size:
     clamp(
-      32px,
-      2.35vw,
-      44px
+      48px,
+      3.4vw,
+      64px
     );
 
   font-weight: 400;
@@ -321,9 +321,9 @@ const areas = [
 
    font-size:
     clamp(
-      13px,
-      0.82vw,
-      15px
+      16px,
+      1.02vw,
+      18px
     );
 
 
@@ -357,7 +357,7 @@ const areas = [
   color: #ffffff;
 
   font-size:
-    clamp(10px, 0.44vw, 9px);
+    clamp(12px, 0.74vw, 14px);
 
   font-weight: 700;
 
@@ -591,7 +591,7 @@ const areas = [
     );
 
   font-size:
-    clamp(8px, 0.44vw, 9px);
+    clamp(9px, 0.55vw, 10px);
 
   font-weight: 600;
 
@@ -666,7 +666,7 @@ const areas = [
     );
 
   font-size:
-    clamp(9px, 0.40vw, 8px);
+    clamp(9px, 0.55vw, 10px);
 
   font-weight: 700;
 
@@ -687,9 +687,9 @@ const areas = [
 
   font-size:
     clamp(
-      20px,
-      2.35vw,
-      25px
+      27px,
+      1.7vw,
+      32px
     );
 
   font-weight: 450;
@@ -749,7 +749,7 @@ const areas = [
     );
 
   font-size:
-    clamp(13px, 0.54vw, 11px);
+    clamp(15px, 0.92vw, 17px);
 
   line-height: 1.5;
 }
@@ -782,7 +782,7 @@ const areas = [
   color: #ffffff;
 
   font-size:
-    clamp(7px, 0.43vw, 9px);
+    clamp(11px, 0.68vw, 13px);
 
   font-weight: 700;
 
@@ -874,25 +874,25 @@ const areas = [
 @media (max-width: 560px) {
 
   .heading-right p {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.65;
   }
 
   .heading-right a {
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .location-type {
-    font-size: 8px;
+    font-size: 9px;
   }
 
   .location-bottom p {
-    font-size: 10px;
+    font-size: 14px;
     line-height: 1.55;
   }
 
   .view-link {
-    font-size: 9px;
+    font-size: 12px;
   }
 
 
@@ -911,7 +911,7 @@ const areas = [
 
   .heading-left h2 {
     font-size:
-      clamp(25px, 7.5vw, 32px);
+      clamp(40px, 10vw, 52px);
   }
 
 
@@ -933,7 +933,7 @@ const areas = [
 
   .location-copy h3 {
     font-size:
-      21px;
+      27px;
   }
 
 }

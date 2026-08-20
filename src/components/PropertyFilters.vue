@@ -2627,7 +2627,7 @@ input {
 
   color: #987b49;
 
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
 
   letter-spacing: 0.2em;
@@ -2641,9 +2641,9 @@ input {
 
   font-size:
     clamp(
-      2.1rem,
-      2.3vw,
-      3.7rem
+      48px,
+      3.4vw,
+      64px
     );
 
   font-weight: 400;
@@ -2663,7 +2663,7 @@ input {
 
   color: #77716a;
 
-  font-size: 15px;
+  font-size: 16px;
 
   line-height: 1.7;
 }
@@ -2744,7 +2744,7 @@ input {
 
   color: #aa8b53;
 
-  font-size: 10px;
+  font-size: 11px;
 
   font-weight: 700;
 
@@ -2755,7 +2755,7 @@ input {
 .filter-header h3 {
   margin: 0;
 
-  font-size: 18px;
+  font-size: 20px;
 
   font-weight: 650;
 }
@@ -2777,7 +2777,7 @@ input {
 
   color: #967b4d;
 
-  font-size: 12px;
+  font-size: 14px;
 
   text-decoration: underline;
 
@@ -2825,7 +2825,7 @@ input {
 .filter-section h4 {
   margin: 0 0 10px;
 
-  font-size: 14px;
+  font-size: 15px;
 
   font-weight: 650;
 }
@@ -2840,7 +2840,7 @@ input {
 
   color: #96928c;
 
-  font-size: 12px;
+  font-size: 14px;
 
   line-height: 1.4;
 }
@@ -3150,7 +3150,7 @@ input {
 
   color: #9b9792;
 
-  font-size: 10px;
+  font-size: 11px;
 }
 
 
@@ -3166,7 +3166,7 @@ input {
 .price-box small {
   color: #8a7553;
 
-  font-size: 10px;
+  font-size: 11px;
 
   font-weight: 700;
 }
@@ -3187,7 +3187,7 @@ input {
 
   color: #222222;
 
-  font-size: 13px;
+  font-size: 14px;
 
   font-weight: 600;
 }
@@ -3254,7 +3254,7 @@ input::-webkit-outer-spin-button {
 
 
 .type-grid button > span {
-  font-size: 12px;
+  font-size: 14px;
 
   font-weight: 700;
 }
@@ -3371,7 +3371,7 @@ input::-webkit-outer-spin-button {
 
   color: #817b74;
 
-  font-size: 10px;
+  font-size: 11px;
 
   font-weight: 600;
 }
@@ -3583,7 +3583,7 @@ input::-webkit-outer-spin-button {
 
   color: #77716a;
 
-  font-size: 14px;
+  font-size: 15px;
 
   cursor: pointer;
 }
@@ -3707,7 +3707,7 @@ input::-webkit-outer-spin-button {
 
   color: #66615c;
 
-  font-size: 10px;
+  font-size: 11px;
 
   text-align: left;
 
@@ -4042,7 +4042,7 @@ input:checked
 
   color: #ffffff;
 
-  font-size: 10px;
+  font-size: 11px;
 }
 
 
@@ -4069,7 +4069,7 @@ input:checked
 
   color: #222222;
 
-  font-size: 13px;
+  font-size: 14px;
 
   font-weight: 700;
 
@@ -4101,7 +4101,7 @@ input:checked
 
   color: #ffffff;
 
-  font-size: 10px;
+  font-size: 11px;
 }
 
 
@@ -4134,7 +4134,7 @@ input:checked
 .advanced-block h5 {
   margin: 0 0 8px;
 
-  font-size: 13px;
+  font-size: 14px;
 }
 
 
@@ -4155,7 +4155,7 @@ input:checked
 
   color: #59544e;
 
-  font-size: 12px;
+  font-size: 14px;
 }
 
 
@@ -4187,7 +4187,7 @@ input:checked
 
   color: #6e6963;
 
-  font-size: 12px;
+  font-size: 14px;
 
   text-decoration: underline;
 
@@ -4210,7 +4210,7 @@ input:checked
 
   color: #ffffff;
 
-  font-size: 12px;
+  font-size: 14px;
 
   font-weight: 700;
 
@@ -4253,7 +4253,7 @@ input:checked
 
   color: #9a7d49;
 
-  font-size: 10px;
+  font-size: 11px;
 
   font-weight: 700;
 
@@ -4279,7 +4279,7 @@ input:checked
 
   background: #ffffff;
 
-  font-size: 12px;
+  font-size: 14px;
 }
 
 
@@ -4456,7 +4456,7 @@ input:checked
   color: #96918a;
 
   font-size:
-    clamp(11px, 0.68vw, 13px);
+    clamp(14px, 0.86vw, 16px);
 
   font-weight: 500;
 }
@@ -4468,7 +4468,7 @@ input:checked
   color: #111111;
 
   font-size:
-    clamp(20px, 1.35vw, 25px);
+    clamp(27px, 1.7vw, 32px);
 
   font-weight: 400;
 
@@ -4505,7 +4505,7 @@ input:checked
 
 .location-row span {
   font-size:
-    clamp(11px, 0.68vw, 13px);
+    clamp(14px, 0.86vw, 16px);
 
   font-weight: 600;
 }
@@ -4573,7 +4573,7 @@ input:checked
   color: #817c75;
 
   font-size:
-    clamp(12px, 0.72vw, 14px);
+    clamp(15px, 0.92vw, 17px);
 
   font-weight: 400;
 
@@ -4681,7 +4681,7 @@ input:checked
   color: #111111;
 
   font-size:
-    clamp(9px, 0.58vw, 11px);
+    clamp(12px, 0.74vw, 14px);
 
   font-weight: 650;
 
@@ -4726,7 +4726,7 @@ input:checked
 
   color: #aaa49d;
 
-  font-size: clamp(8px, 0.46vw, 9px);
+  font-size: clamp(10px, 0.60vw, 12px);
 
   font-weight: 700;
 
@@ -4748,7 +4748,7 @@ input:checked
 .price-right > div span {
   color: #a4864d;
 
-  font-size: clamp(11px, 0.6vw, 12px);
+  font-size: clamp(13px, 0.78vw, 15px);
 
   font-weight: 700;
 }
@@ -4758,7 +4758,7 @@ input:checked
   color: #111111;
 
   font-size:
-    clamp(28px, 1.55vw, 34px);
+    clamp(34px, 2vw, 48px);
 
   font-weight: 500;
 
@@ -4795,7 +4795,7 @@ input:checked
 
   color: #77716a;
 
-  font-size: 13px;
+  font-size: 14px;
 }
 
 
@@ -4812,7 +4812,7 @@ input:checked
 
   color: #ffffff;
 
-  font-size: 12px;
+  font-size: 14px;
 
   font-weight: 700;
 
@@ -4895,7 +4895,7 @@ input:checked
 
     background: #ffffff;
 
-    font-size: 13px;
+    font-size: 14px;
 
     font-weight: 700;
   }
@@ -4916,7 +4916,7 @@ input:checked
 
     color: #ffffff;
 
-    font-size: 10px;
+    font-size: 11px;
 
     font-weight: 700;
   }
@@ -5055,7 +5055,7 @@ input:checked
 
 
   .status-side span {
-    font-size: 0.36rem;
+    font-size: 8px;
   }
 
 
