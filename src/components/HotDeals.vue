@@ -618,7 +618,7 @@ const trendingProperties = [
 .section-head h2 {
  margin: 0;
   
-  font-size:
+ font-size:
     clamp(
       48px,
       3.4vw,
