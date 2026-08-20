@@ -334,6 +334,7 @@
 
 
 <script setup>
+import image2 from "../images/2.jpg";
 
 /* =========================================================
    HOT DEALS
@@ -357,8 +358,7 @@ const hotProperties = [
 
     status: "HOT DEAL",
 
-    image:
-      "src/images/2.jpg"
+   image: image2
   },
 
 
