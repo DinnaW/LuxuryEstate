@@ -134,7 +134,7 @@ const images = [
 ========================================================= */
 
 .head {
-  max-width: 850px;
+  max-width: 920px;
 
   margin:
     0 auto
@@ -146,22 +146,21 @@ const images = [
 
 /* =========================================================
    KICKER
-   SAME SIZE AS FEATURED RESIDENCES
 ========================================================= */
 
 .kicker {
   margin:
     0
     0
-    9px;
+    10px;
 
   color: #a4864d;
 
   font-size:
     clamp(
-      10px,
-      0.68vw,
-      12px
+      13px,
+      0.82vw,
+      15px
     );
 
   font-weight: 700;
@@ -176,7 +175,6 @@ const images = [
 
 /* =========================================================
    TITLE
-   SAME SIZE AS FEATURED RESIDENCES
 ========================================================= */
 
 .title {
@@ -186,14 +184,14 @@ const images = [
 
   font-size:
     clamp(
-      32px,
-      2.35vw,
-      44px
+      48px,
+      3.4vw,
+      64px
     );
 
   font-weight: 400;
 
-  line-height: 1.15;
+  line-height: 1.12;
 
   letter-spacing: -0.035em;
 }
@@ -201,14 +199,13 @@ const images = [
 
 /* =========================================================
    DESCRIPTION
-   SAME SIZE AS FEATURED RESIDENCES
 ========================================================= */
 
 .description {
-  max-width: 560px;
+  max-width: 650px;
 
   margin:
-    13px
+    16px
     auto
     0;
 
@@ -217,9 +214,9 @@ const images = [
 
   font-size:
     clamp(
-      13px,
-      0.82vw,
-      15px
+      16px,
+      1.02vw,
+      18px
     );
 
   font-weight: 400;
@@ -478,24 +475,29 @@ const images = [
 
 
   .head {
-    max-width: 700px;
+    max-width: 760px;
+  }
+
+
+  .kicker {
+    font-size: 12px;
   }
 
 
   .title {
     font-size:
       clamp(
-        30px,
-        4.5vw,
-        38px
+        42px,
+        6vw,
+        56px
       );
   }
 
 
   .description {
-    max-width: 520px;
+    max-width: 580px;
 
-    font-size: 13px;
+    font-size: 16px;
   }
 
 
@@ -549,36 +551,35 @@ const images = [
   }
 
 
-  /* FEATURED RESIDENCES MOBILE KICKER */
-
   .kicker {
     margin-bottom: 8px;
 
-    font-size: 10px;
+    font-size: 12px;
   }
 
 
-  /* FEATURED RESIDENCES MOBILE TITLE */
-
   .title {
-    font-size: 30px;
+    font-size:
+      clamp(
+        40px,
+        10vw,
+        52px
+      );
 
-    line-height: 1.15;
+    line-height: 1.12;
 
     letter-spacing: -0.03em;
   }
 
 
-  /* FEATURED RESIDENCES MOBILE DESCRIPTION */
-
   .description {
-    width: 92%;
+    width: 94%;
 
-    max-width: 430px;
+    max-width: 460px;
 
-    margin-top: 12px;
+    margin-top: 14px;
 
-    font-size: 13px;
+    font-size: 16px;
 
     line-height: 1.65;
   }

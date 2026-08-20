@@ -158,15 +158,15 @@ import interiorImage from "../images/5.png";
   margin:
     0
     0
-    9px;
+    12px;
 
   color: #9d7e46;
 
   font-size:
     clamp(
-      10px,
-      0.68vw,
-      12px
+      13px,
+      0.82vw,
+      15px
     );
 
   font-weight: 700;
@@ -189,14 +189,14 @@ import interiorImage from "../images/5.png";
 
   font-size:
     clamp(
-      2.3rem,
-      3.35vw,
-      4.35rem
+      48px,
+      4vw,
+      68px
     );
 
   font-weight: 400;
 
-  line-height: 1.18;
+  line-height: 1.12;
 
   letter-spacing: -0.035em;
 }
@@ -207,21 +207,22 @@ import interiorImage from "../images/5.png";
 ========================================================= */
 
 .story-description {
-    margin: 0;
+  margin:
+    clamp(1.35rem, 2.2vh, 1.8rem)
+    0
+    0;
 
   color:
     rgba(0, 0, 0, 0.52);
 
-   font-size:
+  font-size:
     clamp(
-      13px,
-      0.82vw,
-      15px
+      16px,
+      1.02vw,
+      18px
     );
 
-
-
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 
@@ -234,31 +235,31 @@ import interiorImage from "../images/5.png";
 
   min-width:
     clamp(
-      175px,
-      14vw,
-      215px
+      205px,
+      15vw,
+      240px
     );
 
   height:
     clamp(
-      42px,
-      3.5vw,
-      50px
+      48px,
+      3.8vw,
+      56px
     );
 
   margin-top:
     clamp(
-      1.7rem,
+      1.9rem,
       3vh,
-      2.3rem
+      2.5rem
     );
 
   padding:
     0
     clamp(
-      1rem,
-      1.3vw,
-      1.4rem
+      1.15rem,
+      1.4vw,
+      1.6rem
     );
 
   display: flex;
@@ -279,9 +280,9 @@ import interiorImage from "../images/5.png";
 
   font-size:
     clamp(
-      0.65rem,
-      0.5vw,
-      0.57rem
+      12px,
+      0.74vw,
+      14px
     );
 
   font-weight: 600;
@@ -302,7 +303,7 @@ import interiorImage from "../images/5.png";
 
 
 .button-arrow {
-  font-size: 0.85rem;
+  font-size: 18px;
 
   transition:
     transform 0.3s ease;
@@ -405,16 +406,16 @@ import interiorImage from "../images/5.png";
 
   min-height:
     clamp(
-      115px,
-      9vw,
-      145px
+      125px,
+      10vw,
+      155px
     );
 
   padding:
     clamp(
-      1.2rem,
-      1.7vw,
-      1.7rem
+      1.35rem,
+      1.8vw,
+      1.9rem
     );
 
   display: flex;
@@ -448,9 +449,9 @@ import interiorImage from "../images/5.png";
 
   font-size:
     clamp(
-      13px,
-      0.82vw,
-      15px
+      16px,
+      1vw,
+      18px
     );
 
   font-weight: 400;
@@ -464,9 +465,9 @@ import interiorImage from "../images/5.png";
 
   margin-top:
     clamp(
-      0.8rem,
+      0.9rem,
       1.2vh,
-      1rem
+      1.1rem
     );
 
   color: #8e8a84;
@@ -475,9 +476,9 @@ import interiorImage from "../images/5.png";
 
   font-size:
     clamp(
-      0.8rem,
-      0.5vw,
-      0.57rem
+      12px,
+      0.72vw,
+      14px
     );
 }
 
@@ -553,13 +554,25 @@ import interiorImage from "../images/5.png";
   }
 
 
+  .story-kicker {
+    font-size: 12px;
+  }
+
+
   .story-title {
     font-size:
       clamp(
-        2.4rem,
+        44px,
         10vw,
-        4rem
+        60px
       );
+  }
+
+
+  .story-description {
+    font-size: 16px;
+
+    line-height: 1.7;
   }
 
 
@@ -594,6 +607,16 @@ import interiorImage from "../images/5.png";
       auto;
   }
 
+
+  .story-quote p {
+    font-size: 15px;
+  }
+
+
+  .story-quote span {
+    font-size: 12px;
+  }
+
 }
 
 
@@ -620,19 +643,19 @@ import interiorImage from "../images/5.png";
   .story-title {
     font-size:
       clamp(
-        2.1rem,
+        40px,
         11vw,
-        3rem
+        52px
       );
 
-    line-height: 1.15;
+    line-height: 1.12;
   }
 
 
   .story-description {
-    font-size: 0.72rem;
+    font-size: 15px;
 
-    line-height: 1.75;
+    line-height: 1.72;
   }
 
 
@@ -646,14 +669,16 @@ import interiorImage from "../images/5.png";
 
     margin-top: -2.2rem;
 
-    padding: 1.2rem;
+    padding: 1.3rem;
   }
 
 
   .story-button {
-    min-width: 190px;
+    min-width: 215px;
 
-    height: 46px;
+    height: 50px;
+
+    font-size: 11px;
   }
 
 }

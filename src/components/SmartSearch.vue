@@ -278,7 +278,7 @@ const year = new Date().getFullYear();
   margin: 0;
 
   color: #9b7b42;
-  font-size: clamp(10px, 0.68vw, 12px);
+  font-size: clamp(15px, 0.94vw, 17px);
 
   font-weight: 600;
 
@@ -293,7 +293,7 @@ const year = new Date().getFullYear();
     0.35rem
     0
     0;
-  font-size: clamp(32px, 2.35vw, 44px);
+  font-size: clamp(44px, 3.1vw, 58px);
   font-weight: 400;
   line-height: 1.15;
   letter-spacing: -0.035em;
@@ -309,7 +309,7 @@ const year = new Date().getFullYear();
     0;
 
   color: #77736e;
-  font-size: clamp(13px, 0.82vw, 15px);
+  font-size: clamp(15px, 0.94vw, 17px);
   line-height: 1.7;
 }
 
@@ -349,7 +349,7 @@ const year = new Date().getFullYear();
     1px solid #d1cdc6;
 
   color: #55514d;
-  font-size: clamp(13px, 0.82vw, 15px);
+  font-size: clamp(15px, 0.94vw, 17px);
 
   font-weight: 500;
 }
@@ -368,7 +368,7 @@ const year = new Date().getFullYear();
   width: fit-content;
 
   color: #252321;
-  font-size: clamp(11px, 0.68vw, 13px);
+  font-size: clamp(13px, 0.80vw, 15px);
 
   font-weight: 400;
   line-height: 1.55;
@@ -409,7 +409,7 @@ const year = new Date().getFullYear();
 
   border-bottom:
     1px solid transparent;
-  font-size: clamp(9px, 0.58vw, 11px);
+  font-size: clamp(10px, 0.63vw, 12px);
 
   font-weight: 700;
 
@@ -463,7 +463,7 @@ const year = new Date().getFullYear();
   display: inline-block;
 
   color: #111111;
-  font-size: clamp(18px, 1.2vw, 22px);
+  font-size: clamp(20px, 1.3vw, 24px);
 
   font-weight: 700;
 
@@ -482,7 +482,7 @@ const year = new Date().getFullYear();
     0;
 
   color: #7c7770;
-  font-size: clamp(11px, 0.68vw, 13px);
+  font-size: clamp(13px, 0.80vw, 15px);
 
   line-height: 1.45;
 }
@@ -510,7 +510,7 @@ const year = new Date().getFullYear();
     0.2rem;
 
   color: #99938b;
-  font-size: clamp(9px, 0.56vw, 11px);
+  font-size: clamp(10px, 0.63vw, 12px);
 
   font-weight: 700;
 
@@ -522,7 +522,7 @@ const year = new Date().getFullYear();
 
 .footer-column a {
   color: #24211f;
-  font-size: clamp(11px, 0.68vw, 13px);
+  font-size: clamp(13px, 0.80vw, 15px);
 
   font-weight: 500;
 
@@ -545,7 +545,7 @@ const year = new Date().getFullYear();
 
 .footer-column span {
   color: #7d7871;
-  font-size: clamp(11px, 0.68vw, 13px);
+  font-size: clamp(13px, 0.80vw, 15px);
 }
 
 
@@ -576,7 +576,7 @@ const year = new Date().getFullYear();
   margin: 0;
 
   color: #8a857e;
-  font-size: clamp(9px, 0.58vw, 11px);
+  font-size: clamp(10px, 0.63vw, 12px);
 }
 
 
@@ -596,7 +596,7 @@ const year = new Date().getFullYear();
 
 .legal a {
   color: #77716b;
-  font-size: clamp(9px, 0.58vw, 11px);
+  font-size: clamp(10px, 0.63vw, 12px);
 
   text-decoration: none;
 }
@@ -657,21 +657,21 @@ const year = new Date().getFullYear();
   }
 
   .seo-head h2 {
-    font-size: 30px;
+    font-size: 36px;
     line-height: 1.15;
   }
 
   .seo-intro {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.65;
   }
 
   .seo-column h3 {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .seo-column nav a {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.5;
   }
 
@@ -680,13 +680,13 @@ const year = new Date().getFullYear();
   }
 
   .brand {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .footer-brand p,
   .footer-column a,
   .footer-column span {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .footer-column h4 {
@@ -780,49 +780,49 @@ const year = new Date().getFullYear();
 ========================================================= */
 @media (max-width: 560px) {
   .kicker {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .seo-head h2 {
-    font-size: 30px;
+    font-size: 36px;
     line-height: 1.15;
   }
 
   .seo-intro {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.65;
   }
 
   .seo-column h3 {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .seo-column nav a {
-    font-size: 11px;
+    font-size: 13px;
     line-height: 1.55;
   }
 
   .view-more {
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .brand {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .footer-brand p,
   .footer-column a,
   .footer-column span {
-    font-size: 11px;
+    font-size: 13px;
   }
 
   .footer-column h4 {
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .footer-bottom p,
   .legal a {
-    font-size: 9px;
+    font-size: 11px;
   }
 }
 

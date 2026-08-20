@@ -314,7 +314,7 @@ import colomboImage from "../images/new.png";
   color: #181818;
 
   font-size:
-    clamp(13px, 0.82vw, 15px);
+    clamp(16px, 1vw, 18px);
 
   line-height: 1.6;
 }
@@ -330,7 +330,7 @@ import colomboImage from "../images/new.png";
   font-family: Georgia, serif;
 
   font-size:
-    clamp(0.8rem, 0.5vw, 0.57rem);
+    clamp(12px, 0.72vw, 14px);
 }
 
 
@@ -358,7 +358,7 @@ import colomboImage from "../images/new.png";
   color: #9d7e46;
 
   font-size:
-    clamp(10px, 0.68vw, 12px);
+    clamp(13px, 0.82vw, 15px);
 
   font-weight: 700;
 
@@ -380,7 +380,7 @@ import colomboImage from "../images/new.png";
   color: #ffffff;
 
   font-size:
-    clamp(2.3rem, 3.35vw, 4.35rem);
+    clamp(48px, 4vw, 68px);
 
   font-weight: 400;
 
@@ -395,13 +395,16 @@ import colomboImage from "../images/new.png";
 ========================================================= */
 
 .description {
-   margin: 0;
+   margin:
+     clamp(1.35rem, 2.2vh, 1.8rem)
+     0
+     0;
 
   color:
     rgba(255, 255, 255, 0.35);
 
    font-size:
-    clamp(13px, 0.82vw, 15px);
+    clamp(16px, 1vw, 18px);
 
 
 
@@ -457,7 +460,7 @@ import colomboImage from "../images/new.png";
     rgba(255, 255, 255, 0.35);
 
   font-size:
-    clamp(9px, 0.55vw, 10px);
+    clamp(14px, 0.86vw, 16px);
 
   font-weight: 600;
 }
@@ -469,7 +472,7 @@ import colomboImage from "../images/new.png";
   color: #ffffff;
 
   font-size:
-    clamp(12px, 0.74vw, 14px);
+    clamp(16px, 1vw, 18px);
 
   font-weight: 500;
 }
@@ -485,7 +488,7 @@ import colomboImage from "../images/new.png";
     rgba(255, 255, 255, 0.4);
 
   font-size:
-    clamp(11px, 0.68vw, 13px);
+    clamp(14px, 0.86vw, 16px);
 
   line-height: 1.55;
 }
@@ -497,9 +500,9 @@ import colomboImage from "../images/new.png";
 
 .design-button {
   width:
-    clamp(175px, 14vw, 215px);
+    clamp(205px, 15vw, 240px);
 
-  min-height: 48px;
+  min-height: 54px;
 
   margin-top:
     clamp(
@@ -532,7 +535,7 @@ import colomboImage from "../images/new.png";
     1px solid #ffffff;
 
   font-size:
-    clamp(0.65rem, 0.5vw, 0.57rem);
+    clamp(12px, 0.74vw, 14px);
 
   font-weight: 600;
 
@@ -555,7 +558,7 @@ import colomboImage from "../images/new.png";
 
 
 .arrow {
-  font-size: 0.9rem;
+  font-size: 18px;
 
   transition:
     transform 0.3s ease;
@@ -695,9 +698,9 @@ import colomboImage from "../images/new.png";
   .title {
     font-size:
       clamp(
-        2rem,
-        10vw,
-        2.9rem
+        40px,
+        11vw,
+        52px
       );
   }
 
