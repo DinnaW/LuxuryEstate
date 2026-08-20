@@ -4,6 +4,7 @@
 
       <!-- HEADER -->
       <div class="section-head">
+
         <div>
           <p class="eyebrow">
             CURATED COLLECTION
@@ -19,10 +20,12 @@
           </p>
         </div>
 
+
         <a href="#" class="view-all">
           View all
           <span>→</span>
         </a>
+
       </div>
 
 
@@ -37,16 +40,19 @@
 
           <!-- IMAGE -->
           <div class="image-box">
+
             <img
               :src="property.image"
               :alt="property.name"
             />
 
+            <!-- STATUS -->
             <div class="status-side">
               <span>
                 {{ property.status }}
               </span>
             </div>
+
           </div>
 
 
@@ -57,6 +63,7 @@
               {{ property.type }}
             </span>
 
+
             <h3>
               {{ property.name }}
             </h3>
@@ -64,6 +71,7 @@
 
             <!-- LOCATION -->
             <div class="location-row">
+
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -86,18 +94,23 @@
               <span>
                 {{ property.location }}
               </span>
+
             </div>
 
 
             <!-- BUILDER -->
             <div class="builder">
-              <span>PRESENTED BY</span>
+
+              <span>
+                PRESENTED BY
+              </span>
 
               <i></i>
 
               <strong>
                 {{ property.builder }}
               </strong>
+
             </div>
 
 
@@ -112,6 +125,7 @@
 
               <!-- BED -->
               <div class="detail">
+
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -129,11 +143,13 @@
                 <span>
                   {{ property.bedrooms }}
                 </span>
+
               </div>
 
 
               <!-- SIZE -->
               <div class="detail">
+
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -151,11 +167,13 @@
                 <span>
                   {{ property.size }}
                 </span>
+
               </div>
 
 
               <!-- BATH -->
               <div class="detail">
+
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -178,12 +196,13 @@
                 <span>
                   {{ property.bathrooms }}
                 </span>
+
               </div>
 
             </div>
 
 
-            <!-- CARD FOOTER -->
+            <!-- FOOTER -->
             <div class="card-footer">
 
               <a
@@ -195,8 +214,8 @@
               </a>
 
 
-              <!-- PRICE -->
               <div class="price-right">
+
                 <small>
                   STARTING FROM
                 </small>
@@ -208,11 +227,13 @@
                     {{ property.price }}
                   </strong>
                 </div>
+
               </div>
 
             </div>
 
           </div>
+
         </article>
 
       </div>
@@ -223,87 +244,133 @@
 
 
 <script setup>
+
+/* =========================================================
+   LOCAL IMAGES
+========================================================= */
+
+import image1 from "../images/1.jpg";
+import image3 from "../images/3.jpg";
+
+
+/* =========================================================
+   PROPERTY DATA
+========================================================= */
+
 const properties = [
+
   {
     name: "Icon V Thalpe",
+
     type: "Beachfront Residence",
+
     location: "Thalpe, Galle",
+
     builder: "Odiliya Premier",
 
     description:
       "Refined beachfront living with ocean views, privacy and contemporary design.",
 
     bedrooms: "2–3 Bed",
+
     size: "1,150–1,850 sq.ft",
+
     bathrooms: "2 Bath",
 
     price: "24M",
+
     status: "FEATURED",
 
-    image: "src/images/1.jpg"
+    image: image1
   },
+
 
   {
     name: "Oceanista Residences",
+
     type: "Beachfront Apartments",
+
     location: "Panadura",
+
     builder: "Odiliya Premier",
 
     description:
       "Contemporary coastal living shaped by light, comfort and lasting value.",
 
     bedrooms: "1–3 Bed",
+
     size: "800–2,400 sq.ft",
+
     bathrooms: "2 Bath",
 
     price: "25M",
+
     status: "NEW",
 
-    image: "src/images/3.jpg"
+    image: image3
   },
+
 
   {
     name: "Platinum 10",
+
     type: "Private Pool Villas",
+
     location: "Colombo",
+
     builder: "Odiliya Premier",
 
     description:
       "Private city residences combining generous space, refined design and convenience.",
 
     bedrooms: "4 Bed",
+
     size: "3,500+ sq.ft",
+
     bathrooms: "4 Bath",
 
     price: "84M",
+
     status: "LIMITED",
 
-    image: "https://images.unsplash.com/photo-1596178067639-5c6e68aea6dc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image:
+      "https://images.unsplash.com/photo-1596178067639-5c6e68aea6dc?q=80&w=2070&auto=format&fit=crop"
   },
+
 
   {
     name: "Ocean House",
+
     type: "Luxury Coastal Residence",
+
     location: "Galle",
+
     builder: "Odiliya Premier",
 
     description:
       "Elegant coastal living shaped around natural light, privacy and calm.",
 
     bedrooms: "3 Bed",
+
     size: "1,750–2,600 sq.ft",
+
     bathrooms: "3 Bath",
 
     price: "42M",
+
     status: "READY",
 
-    image: "https://i.pinimg.com/1200x/9c/9c/24/9c9c246228431e0d4af293d4603da044.jpg"
+    image:
+      "https://i.pinimg.com/1200x/9c/9c/24/9c9c246228431e0d4af293d4603da044.jpg"
   }
+
 ];
+
 </script>
 
 
 <style scoped>
+
 /* =========================================================
    GLOBAL
 ========================================================= */
@@ -363,8 +430,6 @@ const properties = [
 }
 
 
-/* SMALL LABEL */
-
 .eyebrow {
   margin:
     0
@@ -390,8 +455,6 @@ const properties = [
 }
 
 
-/* MAIN SECTION TITLE */
-
 .section-head h2 {
   margin: 0;
 
@@ -411,8 +474,6 @@ const properties = [
   letter-spacing: -0.035em;
 }
 
-
-/* HEADER DESCRIPTION */
 
 .section-description {
   max-width: 500px;
@@ -570,11 +631,14 @@ const properties = [
 
 .image-box img {
   width: 100%;
+
   height: 100%;
 
   display: block;
 
   object-fit: cover;
+
+  object-position: center;
 
   transition:
     transform 0.8s ease;
@@ -589,7 +653,7 @@ const properties = [
 
 
 /* =========================================================
-   VERTICAL STATUS
+   STATUS LABEL
 ========================================================= */
 
 .status-side {
@@ -598,6 +662,7 @@ const properties = [
   z-index: 5;
 
   top: 0;
+
   left: 0;
 
   width:
@@ -666,8 +731,6 @@ const properties = [
 }
 
 
-/* PROPERTY TYPE */
-
 .property-type {
   display: block;
 
@@ -687,8 +750,6 @@ const properties = [
   line-height: 1.4;
 }
 
-
-/* PROPERTY NAME */
 
 .card-content h3 {
   margin: 0;
@@ -730,6 +791,7 @@ const properties = [
 
 .location-row svg {
   width: 14px;
+
   height: 14px;
 
   flex-shrink: 0;
@@ -789,6 +851,7 @@ const properties = [
 
 .builder i {
   width: 15px;
+
   height: 1px;
 
   flex-shrink: 0;
@@ -826,7 +889,6 @@ const properties = [
 ========================================================= */
 
 .description {
-
   overflow: hidden;
 
   margin:
@@ -848,12 +910,13 @@ const properties = [
   line-height: 1.6;
 
   white-space: nowrap;
+
   text-overflow: ellipsis;
 }
 
 
 /* =========================================================
-   PROPERTY DETAILS
+   DETAILS
 ========================================================= */
 
 .details-row {
@@ -895,6 +958,7 @@ const properties = [
 
 .detail svg {
   width: 15px;
+
   height: 15px;
 
   flex-shrink: 0;
@@ -1022,9 +1086,9 @@ const properties = [
 
   font-size:
     clamp(
-      3px,
+      8px,
       0.46vw,
-      16px
+      10px
     );
 
   font-weight: 700;
@@ -1051,7 +1115,7 @@ const properties = [
 
   font-size:
     clamp(
-      11px,
+      10px,
       0.6vw,
       12px
     );
@@ -1065,9 +1129,9 @@ const properties = [
 
   font-size:
     clamp(
-      36px,
+      30px,
       1.55vw,
-      59px
+      42px
     );
 
   font-weight: 500;
@@ -1116,6 +1180,7 @@ const properties = [
   .detail span {
     font-size: 11px;
   }
+
 }
 
 
@@ -1177,8 +1242,7 @@ const properties = [
 
 
   .property-grid {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
 
     gap: 24px;
   }
@@ -1277,6 +1341,7 @@ const properties = [
   .price-right > div strong {
     font-size: 25px;
   }
+
 }
 
 
@@ -1301,13 +1366,14 @@ const properties = [
 
 
   .details-row {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
   }
 
 
   .detail {
     min-height: 25px;
   }
+
 }
+
 </style>
